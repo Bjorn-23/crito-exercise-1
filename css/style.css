@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Inter:wght@300;400;500;700;900&display=swap");
 html, body {
   color: #191919;
   font-family: "Inter" sans-serif;
@@ -12,7 +13,7 @@ html, body {
   border-radius: 25px;
   color: #191919;
   text-decoration: none;
-  padding: 8px 25px;
+  padding: 15px 30px;
   font-weight: 600;
   font-size: 16px;
 }
@@ -21,6 +22,26 @@ html, body {
   font-size: 0.9em;
 }
 .btn-yellow:hover {
+  background-color: #191919;
+  border: 1px solid #F9D783;
+  color: white;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 30px;
+  color: #191919;
+  text-decoration: none;
+  padding: 15px 25px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.btn-transparent i {
+  margin-left: 8px;
+  font-size: 0.9em;
+}
+.btn-transparent:hover {
   background-color: #191919;
   border: 1px solid #F9D783;
   color: white;
@@ -95,6 +116,10 @@ header .container .menu .top-menu .social-media a {
 header .container .menu .top-menu .social-media a:hover {
   color: #7c7c7c;
 }
+header .container .menu .btn-login {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
 header .container .main-menu {
   display: flex;
   justify-content: space-between;
@@ -130,5 +155,79 @@ header .container .menu-bars {
 @media (min-width: 992px) {
   header .container .menu-bars {
     display: none;
+  }
+}
+
+.showcase {
+  background-color: #F0EFE9;
+}
+.showcase .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.showcase .container .content {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .showcase .container .content {
+    text-align: left;
+  }
+}
+.showcase .container .content h1 {
+  font-family: DM sans, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 40px;
+}
+@media (min-width: 768px) {
+  .showcase .container .content h1 {
+    font-size: 70px;
+  }
+}
+@media (min-width: 1200px) {
+  .showcase .container .content h1 {
+    font-size: 70px;
+  }
+}
+@media (min-width: 1400px) {
+  .showcase .container .content h1 {
+    font-size: 86px;
+  }
+}
+.showcase .container .content p {
+  font-size: 16px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .showcase .container .content p {
+    font-size: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.showcase .container .content a {
+  margin-right: 0;
+  display: block;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .showcase .container .content a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+.showcase .container img {
+  display: none;
+  margin-right: -50px;
+}
+@media (min-width: 1200px) {
+  .showcase .container img {
+    display: block;
   }
 }
