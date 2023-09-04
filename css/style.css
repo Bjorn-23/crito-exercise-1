@@ -1,9 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap");
 html, body {
   color: #191919;
   font-family: "Inter" sans-serif;
   font-size: 16px;
   font-weight: 400;
+}
+
+.btn-yellow {
+  background-color: #F9D783;
+  border: 1px solid #F9D783;
+  border-radius: 25px;
+  color: #191919;
+  text-decoration: none;
+  padding: 8px 25px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.btn-yellow i {
+  margin-left: 8px;
+  font-size: 0.9em;
+}
+.btn-yellow:hover {
+  background-color: #191919;
+  border: 1px solid #F9D783;
+  color: white;
 }
 
 header {
@@ -27,14 +47,24 @@ header .container .menu {
 }
 header .container .menu .top-menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
   border-bottom: 1px solid #dad9d3;
   padding-bottom: 10px;
-  align-items: center;
+}
+@media (min-width: 1200px) {
+  header .container .menu .top-menu {
+    justify-content: space-between;
+  }
 }
 header .container .menu .top-menu .contact-information {
-  display: flex;
+  display: none;
   align-items: center;
+}
+@media (min-width: 1200px) {
+  header .container .menu .top-menu .contact-information {
+    display: flex;
+  }
 }
 header .container .menu .top-menu .contact-information .content-box {
   padding-right: 30px;
@@ -44,10 +74,15 @@ header .container .menu .top-menu .contact-information .content-box {
   font-size: 15px;
   font-weight: 300;
 }
+@media (min-width: 1200px) {
+  header .container .menu .top-menu .contact-information .content-box {
+    justify-content: space-between;
+    display: flex;
+  }
+}
 header .container .menu .top-menu .contact-information .content-box i {
   margin-right: 5px;
   font-size: 1.2em;
-  color: #666;
 }
 header .container .menu .top-menu .contact-information .content-box.last {
   border: none;
@@ -58,7 +93,7 @@ header .container .menu .top-menu .social-media a {
   margin-left: 10px;
 }
 header .container .menu .top-menu .social-media a:hover {
-  color: #666;
+  color: #7c7c7c;
 }
 header .container .main-menu {
   display: flex;
