@@ -4,10 +4,17 @@
 
 html, body {
     color: #191919;
-    font-family: 'Inter' sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
 }
+
+@media (min-width: 1660px){
+    #features-container{
+        max-width:1520px;
+      }    
+}
+
 
 .btn-yellow {
     background-color: #F9D783;
@@ -217,7 +224,6 @@ padding: 16px;
             h1 {
                 font-family: DM sans, sans-serif; 
                 font-weight:700;
-                text-align: center;
                 font-size: 40px;
                 
                 @media (min-width: 768px) {
@@ -273,4 +279,87 @@ padding: 16px;
 
 
     }
+}
+
+#clients {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .container{
+        padding-left: 25px;
+        padding-right: 25px;
+        // background-color: #f4f4f4;- använde för att kolla padding
+ 
+        .client-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: content-box;
+            padding: 20px;
+            
+
+        
+
+            .client-img {
+                display: flex;
+            }
+        }    
+    }        
+}
+
+.features-container {
+    align-items: center;
+
+    .container {
+        border: 1px solid #D3D3D3;
+        padding: 72px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        box-sizing: border-box;
+
+        .box-left {
+                       
+            p {
+                color: #F94D1C;
+                font-size: 18px; 
+                padding-bottom: 10px;
+            }
+
+            .box-title {
+                font-size: 45px;
+                font-weight: 700;
+                padding-top: 10px;
+                padding-bottom: 10px; 
+
+            }
+
+            .btn-yellow {
+
+            }
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            // background-color: #7c7c7c;
+            padding: 20px;
+            gap: 10px;
+            
+            .grid-item {
+                // background-color: #F0EFE9;
+                text-align: left;
+
+                img {
+                    padding-bottom: 20px;
+                }
+
+                h3 {
+                    padding-bottom: 20px;
+                }
+            }
+        }
+
+    }
+        
 }

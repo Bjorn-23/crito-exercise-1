@@ -2,18 +2,23 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Inter:wght@300;400;500;700;900&display=swap");
 html, body {
   color: #191919;
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
 
+@media (min-width: 1660px) {
+  #features-container {
+    max-width: 1520px;
+  }
+}
 .btn-yellow {
   background-color: #F9D783;
   border: 1px solid #F9D783;
   border-radius: 25px;
   color: #191919;
   text-decoration: none;
-  padding: 15px 30px;
+  padding: 15px 25px;
   font-weight: 600;
   font-size: 16px;
 }
@@ -30,7 +35,7 @@ html, body {
 .btn-transparent {
   background-color: transparent;
   border: 1px solid black;
-  border-radius: 30px;
+  border-radius: 25px;
   color: #191919;
   text-decoration: none;
   padding: 15px 25px;
@@ -179,7 +184,6 @@ header .container .menu-bars {
 .showcase .container .content h1 {
   font-family: DM sans, sans-serif;
   font-weight: 700;
-  text-align: center;
   font-size: 40px;
 }
 @media (min-width: 768px) {
@@ -230,4 +234,61 @@ header .container .menu-bars {
   .showcase .container img {
     display: block;
   }
+}
+
+#clients {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+#clients .container {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+#clients .container .client-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: content-box;
+  padding: 20px;
+}
+#clients .container .client-wrapper .client-img {
+  display: flex;
+}
+
+.features-container {
+  align-items: center;
+}
+.features-container .container {
+  border: 1px solid #D3D3D3;
+  padding: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  box-sizing: border-box;
+}
+.features-container .container .box-left p {
+  color: #F94D1C;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.features-container .container .box-left .box-title {
+  font-size: 45px;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.features-container .container .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 20px;
+  gap: 10px;
+}
+.features-container .container .grid-container .grid-item {
+  text-align: left;
+}
+.features-container .container .grid-container .grid-item img {
+  padding-bottom: 20px;
+}
+.features-container .container .grid-container .grid-item h3 {
+  padding-bottom: 20px;
 }
