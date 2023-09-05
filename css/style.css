@@ -265,6 +265,10 @@ header .container .menu-bars {
   justify-content: space-between;
   align-items: start;
   box-sizing: border-box;
+  gap: 10px;
+}
+.features-container .container .box-left {
+  flex: 3;
 }
 .features-container .container .box-left p {
   color: #F94D1C;
@@ -278,10 +282,11 @@ header .container .menu-bars {
   padding-bottom: 10px;
 }
 .features-container .container .grid-container {
+  flex: 3;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  padding: 20px;
-  gap: 10px;
+  padding: 0 40px;
+  gap: 40px;
 }
 .features-container .container .grid-container .grid-item {
   text-align: left;
@@ -291,4 +296,7 @@ header .container .menu-bars {
 }
 .features-container .container .grid-container .grid-item h3 {
   padding-bottom: 20px;
+}
+.features-container .container .right-spacer {
+  flex: 1;
 }
