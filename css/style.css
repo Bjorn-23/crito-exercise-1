@@ -52,6 +52,26 @@ html, body {
   color: white;
 }
 
+.btn-transparent-fat {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 35px;
+  color: #191919;
+  text-decoration: none;
+  padding: 20px 35px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.btn-transparent-fat i {
+  margin-left: 8px;
+  font-size: 0.9em;
+}
+.btn-transparent-fat:hover {
+  background-color: #191919;
+  border: 1px solid #F9D783;
+  color: white;
+}
+
 .btn-black {
   background-color: #191919;
   border: 1px solid #191919;
@@ -93,6 +113,34 @@ html, body {
   background-color: #191919;
   border: 1px solid #191919;
   color: white;
+}
+
+.btn-arw-r {
+  text-decoration: none;
+  padding: 15px 25px;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: right;
+}
+.btn-arw-r i {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  align-items: center;
+  border: 1px solid #191919;
+  border-radius: 100%;
+  margin-left: 8px;
+  margin-right: -15px;
+  font-size: 0.9em;
+}
+
+.services-link {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.services-link:hover {
+  background-color: #F9D783;
 }
 
 header {
@@ -353,6 +401,7 @@ header .container .menu-bars {
 
 .company-intro .container {
   margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-content: start;
@@ -362,21 +411,25 @@ header .container .menu-bars {
 @media (min-width: 768px) {
   .company-intro .container {
     margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 @media (min-width: 992px) {
   .company-intro .container {
     margin-top: 60px;
+    margin-bottom: 60px;
   }
 }
 @media (min-width: 1200px) {
   .company-intro .container {
     margin-top: 90px;
+    margin-bottom: 90px;
   }
 }
 @media (min-width: 1400px) {
   .company-intro .container {
     margin-top: 120px;
+    margin-bottom: 120px;
   }
 }
 .company-intro .container .sam-b-wrapper {
@@ -428,4 +481,70 @@ header .container .menu-bars {
 }
 .company-intro .container .about-company .btm-txt {
   margin-bottom: 120px;
+}
+
+.our-services {
+  background-color: #F0EFE9;
+  margin-top: 120px;
+  padding-top: 120px;
+  padding-bottom: 19px;
+}
+.our-services .c-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex: wrap;
+  margin-bottom: 30px;
+}
+.our-services .c-top .top-wrapper {
+  flex: 1;
+}
+.our-services .c-top .top-wrapper p {
+  font-family: "inter", sans-serif;
+  color: #F94D1C;
+}
+.our-services .c-top .top-wrapper h2.services-title {
+  font-family: "DM sans", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+}
+.our-services .c-top .spacer {
+  flex: 1.8;
+}
+.our-services .c-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.our-services .c-middle .services-link .outer-border {
+  background-color: white;
+  padding: 10px 0px 50px 0px;
+}
+.our-services .c-middle .services-link .outer-border .inner-border {
+  background: white;
+  padding-top: 35px;
+  padding-right: 15px;
+  padding-left: 20px;
+}
+.our-services .c-middle .services-link .outer-border .inner-border .box-line {
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #191919;
+}
+.our-services .c-middle .services-link .outer-border .inner-border h3 {
+  font-family: "DM sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #191919;
+  margin-bottom: 16px;
+}
+.our-services .c-middle .services-link .outer-border .inner-border p {
+  font-family: "inter" sans-serif;
+  font-weight: 400;
+  color: #626262;
+}
+.our-services .c-btm {
+  margin-top: 50px;
+  text-align: center;
 }
