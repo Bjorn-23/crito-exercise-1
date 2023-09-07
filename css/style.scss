@@ -145,24 +145,50 @@ html, body {
         margin-right: -15px;
         font-size: 0.9em;
     }    
-    // i:hover {
-    // background-color: White;
-    // border: 1px solid white;
-    // color: #191919;
-    // }
+    i:hover {
+    background-color: White;
+    border: 1px solid white;
+    color: #191919;
+    }
 }    
-// försöker få hover effekt på boxar i service- går inte
+// försöker få hover effekt på pilen i svarta cirkeln men får inte den syncad med anchor tag.
 .services-link {
     text-decoration: none;
-    background-color: transparent;
+    background-color: white;
+    
 }
 .services-link:hover {
     background-color: #F9D783;
 
 }
+//Funkar inte på individuella element, bara på hela grid?
+#p-lnk-1::after {
+    content:"";
+    /* Set the element as full-size */
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    /* Set bg and hide the element + animation */
+    background-color: #F9D783;
+    opacity:0;
+    transition: all 0.5s ease 0s;                
+
+}
+#p-lnk-1:hover::after {
+    /* Show the overlay on hover */
+    opacity:0.3;
+}
+
+
+
+
+  
+
     
 
-// Header ser bra ut
+// Header ser bra ut -- anpassa för mobilläge är nästa projekt
 header {
 background-color: #F0EFE9;
 padding: 16px;
@@ -299,7 +325,7 @@ padding: 16px;
     }
 
 }
-// Showcase ser bra ut
+// Showcase ser bra ut -- anpassa för mobilläge är nästa projekt
 .showcase {
     background-color: #F0EFE9;
     
@@ -379,9 +405,8 @@ padding: 16px;
     }
 }
 
-// ALLTING PÅ CLIENTS SER OK UT ÖVER 992px - behöver fixa designen på dimensioner under det.
-
-#clients {
+// .clients ser bra ut - anpassa för mobilläge är nästa projekt
+.clients {
     padding-top: 80px;
     padding-bottom: 80px;
 
@@ -407,7 +432,7 @@ padding: 16px;
     }        
 }
 
-// ALLTING PÅ FEATURES SER OK UT ÖVER 992px - behöver fixa designen på dimensioner under det.
+//.features-container ser bra ut - anpassa för mobilläge är nästa projekt
 .features-container {
     align-items: center;
 
@@ -479,7 +504,7 @@ padding: 16px;
 
 }
 
-// ALLTING PÅ company-intro SER OK UT ÖVER 992px - behöver fixa designen på dimensioner under det.
+// .company-intro ser bra ut - anpassa för mobilläge är nästa projekt 
 .company-intro {
     
     
@@ -523,7 +548,7 @@ padding: 16px;
             img {
                 flex: 2;
                 max-width: 100%;
-                position: relative;
+                // position: relative;
             }
 
             // Behöver fixa här så att den följer bilden.
@@ -586,7 +611,7 @@ padding: 16px;
     }
 }
 
-//Our Services nedanför
+//Our Services nedanför- lös så att .i också ändrar färg på .services-link:hover. + mobilläge
 .our-services {
     background-color: #F0EFE9;
     margin-top: 120px;
@@ -629,18 +654,17 @@ padding: 16px;
         justify-content: space-between;
         align-items: center;
         gap: 30px;
+  
 
     //    för nedan tag - använd rad 155 ovan ^
         .services-link {
-            // text-decoration: none;
-            // background-color: transparent;
-
+            
             .outer-border {
-            background-color: white;
+            background-color: transparent;
             padding: 10px 0px 50px 0px;
 
                 .inner-border {
-                    background: white;
+                    background: transparent;
                     padding-top: 35px;             
                     padding-right: 15px;
                     padding-left: 20px;
@@ -676,5 +700,194 @@ padding: 16px;
        
 }    
 
+//.choose-us ser bra ut - anpassa för mobilläge är nästa projekt
+.choose-us {
 
+    .flex-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .cu-lft {
+            flex: 1;
+
+            .cu-title-cont{
+                padding-right: 250px;
+                margin-bottom: 50px;
+    
+                p {
+                    color: #F94D1C;
+                }
+    
+                h2 {
+                    font-family: 'DM sans', sans-serif;
+                    font-size: 45px;
+                    font-weight: 700;
+    
+                }
+            }
+            
+            .cu-pts-cont {
+               
+    
+               .pts {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items:start;
+                    // background-color: #BEEBFF;
+                    // border: 1px solid black;
+    
+                    .img-div {
+                        
+    
+                        img {
+                            padding: 18px;
+                            border: 1px solid #E8E8E8;
+                            border-radius: 50%;
+        
+                        }
+        
+                    }
+    
+                    .txt-div {
+                        margin-left: 15px;
+                        flex: 1;
+    
+                        p {
+                            color: #626262;
+                            
+    
+                        }
+    
+                        h3 {
+                            font-family: 'DM sans', sans-serif;
+                            font-size: 22px;
+                            font-weight: 700;
+    
+                        }
+    
+                    }
+               }
+            }
+        }
+    
+        .cu-rgt {
+            flex: 1;
+        
+    
+            .top-white {
+                background-color: transparent;
+                padding-top: 250px;
+                position: relative;
+                
+    
+                img {
+                    width: 100%;
+                    z-index: 1;
+                    position: absolute;
+                    top: 70px;
+                    left: 20px;
+
+                    // display: none;
+
+                }
+            }
+    
+            .bottom-grey {
+                background-color: #F0EFE9;
+                padding: 212px;
+                margin-right: -20000px;
+                margin-left: -100px
+            }    
+        }
+    }   
+}
+//projects ser bra ut - fixa så att länkarna kan hovras individuellt - anpassa för mobilläge är nästa projekt
+.projects {
+
+    .projects-wrapper {
+
+        margin-right: -35px;
+
+        .title-wrapper {
+            text-align: center;
+            margin-top: 80px;
+
+            p {
+                color: #F94D1C;
+                margin-bottom: 30px;
+
+            }
+
+            h2 {
+                font-family: 'DM sans', sans-serif;
+                font-size: 45px;
+                font-weight: 700;
+                margin-bottom: 60px;
+            }
+
+            
+        }
+
+        .a-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            .grid-container-p {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 30px;
+                position: relative;
+               
+
+                .grid-item-p {
+                    text-decoration: none;
+                    color: #191919;
+                   
+
+                    .image-h3 {
+
+                        img {
+                            margin-bottom: 40px;
+                        }
+
+                        h3 {
+                            font-family: 'DM sans', sans-serif;
+                            font-size: 22px;
+                            font-weight: 700;
+                            border-bottom: 2px solid #E8E8E8;
+                            padding-bottom: 20px;
+
+
+                        }
+                    }
+
+                    .txt-arw {
+                        text-align: right;
+
+                        p {
+                           
+
+                        }
+
+                        i {
+                            
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn-projects {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+    }
+
+
+}
 
