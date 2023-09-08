@@ -11,7 +11,7 @@
     <title></title>
 </head>
 <body>
-    <!-- header section -->
+    <!-- header section-->
     <header>
        <div class="container">
         <a href="index.html"><img src="images/Logotype.svg" alt="Crito Logotype"></a>
@@ -42,8 +42,9 @@
                 </div>
             </div>
             <div class="main-menu">
-                <nav>
-                    <a class="active" href="index.html">Home</a>
+                <nav> 
+                    <!-- när annan sida är aktiv så ändra classen nedan på den sidan -->
+                    <a class="active" href="index.html">Home</a> 
                     <a href="Service.html">Service</a>
                     <a href="news.html">News</a>
                     <a href="contacts.html">Contact</a>
@@ -54,7 +55,7 @@
        </div>
     </header>
       
-    <!-- showcase section -->
+    <!-- showcase section-->
     <section class="showcase">
         <div class="container">
             <div class="content">
@@ -68,7 +69,7 @@
         </div>
     </section>
 
-    <!-- clients section -->
+    <!-- clients section-->
     <section class="clients">
         <div id="client-container" class="container">
             <div class="client-wrapper">
@@ -81,7 +82,7 @@
         </div>
     </section>
 
-    <!-- features section -->
+    <!-- features section-->
     <section class="features-container">
         <div id="features-container" class="container">
             
@@ -124,7 +125,7 @@
 
     </section>
 
-    <!-- company-intro section -->
+    <!-- company-intro section-->
     <section class="company-intro">
         <div class="container">
             <div class="sam-b-wrapper"><img src="images/sam-b.png" alt="A picture of Samantha Brown, Crito's founder">
@@ -158,7 +159,7 @@
 
     </section>
     
-    <!-- Our Services-section -->
+    <!-- our-services section-->
     <section class="our-services">
         <div class="container c-top">
 
@@ -225,6 +226,7 @@
 
     </section>
 
+    <!-- choose-us section-->
     <section class="choose-us container">
         <div class="flex-wrapper">
             <div class="cu-lft">
@@ -294,6 +296,7 @@
 
     </section>
 
+    <!-- projects section-->
     <section class="projects container">
         <div class="projects-wrapper">
             
@@ -362,7 +365,181 @@
 
     </section>
 
+    <!-- team section - carousel funkar inte, knappar under carousel funkar inte - ÄN -->
+    <section class="team">
+        <div class="team-content  container">
+            
+            <div class="top-wrapper">
+                <div class="team-title">
+                    <p>Meet Our Team</p>
+                    <h2>Experienced Team Members</h2>
+                </div>
+                <div class="btn-team-wrapper">
+                    <a class="btn-yellow btn-team" href="#">Browse Team<i class="fa-regular fa-arrow-up-right"></i></a>
+                </div>
+            </div>
 
+            <div class="slide-wrapper">
+                <!-- CAROUSEL FUNKAR INTE ÄNNU -->
+                <div class="image-container carousel slide" data-ride="carousel">
+                    <div class="ts-1 carousel-inner">
+                        <div class="carousel-item active" id="0">
+
+                            <div class="ts-1-img">
+                                <img src="images/team/k-palmer.png" alt="Kristine Palmer is the chief operations officer of Crito">
+                                <div class="slide-bottom-text">
+                                    <h3>Kristine Palmer</h3>
+                                    <p>Chief Operations Officer</p>
+                                </div>
+                            </div>
+    
+                            <div class="ts-1-img">
+                                <img src="images/team/m-aubri.png" alt="Mark Aubri, senior consultant of Crito">
+                                <div class="slide-bottom-text">
+                                    <h3>Mark Aubri</h3>
+                                    <p>Senior Consultant</p>
+                                </div>
+                            </div>
+    
+                            <div class="ts-1-img">
+                                <img src="images/team/k-hansen.png" alt="Kimberley Hansen, senior consultant of Crito">
+                                <div class="slide-bottom-text">
+                                    <h3>Kimberley Hansen</h3>
+                                    <p>Senior Consultant</p>
+                                </div>
+                            </div>
+    
+                            <div class="ts-1-img">
+                                <img src="images/team/j-willoman.png" alt="Justin Willoman, senior tech consultant of Crito">
+                                <div class="slide-bottom-text">
+                                    <h3>Justin Willoman</h3>
+                                    <p>Senior Tech Consultant</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item" id="1">
+
+                            <div class="ts-1-img">
+                                <img src="images/team/k-palmer.png" alt="Kristine Palmer is the chief operations officer of Crito">
+                                <div class="slide-bottom-text">
+                                    <h3>Kristine Palmer</h3>
+                                    <p>Chief Operations Officer</p>
+                                </div>
+                            </div>
+    
+                            <div class="ts-1-img">
+                                <img src="images/team/m-aubri.png" alt="Mark Aubri, senior consultant of Crito">
+                                <div class="slide-bottom-text">
+                                    <h3>Mark Aubri</h3>
+                                    <p>Senior Consultant</p>
+                                </div>
+                            </div>
+    
+                            <div class="ts-1-img">
+                                <img src="images/team/k-hansen.png" alt="Kimberley Hansen, senior consultant of Crito">
+                                <div class="slide-bottom-text">
+                                    <h3>Kimberley Hansen</h3>
+                                    <p>Senior Consultant</p>
+                                </div>
+                            </div>
+    
+                            <div class="ts-1-img">
+                                <img src="images/team/j-willoman.png" alt="Justin Willoman, senior tech consultant of Crito">
+                                <div class="slide-bottom-text">
+                                    <h3>Justin Willoman</h3>
+                                    <p>Senior Tech Consultant</p>
+                                </div>
+                            </div>   
+                        </div>
+                        
+                    
+                    </div>
+                       
+
+                
+
+                 </div>
+
+            </div>
+
+            <!-- FUNKAR INTE ÄN tillsätt denna text i class härunder (carousel-indicators) -->
+            <ol class="slide-dots">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="dot active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1" class="dot"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2" class="dot"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3" class="dot"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4" class="dot"></li>
+            </ol>
+           
+
+
+        </div>
+
+    </section>
+
+    <!-- testimonials section -->
+<section class="testimonials">
+
+    <div class="testimonials-content container">
+
+        <div class="test-top-wrapper">
+            <div>
+                <p class="orange-txt">Testimonials</p>
+                <h2 class="test-titles">What Our Clients Say</h2>
+            </div>
+        </div>
+
+        <div class="test-middle-wrapper">
+            <div class="test-box tb1">
+                <p class="stars"><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i></p>
+                <p class="-grey-txt">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate"</p>
+                <div class="flex-wrapper">
+                    <img src="images/testimonials/c-warren.png" alt="a picture of Cassandra Warren">
+                    <div>
+                        <h3 class="name">Cassandra Warren</h3>
+                        <p class="orange-txt">Business Manager, Dorfus</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-box tb2">
+                <p class="stars"><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i></p>
+                <p class="-grey-txt">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate"</p>
+                <div class="flex-wrapper">
+                    <img src="images/testimonials/a-tulling.png" alt="a picture of Amanda Tulling">
+                    <div>
+                        <h3 class="name">Amanda Tulling</h3>
+                        <p class="orange-txt">Senior Developer, Square</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-box tb3">
+                <p class="stars"><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i></p>
+                <p class="-grey-txt">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate"</p>
+                <div class="flex-wrapper">
+                    <img src="images/testimonials/j-mcdogglas.png" alt="a picture of Jack McDogglas">
+                    <div>
+                        <h3 class="name">Jack McDogglas</h3>
+                        <p class="orange-txt">Key Account Manager, Gobona</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-bottom-wrapper">
+            <a class="btn-black" href="#">All Recent Projects<i class="fa-regular fa-arrow-up-right"></i></a>
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- SORT OUT ALL HREF, ALT-TEXT -->
 
     <!-- ta bort senare -->
     <div style="height: 2000px"></div>
