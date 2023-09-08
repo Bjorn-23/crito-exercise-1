@@ -777,9 +777,10 @@ header .container .menu-bars {
   justify-content: space-between;
   align-content: center;
   margin: 100px 120px 70px;
-  gap: 60px;
+  gap: 40px;
 }
 .testimonials .container .test-middle-wrapper .test-box .stars {
+  letter-spacing: 3px;
   color: #F94D1C;
 }
 .testimonials .container .test-middle-wrapper .test-box p {
@@ -787,14 +788,19 @@ header .container .menu-bars {
 }
 .testimonials .container .test-middle-wrapper .test-box .flex-wrapper {
   display: flex;
+  align-items: center;
 }
-.testimonials .container .test-middle-wrapper .test-box .flex-wrapper img {
-  margin-right: 20px;
+.testimonials .container .test-middle-wrapper .test-box .flex-wrapper div {
+  margin-left: 20px;
 }
 .testimonials .container .test-middle-wrapper .test-box .flex-wrapper div h3 {
   font-size: 22px;
   font-family: "DM sans", sans-serif;
-  font-weight: 700;
+  font-weight: 0;
+  margin-top: 15px;
+}
+.testimonials .container .test-middle-wrapper .test-box .flex-wrapper div p {
+  color: #F94D1C;
 }
 .testimonials .container .test-bottom-wrapper {
   text-align: center;

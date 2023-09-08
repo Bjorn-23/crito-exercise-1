@@ -188,7 +188,7 @@ html, body {
 
     
 
-// Header ser bra ut -- anpassa för mobilläge är nästa projekt
+// Header ser bra ut -- att anpassa för mobilläge är nästa projekt.
 header {
 background-color: #F0EFE9;
 padding: 16px;
@@ -325,7 +325,7 @@ padding: 16px;
     }
 
 }
-// Showcase ser bra ut -- anpassa för mobilläge är nästa projekt
+// Showcase ser bra ut -- att anpassa för mobilläge är nästa projekt.
 .showcase {
     background-color: #F0EFE9;
     
@@ -405,7 +405,7 @@ padding: 16px;
     }
 }
 
-// .clients ser bra ut - anpassa för mobilläge är nästa projekt
+// .clients ser bra ut - att anpassa för mobilläge är nästa projekt.
 .clients {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -432,7 +432,7 @@ padding: 16px;
     }        
 }
 
-//.features-container ser bra ut - anpassa för mobilläge är nästa projekt
+//.features-container ser bra ut - att anpassa för mobilläge är nästa projekt.
 .features-container {
     align-items: center;
 
@@ -504,7 +504,7 @@ padding: 16px;
 
 }
 
-// .company-intro ser bra ut - anpassa för mobilläge är nästa projekt 
+// .company-intro ser bra ut - att anpassa för mobilläge är nästa projekt. 
 .company-intro {
     
     
@@ -700,7 +700,7 @@ padding: 16px;
        
 }    
 
-//.choose-us ser bra ut - anpassa för mobilläge är nästa projekt
+//.choose-us ser bra ut - att anpassa för mobilläge är nästa projekt.
 .choose-us {
 
     .flex-wrapper {
@@ -804,7 +804,7 @@ padding: 16px;
     }   
 }
 
-//projects ser bra ut - fixa så att länkarna kan hovras individuellt - anpassa för mobilläge är nästa projekt
+//projects ser bra ut - fixa så att länkarna kan hovras individuellt - att anpassa för mobilläge är nästa projekt.
 .projects {
 
     .projects-wrapper {
@@ -1001,7 +1001,7 @@ padding: 16px;
     }
 }
 
-// testimonials - active development.
+// testimonials - att anpassa för mobilläge är nästa projekt.
 .testimonials {
     background-color: #ECD28B;
     padding-top: 125px;
@@ -1036,12 +1036,13 @@ padding: 16px;
             justify-content: space-between;
             align-content: center;
             margin: 100px 120px 70px;        
-            gap: 60px;
+            gap: 40px;
 
             .test-box {
                 
 
                 .stars {
+                    letter-spacing: 3px;
                     color:#F94D1C;
                         
                 }
@@ -1053,18 +1054,24 @@ padding: 16px;
                 
                 .flex-wrapper {
                     display: flex;
+                    align-items: center;
+
                     img {
-                        margin-right: 20px;
+                        
                     }
 
                     div {
+                        margin-left: 20px;
+                                                
                         h3 {
                             font-size: 22px; 
                             font-family: 'DM sans', sans-serif;
-                            font-weight: 700;
-            
+                            font-weight: 00;
+                            margin-top: 15px;                                        
                         }
                         p {
+                            color:#F94D1C;
+                            
 
                         }
                     }
