@@ -145,41 +145,16 @@ html, body {
         margin-right: -15px;
         font-size: 0.9em;
     }    
-    i:hover {
-    background-color: White;
-    border: 1px solid white;
-    color: #191919;
-    }
+    // i:hover {
+    // background-color: White;
+    // border: 1px solid white;
+    // color: #191919;
+    // }
 }    
 // försöker få hover effekt på pilen i svarta cirkeln men får inte den syncad med anchor tag.
-.services-link {
-    text-decoration: none;
-    background-color: white;
-    
-}
-.services-link:hover {
-    background-color: #F9D783;
 
-}
-//Funkar inte på individuella element, bara på hela grid?
-#p-lnk-1::after {
-    content:"";
-    /* Set the element as full-size */
-    position:absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    /* Set bg and hide the element + animation */
-    background-color: #F9D783;
-    opacity:0;
-    transition: all 0.5s ease 0s;                
 
-}
-#p-lnk-1:hover::after {
-    /* Show the overlay on hover */
-    opacity:0.3;
-}
+
 
 
 
@@ -656,7 +631,7 @@ padding: 16px;
         gap: 30px;
   
 
-    //    för nedan tag - använd rad 155 ovan ^
+
         .services-link {
             
             .outer-border {
@@ -691,7 +666,27 @@ padding: 16px;
                     }
                 }
             }
-        }         
+        }
+
+        .services-link {
+            text-decoration: none;
+            background-color: white;
+
+            &:hover {
+                background-color: #F9D783;
+            }
+            &:hover .btn-arw-r i {
+                background-color: white;
+                color: #191919;
+            }
+                    
+        }
+       
+       
+       
+       
+        
+
     }
     .c-btm {
         margin-top: 50px;
@@ -809,7 +804,7 @@ padding: 16px;
 
     .projects-wrapper {
 
-        margin-right: -35px;
+        // margin-right: -35px;
 
         .title-wrapper {
             text-align: center;
@@ -831,57 +826,46 @@ padding: 16px;
             
         }
 
-        .a-wrapper {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+        .grid-container-p {            
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-area: auto 1fr auto;
+            gap: 30px;         
 
-            .grid-container-p {
-                display: grid;
-                grid-template-columns: auto auto;
-                gap: 2em;
-                position: relative;
-               
+            .grid-item-p {
+                text-decoration: none;
+                color: #191919;          
 
-                .grid-item-p {
-                    text-decoration: none;
-                    color: #191919;
-                   
+                img {
+                    margin-bottom: 40px;
+                    width: 100%;
+                    
+                }
 
-                    .image-h3 {
-
-                        img {
-                            margin-bottom: 40px;
-                            width: 100%;
-                            
-                        }
-
-                        h3 {
-                            font-family: 'DM sans', sans-serif;
-                            font-size: 22px;
-                            font-weight: 700;
-                            border-bottom: 2px solid #E8E8E8;
-                            padding-bottom: 20px;
+                h3 {
+                    font-family: 'DM sans', sans-serif;
+                    font-size: 22px;
+                    font-weight: 700;
+                    border-bottom: 2px solid #E8E8E8;
+                    padding-bottom: 20px;
 
 
-                        }
-                    }
+                }
+                
 
-                    .txt-arw {
-                        text-align: right;
+                .txt-arw {
+                    text-align: right;
+                    margin: 15px;
 
-                        p {
-                           
+                }
+                &:hover .txt-arw {
+                    text-decoration: underline;
 
-                        }
-
-                        i {
-                            
-
-                        }
-                    }
                 }
             }
+
+            
+            
         }
 
         .btn-projects {
@@ -890,8 +874,6 @@ padding: 16px;
         }
 
     }
-
-
 }
 
 // team - active development.
@@ -924,6 +906,11 @@ padding: 16px;
                     font-weight: 700;
                     margin-bottom: 60px;
                 }
+            }
+
+            .btn-team {
+                border: 1px solid #191919;
+                font-weight: 600;
             }
         }
 

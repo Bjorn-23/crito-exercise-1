@@ -133,39 +133,6 @@ html, body {
   margin-right: -15px;
   font-size: 0.9em;
 }
-.btn-arw-r i:hover {
-  background-color: White;
-  border: 1px solid white;
-  color: #191919;
-}
-
-.services-link {
-  text-decoration: none;
-  background-color: white;
-}
-
-.services-link:hover {
-  background-color: #F9D783;
-}
-
-#p-lnk-1::after {
-  content: "";
-  /* Set the element as full-size */
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  /* Set bg and hide the element + animation */
-  background-color: #F9D783;
-  opacity: 0;
-  transition: all 0.5s ease 0s;
-}
-
-#p-lnk-1:hover::after {
-  /* Show the overlay on hover */
-  opacity: 0.3;
-}
 
 header {
   background-color: #F0EFE9;
@@ -567,6 +534,17 @@ header .container .menu-bars {
   font-weight: 400;
   color: #626262;
 }
+.our-services .c-middle .services-link {
+  text-decoration: none;
+  background-color: white;
+}
+.our-services .c-middle .services-link:hover {
+  background-color: #F9D783;
+}
+.our-services .c-middle .services-link:hover .btn-arw-r i {
+  background-color: white;
+  color: #191919;
+}
 .our-services .c-btm {
   margin-top: 50px;
   text-align: center;
@@ -636,9 +614,6 @@ header .container .menu-bars {
   margin-left: -100px;
 }
 
-.projects .projects-wrapper {
-  margin-right: -35px;
-}
 .projects .projects-wrapper .title-wrapper {
   text-align: center;
   margin-top: 80px;
@@ -653,34 +628,33 @@ header .container .menu-bars {
   font-weight: 700;
   margin-bottom: 60px;
 }
-.projects .projects-wrapper .a-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.projects .projects-wrapper .a-wrapper .grid-container-p {
+.projects .projects-wrapper .grid-container-p {
   display: grid;
-  grid-template-columns: auto auto;
-  gap: 2em;
-  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-area: auto 1fr auto;
+  gap: 30px;
 }
-.projects .projects-wrapper .a-wrapper .grid-container-p .grid-item-p {
+.projects .projects-wrapper .grid-container-p .grid-item-p {
   text-decoration: none;
   color: #191919;
 }
-.projects .projects-wrapper .a-wrapper .grid-container-p .grid-item-p .image-h3 img {
+.projects .projects-wrapper .grid-container-p .grid-item-p img {
   margin-bottom: 40px;
   width: 100%;
 }
-.projects .projects-wrapper .a-wrapper .grid-container-p .grid-item-p .image-h3 h3 {
+.projects .projects-wrapper .grid-container-p .grid-item-p h3 {
   font-family: "DM sans", sans-serif;
   font-size: 22px;
   font-weight: 700;
   border-bottom: 2px solid #E8E8E8;
   padding-bottom: 20px;
 }
-.projects .projects-wrapper .a-wrapper .grid-container-p .grid-item-p .txt-arw {
+.projects .projects-wrapper .grid-container-p .grid-item-p .txt-arw {
   text-align: right;
+  margin: 15px;
+}
+.projects .projects-wrapper .grid-container-p .grid-item-p:hover .txt-arw {
+  text-decoration: underline;
 }
 .projects .projects-wrapper .btn-projects {
   text-align: center;
@@ -709,6 +683,10 @@ header .container .menu-bars {
   font-size: 45px;
   font-weight: 700;
   margin-bottom: 60px;
+}
+.team .team-content .top-wrapper .btn-team {
+  border: 1px solid #191919;
+  font-weight: 600;
 }
 .team .team-content .slide-wrapper .image-container .ts-1 .carousel-item {
   display: flex;
