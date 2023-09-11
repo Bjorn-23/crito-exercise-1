@@ -380,31 +380,60 @@ padding: 16px;
     }
 }
 
-// .clients ser bra ut - att anpassa för mobilläge är nästa projekt.
+// .clients ser bra ut
 .clients {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media (min-width: 768px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    @media (min-width: 992px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+
+
+    
 
     .container{
-        padding-left: 25px;
-        padding-right: 25px;
-        // background-color: #f4f4f4;- använde för att kolla padding
+        padding: 25px 0;
  
         .client-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-sizing: content-box;
-            padding: 20px;
+            display: block;
             
-
-        
-
-            .client-img {
+            @media (min-width: 992px) {
                 display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-sizing: content-box;
+                padding: 20px;               
+            }
+
+            @media (min-width: 1200px) {
+                margin-right: -50px;
+
+            }
+
+            
+            .client-img {
+                display: block;
+                // width: 50%;
+                margin: 30px auto;
+
+                @media (min-width: 992px) {
+                    display: flex;
+                    width: fit-content;
+                   
+                   
+                }
+
             }
         }    
-    }        
+    }      
 }
 
 //.features-container ser bra ut - att anpassa för mobilläge är nästa projekt.
@@ -586,7 +615,7 @@ padding: 16px;
     }
 }
 
-//Our Services nedanför- lös så att .i också ändrar färg på .services-link:hover. + mobilläge
+//Our Services nedanför - gör om till grid för bättre skalning till mobil. <1200: 2x2, <768 1x4
 .our-services {
     background-color: #F0EFE9;
     margin-top: 120px;
@@ -595,12 +624,19 @@ padding: 16px;
     
 
     .c-top {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        flex: wrap;
-        margin-bottom: 30px;
-        // background-color: #F9D783;
+        display: block;
+
+        @media (min-width: 768px){
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex: wrap;
+            margin-bottom: 30px;
+            // background-color: #F9D783;
+
+        }
+
+       
 
         .top-wrapper {
             flex: 1;
@@ -993,100 +1029,7 @@ padding: 16px;
     }
 }
 
-// testimonials - att anpassa för mobilläge är nästa projekt. HAR ANPASSAT PÅ NÄSTA SEKTION
-// .testimonials {
-//     background-color: #ECD28B;
-//     padding-top: 125px;
-//     padding-bottom: 125px;
-    
-//     .container {
-//         background-color: white;
-//         padding-top: 125px;
-//         padding-bottom: 125px;
-
-//         .test-top-wrapper {
-                
-
-//             div {
-//                 text-align: center;
-//                 p { 
-//                     color:#F94D1C;
-//                     margin-bottom: 35px;
-//                 }
-    
-//                 h2 {
-//                     font-size: 45px; 
-//                     font-family: 'DM sans', sans-serif;
-//                     font-weight: 700;
-    
-//                     }
-//             }
-//         }
-    
-//         .test-middle-wrapper {
-//             display: flex;
-//             justify-content: space-between;
-//             align-content: center;
-//             margin: 100px 120px 70px;        
-//             gap: 40px;
-
-//             .test-box {
-                
-
-//                 .stars {
-//                     letter-spacing: 3px;
-//                     color:#F94D1C;
-                        
-//                 }
-
-//                 p { 
-//                     color: #191919;
-                    
-//                 }
-                
-//                 .flex-wrapper {
-//                     display: flex;
-//                     align-items: center;
-
-//                     img {
-                        
-//                     }
-
-//                     div {
-//                         margin-left: 20px;
-                                                
-//                         h3 {
-//                             font-size: 22px; 
-//                             font-family: 'DM sans', sans-serif;
-//                             font-weight: 00;
-//                             margin-top: 15px;                                        
-//                         }
-//                         p {
-//                             color:#F94D1C;
-                            
-
-//                         }
-//                     }
-
-//                 }
-//             }
-    
-    
-//         }
-    
-//         .test-bottom-wrapper {
-//             text-align: center;
-            
-//         }
-//     }
-    
-
-
-// }
-
-
-// TEST NEDANFÖR - FUNKAR BRA!
-
+// testimonials section - FUNKAR BRA!
 .testimonials {
 
 
@@ -1128,12 +1071,14 @@ padding: 16px;
             display: grid;
             grid-template-columns: 1fr;
             grid-area: auto 1fr auto ;
-            gap: 50px;
-            padding: 100px;
+            padding: 20px;
+            
 
             @media (min-width: 992px) {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
+                gap: 50px;
+                padding: 100px;
             }
 
             .grid-item {

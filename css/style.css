@@ -319,22 +319,51 @@ header .container .menu-bars {
 }
 
 .clients {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .clients {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .clients {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }
 .clients .container {
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 25px 0;
 }
 .clients .container .client-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: content-box;
-  padding: 20px;
+  display: block;
+}
+@media (min-width: 992px) {
+  .clients .container .client-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: content-box;
+    padding: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .clients .container .client-wrapper {
+    margin-right: -50px;
+  }
 }
 .clients .container .client-wrapper .client-img {
-  display: flex;
+  display: block;
+  margin: 30px auto;
+}
+@media (min-width: 992px) {
+  .clients .container .client-wrapper .client-img {
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 
 .features-container {
@@ -480,11 +509,16 @@ header .container .menu-bars {
   padding-bottom: 19px;
 }
 .our-services .c-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex: wrap;
-  margin-bottom: 30px;
+  display: block;
+}
+@media (min-width: 768px) {
+  .our-services .c-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: wrap;
+    margin-bottom: 30px;
+  }
 }
 .our-services .c-top .top-wrapper {
   flex: 1;
@@ -768,13 +802,14 @@ header .container .menu-bars {
   display: grid;
   grid-template-columns: 1fr;
   grid-area: auto 1fr auto;
-  gap: 50px;
-  padding: 100px;
+  padding: 20px;
 }
 @media (min-width: 992px) {
   .testimonials .container .test-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    padding: 100px;
   }
 }
 .testimonials .container .test-grid-container .grid-item .stars {
