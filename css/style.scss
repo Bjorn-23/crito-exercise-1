@@ -625,12 +625,15 @@ padding: 16px;
     }
 
     .c-middle {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 30px;
+        display: block;
+        
   
-
+        @media (min-width: 992px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
 
         .services-link {
             
@@ -674,10 +677,12 @@ padding: 16px;
 
             &:hover {
                 background-color: #F9D783;
+                transition: 1s;
             }
             &:hover .btn-arw-r i {
                 background-color: white;
                 color: #191919;
+                transition: 0.7s;
             }
                     
         }
@@ -988,11 +993,108 @@ padding: 16px;
     }
 }
 
-// testimonials - att anpassa för mobilläge är nästa projekt.
+// testimonials - att anpassa för mobilläge är nästa projekt. HAR ANPASSAT PÅ NÄSTA SEKTION
+// .testimonials {
+//     background-color: #ECD28B;
+//     padding-top: 125px;
+//     padding-bottom: 125px;
+    
+//     .container {
+//         background-color: white;
+//         padding-top: 125px;
+//         padding-bottom: 125px;
+
+//         .test-top-wrapper {
+                
+
+//             div {
+//                 text-align: center;
+//                 p { 
+//                     color:#F94D1C;
+//                     margin-bottom: 35px;
+//                 }
+    
+//                 h2 {
+//                     font-size: 45px; 
+//                     font-family: 'DM sans', sans-serif;
+//                     font-weight: 700;
+    
+//                     }
+//             }
+//         }
+    
+//         .test-middle-wrapper {
+//             display: flex;
+//             justify-content: space-between;
+//             align-content: center;
+//             margin: 100px 120px 70px;        
+//             gap: 40px;
+
+//             .test-box {
+                
+
+//                 .stars {
+//                     letter-spacing: 3px;
+//                     color:#F94D1C;
+                        
+//                 }
+
+//                 p { 
+//                     color: #191919;
+                    
+//                 }
+                
+//                 .flex-wrapper {
+//                     display: flex;
+//                     align-items: center;
+
+//                     img {
+                        
+//                     }
+
+//                     div {
+//                         margin-left: 20px;
+                                                
+//                         h3 {
+//                             font-size: 22px; 
+//                             font-family: 'DM sans', sans-serif;
+//                             font-weight: 00;
+//                             margin-top: 15px;                                        
+//                         }
+//                         p {
+//                             color:#F94D1C;
+                            
+
+//                         }
+//                     }
+
+//                 }
+//             }
+    
+    
+//         }
+    
+//         .test-bottom-wrapper {
+//             text-align: center;
+            
+//         }
+//     }
+    
+
+
+// }
+
+
+// TEST NEDANFÖR - FUNKAR BRA!
+
 .testimonials {
+
+
+    @media (min-width: 768px) {
     background-color: #ECD28B;
     padding-top: 125px;
     padding-bottom: 125px;
+    }
     
     .container {
         background-color: white;
@@ -1010,22 +1112,32 @@ padding: 16px;
                 }
     
                 h2 {
-                    font-size: 45px; 
+                    font-size: 32px; 
                     font-family: 'DM sans', sans-serif;
                     font-weight: 700;
-    
+
+                    @media (min-width: 768px) {
+                        font-size: 45px; 
                     }
+    
+                }
             }
         }
     
-        .test-middle-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-content: center;
-            margin: 100px 120px 70px;        
-            gap: 40px;
+        .test-grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-area: auto 1fr auto ;
+            gap: 50px;
+            padding: 100px;
 
-            .test-box {
+            @media (min-width: 992px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            .grid-item {
+                
                 
 
                 .stars {
@@ -1069,7 +1181,7 @@ padding: 16px;
     
         }
     
-        .test-bottom-wrapper {
+        .btn-black-div {
             text-align: center;
             
         }
@@ -1078,7 +1190,6 @@ padding: 16px;
 
 
 }
-
 
 
 
