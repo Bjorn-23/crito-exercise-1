@@ -144,11 +144,11 @@
             </div>
             
             <div class="about-company">
-                <p class="orange-txt">About Company</p>
+                <p class="orange-txt">About Our Company</p>
                 <h2>We are Business Consulting & Credit Repair Experts</h2>
                 <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officiis quas assumenda esse obcaecati? Ex esse error voluptates iure vel totam eos.</p>
-                <p class="btm-txt lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis esse quasi incidunt adipisci accusantium libero provident voluptate amet.</p>
-                <div>
+                <p class="lorem btm-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis esse quasi incidunt adipisci accusantium libero provident voluptate amet.</p>
+                <div class="ci-buttons">
                     <a class="btn-black">Learn More<i class="fa-regular fa-arrow-up-right"></i></a>
                     <a class="btn-video"><i class="fa-sharp fa-solid fa-play"></i>Intro Video</a>
 
@@ -301,9 +301,9 @@
 
             <div class="grid-container-p">
                                    
-                <a class="grid-item-p" href="#">
+                <a class="grid-item-p br" href="#">
                     <img src="images/projects/top-lft.png" alt="">
-                    <h3>Grow your business <br></h3>
+                    <h3>Grow your business<br><br></h3>
                     <div class="txt-arw">Learn More<i class="fa-regular fa-arrow-up-right"></i>                       
                     </div>
                 </a>
@@ -341,11 +341,11 @@
 
     <!-- team section - carousel funkar inte, knappar under carousel funkar inte - ÄN -->
     <section class="team">
-        <div class="team-content  container">
+        <div class="container">
             
             <div class="top-wrapper">
                 <div class="team-title">
-                    <p>Meet Our Team</p>
+                    <p class="orange-txt">Meet Our Team</p>
                     <h2>Experienced Team Members</h2>
                 </div>
                 <div class="btn-team-wrapper">
@@ -354,12 +354,13 @@
             </div>
 
             <div class="slide-wrapper">
-                <!-- CAROUSEL FUNKAR INTE ÄNNU -->
-                <div class="image-container carousel slide" data-ride="carousel">
-                    <div class="ts-1 carousel-inner">
-                        <div class="carousel-item active" id="0">
+                <div id="myCarousel" class="carousel slide"">
 
-                            <div class="ts-1-img">
+
+                    <div class="carousel-inner">
+
+                        <div class="item active">
+                            <div class="img-wrap">
                                 <img src="images/team/k-palmer.png" alt="Kristine Palmer is the chief operations officer of Crito">
                                 <div class="slide-bottom-text">
                                     <h3>Kristine Palmer</h3>
@@ -367,7 +368,7 @@
                                 </div>
                             </div>
     
-                            <div class="ts-1-img">
+                            <div class="img-wrap">
                                 <img src="images/team/m-aubri.png" alt="Mark Aubri, senior consultant of Crito">
                                 <div class="slide-bottom-text">
                                     <h3>Mark Aubri</h3>
@@ -375,7 +376,7 @@
                                 </div>
                             </div>
     
-                            <div class="ts-1-img">
+                            <div class="img-wrap">
                                 <img src="images/team/k-hansen.png" alt="Kimberley Hansen, senior consultant of Crito">
                                 <div class="slide-bottom-text">
                                     <h3>Kimberley Hansen</h3>
@@ -383,58 +384,69 @@
                                 </div>
                             </div>
     
-                            <div class="ts-1-img">
+                            <div class="img-wrap">
                                 <img src="images/team/j-willoman.png" alt="Justin Willoman, senior tech consultant of Crito">
                                 <div class="slide-bottom-text">
                                     <h3>Justin Willoman</h3>
                                     <p>Senior Tech Consultant</p>
                                 </div>
                             </div>
-
                         </div>
 
-                        <div class="carousel-item" id="1">
-
-                            <div class="ts-1-img">
-                                <img src="images/team/k-palmer.png" alt="Kristine Palmer is the chief operations officer of Crito">
-                                <div class="slide-bottom-text">
-                                    <h3>Kristine Palmer</h3>
-                                    <p>Chief Operations Officer</p>
-                                </div>
-                            </div>
-    
-                            <div class="ts-1-img">
-                                <img src="images/team/m-aubri.png" alt="Mark Aubri, senior consultant of Crito">
-                                <div class="slide-bottom-text">
-                                    <h3>Mark Aubri</h3>
-                                    <p>Senior Consultant</p>
-                                </div>
-                            </div>
-    
-                            <div class="ts-1-img">
-                                <img src="images/team/k-hansen.png" alt="Kimberley Hansen, senior consultant of Crito">
-                                <div class="slide-bottom-text">
-                                    <h3>Kimberley Hansen</h3>
-                                    <p>Senior Consultant</p>
-                                </div>
-                            </div>
-    
-                            <div class="ts-1-img">
-                                <img src="images/team/j-willoman.png" alt="Justin Willoman, senior tech consultant of Crito">
-                                <div class="slide-bottom-text">
-                                    <h3>Justin Willoman</h3>
-                                    <p>Senior Tech Consultant</p>
-                                </div>
-                            </div>   
-                        </div>
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
                         
-                    
+                        <!-- <div class="item">
+                            <div class="img-wrap">
+                                <img src="images/team/k-palmer.png" alt="Kristine Palmer is the chief operations officer of Crito">
+                                <div class="slide-bottom-text">
+                                    <h3>Kristine Palmer</h3>
+                                    <p>Chief Operations Officer</p>
+                                </div>
+                            </div>
+    
+                            <div class="img-wrap">
+                                <img src="images/team/m-aubri.png" alt="Mark Aubri, senior consultant of Crito">
+                                <div class="slide-bottom-text">
+                                    <h3>Mark Aubri</h3>
+                                    <p>Senior Consultant</p>
+                                </div>
+                            </div>
+    
+                            <div class="img-wrap">
+                                <img src="images/team/k-hansen.png" alt="Kimberley Hansen, senior consultant of Crito">
+                                <div class="slide-bottom-text">
+                                    <h3>Kimberley Hansen</h3>
+                                    <p>Senior Consultant</p>
+                                </div>
+                            </div>
+    
+                            <div class="img-wrap">
+                                <img src="images/team/j-willoman.png" alt="Justin Willoman, senior tech consultant of Crito">
+                                <div class="slide-bottom-text">
+                                    <h3>Justin Willoman</h3>
+                                    <p>Senior Tech Consultant</p>
+                                </div>
+                            </div>
+                        </div> -->
+
                     </div>
+                    
+
+                    
+                
+                
                        
 
                 
 
-                 </div>
+                </div>
 
             </div>
 
