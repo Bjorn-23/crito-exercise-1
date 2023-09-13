@@ -5,8 +5,12 @@
 html, body {
     color: #191919;
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
+
+    @media (min-width: 576px) {
+        font-size: 16px;
+    }
 }
 
 h2 {
@@ -206,6 +210,32 @@ h3 {
     }
 }    
 
+.slide-dots {
+    text-align: center;
+    margin-top: 30px;
+
+    @media (min-width) {
+        margin-top: 50px;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #C4AF75;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .dot:hover:active {
+        background-color: #191919;
+    }
+    .active, .dot:hover {
+        background-color: #191919;
+      }
+    
+}
 
   
 
@@ -802,13 +832,19 @@ padding: 16px;
     
             .grid-container {
                 display: grid;
-                grid-template-columns: auto auto auto auto;
+                grid-template-columns: auto;
                 text-decoration: none;
                 margin: 10px;
+
+                @media (min-width: 768px) {
+                    grid-template-columns: auto;
+                    margin: 15px;
+                }
                 
                 @media (min-width: 992px) {
                     grid-template-columns: auto auto auto auto;
-                    margin: 0;
+                    margin: 10px;
+
                 }
     
                 .grid-item-services {
@@ -858,7 +894,7 @@ padding: 16px;
     }   
 }    
 
-//.choose-us ser bra ut - fixa - på ipad
+//.why-choose-us ser bra ut - fixa på ipad blir konstigt run 992px
 .why-choose-us {
 
     .flex-wrapper {
@@ -909,8 +945,6 @@ padding: 16px;
 
             
             .cu-points-cont {
-               
-    
                .points {
                     display: flex;
                     justify-content: space-between;
@@ -1010,7 +1044,7 @@ padding: 16px;
     }   
 }
 
-//projects ser bra ut - fixa så att länkarna kan hovras individuellt - att anpassa för mobilläge är nästa projekt.
+//projects ser bra ut
 .projects {
 
     .projects-wrapper {
@@ -1190,35 +1224,7 @@ padding: 16px;
                     }                      
                 }                      
             }
-        }
-                             
-        .slide-dots {
-            text-align: center;
-            margin-top: 30px;
-
-            @media (min-width) {
-                margin-top: 50px;
-            }
-        
-            .dot {
-                cursor: pointer;
-                height: 15px;
-                width: 15px;
-                margin: 0 2px;
-                background-color: #C4AF75;
-                border-radius: 50%;
-                display: inline-block;
-                transition: background-color 0.6s ease;
-            }
-            .dot:hover:active {
-                background-color: #191919;
-            }
-            .active, .dot:hover {
-                background-color: #191919;
-              }
-            
-        }
-        
+        }        
     }
 }
 
@@ -1338,6 +1344,158 @@ padding: 16px;
 
 }
 
+// articles & news section
+.articles-news {
+    .container {
+        // padding: 20px;
+
+        @media (min-width: 992px) {
+            padding: 30px;
+            padding-top: 60px;            
+        }
+
+        @media (min-width: 1200px) {
+            padding: 75px;
+            padding-top: 90px;            
+        }
+
+        @media (min-width: 1400px) {
+            padding: 100px;
+            padding-top: 120px;            
+        }
+
+        .top {
+            display: block;
+            text-align: center;
+
+            @media (min-width: 992px) {
+                display: flex;
+                justify-content: space-between;
+                align-items: last baseline;
+                text-align: left;
+            }
+
+            .top-lft{
+                p {
+                    margin-top: 30px;
+                }
+                h2 {
+                    margin-top: 20px;
+
+                }
+            }
+
+            .top-rgt {
+                margin-top: 40px;
+
+                @media (min-width: 992px) {
+                    margin-top: 0;
+                }
+
+                .articles-btn-container {
+                    .btn-transparent-fat {
+                        padding: 15px 35px;
+                    }
+                    
+                }
+            }   
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 40px auto 20px;
+            gap: 15px;
+
+            @media (min-width: 768px){
+                gap: 30px
+            }
+
+            @media (min-width: 768px) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            .grid-item {
+                border: 1px solid #D3D3D3;
+                padding: 10px;
+                border-radius: 10px;
+                position: relative;
+                width:100%;
+                text-decoration: none;
+
+                @media (min-width: 992px) {
+                    border: none;
+                }
 
 
-  
+                .img-wrapper {
+                    .article-img {
+                        width: 100%;                        
+                    }
+    
+                    .date-wrapper {
+                        position: absolute;
+                        width:100%;
+                        top: 5%;
+                        left: 5%;
+    
+                        img {
+                            width: 15%;
+                        }
+                    }
+                }
+                
+                .subject {
+                    margin: 15px auto;
+                    color: #6A6C71                    
+                }
+
+                h3 {
+                    margin: 10px auto;
+                    
+                }
+                &:hover h3 {
+                    text-decoration: underline;
+                }
+
+                .lorem {
+                    padding-right: 50px;
+                    color: #6A6C71                    
+
+                }
+            }
+        }
+
+        .bottom {
+            .slide-dots {
+                text-align: center;
+
+                @media (min-width: 768px) {
+                    margin-top: 30px;
+                }
+            
+                @media (min-width: 992px) {
+                    margin-top: 60px;
+                }
+            
+                .dot {
+                    cursor: pointer;
+                    height: 15px;
+                    width: 15px;
+                    margin: 0 2px;
+                    background-color: #d3d3d3;
+                    border-radius: 50%;
+                    display: inline-block;
+                    transition: background-color 0.6s ease;
+                }
+                .dot:hover:active {
+                    background-color: #191919;
+                }
+                .active, .dot:hover {
+                    background-color: #191919;
+                  }
+                
+            }
+        }
+    }
+}

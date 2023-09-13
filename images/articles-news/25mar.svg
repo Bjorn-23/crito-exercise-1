@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="64" viewBox="0 0 56 64">
+  <g id="Date" transform="translate(-316 -8385)">
+    <rect id="Rectangle_14" data-name="Rectangle 14" width="56" height="64" transform="translate(316 8385)" fill="#f9d783"/>
+    <g id="Group_1000004907" data-name="Group 1000004907">
+      <text id="_25" data-name="25" transform="translate(332 8395.336)" fill="#191919" font-size="22" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="24">25</tspan></text>
+      <text id="Mar" transform="translate(330 8420.363)" fill="rgba(25,25,25,0.7)" font-size="16" font-family="SegoeUI, Segoe UI" letter-spacing="-0.01em"><tspan x="0" y="17">Mar</tspan></text>
+    </g>
+  </g>
+</svg>
