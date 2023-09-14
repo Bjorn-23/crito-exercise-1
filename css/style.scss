@@ -894,7 +894,7 @@ padding: 16px;
     }   
 }    
 
-//.why-choose-us - ser bra ut - fixa på ipad blir konstigt run 992px
+//.why-choose-us - ser bra ut - fixa på ipad blir konstigt run 992px - fixa blå rutans padding på mobil
 .why-choose-us {
 
     .flex-wrapper {
@@ -982,17 +982,9 @@ padding: 16px;
     
                         p {
                             color: #626262;
-                            
-    
-                        }
-    
-                        h3 {
-
-    
-                        }
-    
+                        }    
                     }
-               }
+                }
             }
         }
     
@@ -1199,8 +1191,7 @@ padding: 16px;
                             align-items: center;
                             gap: 30px;
                             text-decoration: none;
-                        }
-                        
+                        }                        
 
                         .img-wrap {                        
                             img {
@@ -1209,8 +1200,6 @@ padding: 16px;
                             }
     
                             .slide-bottom-text {                                
-                                h3 {}
-            
                                 p {
                                     color: #626262;
                                     font-size: 14px;
@@ -1232,7 +1221,6 @@ padding: 16px;
 .testimonials {
     background-color: #ECD28B;
     padding: 15px 10px 40px 10px;
-
 
     @media (min-width: 768px) {
     background-color: #ECD28B;
@@ -1260,8 +1248,7 @@ padding: 16px;
                     @media (min-width: 768px) {
                     margin-bottom: 35px;
                     }
-                }
-    
+                }    
             }
         }
     
@@ -1271,7 +1258,6 @@ padding: 16px;
             grid-area: auto 1fr auto ;
             padding: 20px;
             
-
             @media (min-width: 992px) {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
@@ -1292,11 +1278,9 @@ padding: 16px;
 
                 }
                 
-
                 .stars {
                     letter-spacing: 3px;
                     color:#F94D1C;
-                        
                 }
 
                 p { 
@@ -1307,10 +1291,6 @@ padding: 16px;
                 .flex-wrapper {
                     display: flex;
                     align-items: center;
-
-                    img {
-                        
-                    }
 
                     div {
                         margin-left: 20px;
@@ -1327,11 +1307,8 @@ padding: 16px;
 
                         }
                     }
-
                 }
-            }
-    
-    
+            }   
         }
     
         .btn-black-div {
@@ -1339,9 +1316,6 @@ padding: 16px;
             
         }
     }
-    
-
-
 }
 
 // articles & news - ser bra ut
@@ -1380,7 +1354,6 @@ padding: 16px;
                 }
                 h2 {
                     margin-top: 20px;
-
                 }
             }
 
@@ -1394,8 +1367,7 @@ padding: 16px;
                 .articles-btn-container {
                     .btn-transparent-fat {
                         padding: 15px 35px;
-                    }
-                    
+                    }                    
                 }
             }   
         }
@@ -1425,7 +1397,6 @@ padding: 16px;
                 @media (min-width: 992px) {
                     border: none;
                 }
-
 
                 .img-wrapper {
                     .article-img {
@@ -1459,8 +1430,7 @@ padding: 16px;
 
                 .lorem {
                     padding-right: 50px;
-                    color: #6A6C71                    
-
+                    color: #6A6C71;
                 }
             }
         }
@@ -1492,8 +1462,7 @@ padding: 16px;
                 }
                 .active, .dot:hover {
                     background-color: #191919;
-                  }
-                
+                }              
             }
         }
     }
@@ -1603,3 +1572,90 @@ padding: 16px;
 }
 
 // footer - active development
+.footer {
+    background-color: #0E1021;
+    
+    .container {
+        @media (min-width: 768px) {
+            padding: 40px;
+        }
+        
+        @media (min-width: 1200px) {
+            padding: 100px;
+        }
+
+        .top {
+            .grid-container {
+                display: block;
+
+                @media (min-width: 768px) {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                    }
+                
+                .grid-item{
+                    display: none;
+                }
+
+                #logotype{
+                    display: block;
+
+                    img{
+                        padding-left: 50px;
+                    }
+
+                    p{
+                        display: none;
+                        
+                        @media (min-width: 768px){
+                            display: block;
+                        }
+                    }
+                }
+
+                #design-squiggles {
+                    display: none;
+
+                    // @media (min-width: 768px) {
+                    //     display: block;
+                    //     margin-right: -350px;
+                    //     margin-bottom: -350px;                        
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            @media (min-width: 768px) {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                text-align: left;
+            }
+
+            .left {
+               .copyright {
+                color: white;            
+               } 
+            }
+            
+            .right {
+                .social-media-footer {
+                    display: flex;
+                    justify-content: space-between;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
