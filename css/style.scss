@@ -241,7 +241,7 @@ h3 {
 
     
 
-// Header ser bra ut
+// Header - ser bra ut
 header {
 background-color: #F0EFE9;
 padding: 16px;
@@ -378,7 +378,7 @@ padding: 16px;
     }
 
 }
-// Showcase ser bra ut
+// Showcase - ser bra ut
 .showcase {
     background-color: #F0EFE9;
     
@@ -458,7 +458,7 @@ padding: 16px;
     }
 }
 
-// .clients ser bra ut
+// .clients - ser bra ut
 .clients {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -514,7 +514,7 @@ padding: 16px;
     }      
 }
 
-//.features-container ser bra ut
+//.features-container - ser bra ut
 .features-container {
     align-items: center;
 
@@ -613,7 +613,7 @@ padding: 16px;
 
 }
 
-// .company-intro ser bra ut
+// .company-intro - ser bra ut
 .company-intro {
     
     
@@ -894,7 +894,7 @@ padding: 16px;
     }   
 }    
 
-//.why-choose-us ser bra ut - fixa på ipad blir konstigt run 992px
+//.why-choose-us - ser bra ut - fixa på ipad blir konstigt run 992px
 .why-choose-us {
 
     .flex-wrapper {
@@ -1044,7 +1044,7 @@ padding: 16px;
     }   
 }
 
-//projects ser bra ut
+//projects - ser bra ut
 .projects {
 
     .projects-wrapper {
@@ -1121,7 +1121,7 @@ padding: 16px;
     }
 }
 
-// team - active development.
+// team - ser bra ut
 .team {
     background-color: #ECD28B;
 
@@ -1228,7 +1228,7 @@ padding: 16px;
     }
 }
 
-// testimonials section - FUNKAR BRA!
+// testimonials - ser bra ut
 .testimonials {
     background-color: #ECD28B;
     padding: 15px 10px 40px 10px;
@@ -1344,13 +1344,12 @@ padding: 16px;
 
 }
 
-// articles & news section
+// articles & news - ser bra ut
 .articles-news {
     .container {
-        // padding: 20px;
+        padding-bottom: 30px;
 
         @media (min-width: 992px) {
-            padding: 30px;
             padding-top: 60px;            
         }
 
@@ -1499,3 +1498,108 @@ padding: 16px;
         }
     }
 }
+
+// subscribe section - ser bra ut
+.subscribe{
+    background-color: #F0EFE9;
+
+    .container {
+        padding: 40px 15px 30px 15px;
+
+        @media (min-width: 992px) {
+            padding: 40px;
+        }
+        
+        @media (min-width: 1200px) {
+            padding: 100px;
+        }
+
+        .flex-wrapper {
+            display: block;
+            text-align: center;
+
+            @media (min-width: 992px) {
+                display:flex;
+                align-items: center;
+                justify-content: space-between;
+                text-align: left;
+            }
+
+            .left {
+                h2 {
+                    padding: 0 50px 15px;
+                    font-size: 24px;
+
+                    @media (min-width: 380px) {
+                        padding: 0 60 15px;
+                        font-size: 28px;
+                    }
+
+                    @media (min-width: 576px) {
+                        padding: 0 0 15px;
+                        font-size: 28px;
+                    }
+
+                    @media (min-width: 768px) {
+                        padding: 0 0 15px;
+                        font-size: 32px;
+                    }
+
+                    @media (min-width: 1200px) {
+                        padding: 0px;
+                        font-size: 38px;
+                    }
+
+                    @media (min-width: 1400px) {
+                        font-size: 45px;
+                    }
+                }
+            }
+
+            .right {
+                display: block;
+                position: relative;
+
+                @media (min-width: 576px) {
+                    display:flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                }
+
+                @media (min-width: 992px) {
+                    display:flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .email {
+                    border: 5px solid white;
+                    border-radius: 25px;
+                    padding: 8px 25px;
+                    margin: 0.5em
+                }
+
+                .btn-yellow {
+                    display: inline-block;
+                    padding: 12px 25px;
+                    margin: 0.5em;
+                }
+            }
+        }
+    }
+    
+    .design {
+        display: none;
+        
+        @media (min-width: 1200px) {
+            display: flex;
+            position: absolute;
+            width: 40px;
+            max-width: 100%;
+            top: 50%;
+            left: 110%;
+        }    
+    }
+}
+
+// footer - active development

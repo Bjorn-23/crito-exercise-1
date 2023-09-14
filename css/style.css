@@ -1150,9 +1150,11 @@ header .container .menu-bars {
   text-align: center;
 }
 
+.articles-news .container {
+  padding-bottom: 30px;
+}
 @media (min-width: 992px) {
   .articles-news .container {
-    padding: 30px;
     padding-top: 60px;
   }
 }
@@ -1280,4 +1282,108 @@ header .container .menu-bars {
 }
 .articles-news .container .bottom .slide-dots .active, .articles-news .container .bottom .slide-dots .dot:hover {
   background-color: #191919;
+}
+
+.subscribe {
+  background-color: #F0EFE9;
+}
+.subscribe .container {
+  padding: 40px 15px 30px 15px;
+}
+@media (min-width: 992px) {
+  .subscribe .container {
+    padding: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .subscribe .container {
+    padding: 100px;
+  }
+}
+.subscribe .container .flex-wrapper {
+  display: block;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .subscribe .container .flex-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+.subscribe .container .flex-wrapper .left h2 {
+  padding: 0 50px 15px;
+  font-size: 24px;
+}
+@media (min-width: 380px) {
+  .subscribe .container .flex-wrapper .left h2 {
+    padding: 0 60 15px;
+    font-size: 28px;
+  }
+}
+@media (min-width: 576px) {
+  .subscribe .container .flex-wrapper .left h2 {
+    padding: 0 0 15px;
+    font-size: 28px;
+  }
+}
+@media (min-width: 768px) {
+  .subscribe .container .flex-wrapper .left h2 {
+    padding: 0 0 15px;
+    font-size: 32px;
+  }
+}
+@media (min-width: 1200px) {
+  .subscribe .container .flex-wrapper .left h2 {
+    padding: 0px;
+    font-size: 38px;
+  }
+}
+@media (min-width: 1400px) {
+  .subscribe .container .flex-wrapper .left h2 {
+    font-size: 45px;
+  }
+}
+.subscribe .container .flex-wrapper .right {
+  display: block;
+  position: relative;
+}
+@media (min-width: 576px) {
+  .subscribe .container .flex-wrapper .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 992px) {
+  .subscribe .container .flex-wrapper .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.subscribe .container .flex-wrapper .right .email {
+  border: 5px solid white;
+  border-radius: 25px;
+  padding: 8px 25px;
+  margin: 0.5em;
+}
+.subscribe .container .flex-wrapper .right .btn-yellow {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 0.5em;
+}
+.subscribe .design {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .subscribe .design {
+    display: flex;
+    position: absolute;
+    width: 40px;
+    max-width: 100%;
+    top: 50%;
+    left: 110%;
+  }
 }
