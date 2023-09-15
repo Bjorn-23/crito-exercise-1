@@ -1572,9 +1572,15 @@ header .container .menu-bars {
 }
 .contact .container .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
-  grid-area: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+@media (min-width: 1200px) {
+  .contact .container .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
 }
 .contact .container .grid-container .grid-item {
   display: flex;
@@ -1603,7 +1609,22 @@ header .container .menu-bars {
 }
 .contact .container .message-us h2 {
   text-align: center;
-  margin: 0 200px;
+  margin: 0;
+}
+@media (min-width: 992px) {
+  .contact .container .message-us h2 {
+    margin: 0 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .contact .container .message-us h2 {
+    margin: 0 100px;
+  }
+}
+@media (min-width: 1400px) {
+  .contact .container .message-us h2 {
+    margin: 0 200px;
+  }
 }
 .contact .container .message-us form {
   margin-top: 30px;
