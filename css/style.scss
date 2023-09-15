@@ -1572,11 +1572,14 @@ padding: 16px;
     }
 }
 
-// footer - active development
+// footer section - ser bra ut
 .footer {
     background-color: #0E1021;
-    
-    .container {
+    position: relative;
+    z-index: auto;
+
+    .footer-top {
+        position: relative;
         padding: 20px;
 
         @media (min-width: 768px) {
@@ -1584,7 +1587,7 @@ padding: 16px;
         }
         
         @media (min-width: 1200px) {
-            padding: 100px;
+            padding: 100px 100px 75px;
         }
 
         .top {
@@ -1599,13 +1602,11 @@ padding: 16px;
                     justify-content: space-between;
                     grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr;
                     gap: 60px;
-                    padding-bottom: 30px;
+                    // padding-bottom: 30px;
                     }
                 
                 .grid-item{
                     display: none;
-                    // border: 1px solid white;
-
                                             
                     @media (min-width: 992px){
                         display: inline-block;
@@ -1613,11 +1614,12 @@ padding: 16px;
 
                     h3 {
                         color:white;
+                        margin-bottom: 40px;
                     }
 
-                    .white-text{
+                    .grey-text{
                         a {
-                            color: #ffffff;
+                            color: #B9B9BF;
                             text-decoration: none;
                         }
 
@@ -1625,7 +1627,6 @@ padding: 16px;
                             text-decoration: underline;
                         }
                     }
-
                 }
 
                 #logotype{
@@ -1633,21 +1634,19 @@ padding: 16px;
 
                     @media (min-width: 992px) {
 
-                        img{
+                        img {
                             padding-left: 30px;
 
                             @media (min-width: 992px) {
                                 padding: 0;
-                                margin-bottom: 20px;
+                                margin-bottom: 40px;
 
                             }
                         }
                     }    
 
-
-
                     .lorem {
-                        color: #fff;
+                        color: #B9B9BF;
                         display: none;
 
                         @media (min-width: 992px){
@@ -1655,55 +1654,70 @@ padding: 16px;
                         }
                     }
                 }
+            }
+        }
+        
+        .design {
+            .absolute-f-t {
+                display:none;
 
-                #design-squiggles {
-                    display: none;
-
-                    // @media (min-width: 768px) {
-                    //     display: block;
-                    //     margin-right: -350px;
-                    //     margin-bottom: -350px;                        
-                    // }
+                @media (min-width: 1200px){
+                display:flex;
+                position: absolute;
+                left: 68%;
+                top: 75%;
+                z-index:1;
                 }
             }
         }
+    }
+
+    // grey line across footer
+    .cf-1 {
+        display: none;
+
+        @media (min-width:992px) {
+            min-width: 100vw;
+            background-color: #0E1021;
+            border: 1px solid #7c7c7c;
+            position: relative;
+        }
+
+
+    }
+
+    .footer-bottom {
+        background-color: #0E1021;
+        position: relative;
+        z-index: 2;
 
         .bottom {
-            // border: 1px solid red;
-
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             text-align: center;
-
+            
             @media (min-width: 992px) {
                 display: flex;
                 flex-direction: row-reverse;
                 justify-content: space-between;
                 align-content: center;
                 text-align: left;
-                padding-top: 30px;
-                border-top: 1px solid #707070;
+                padding: 30px 0 12px;
             }
 
             .left {
-                // border: 1px solid yellow;
-
                .copyright {
-                color: white;
-                font-size: 10px;
+                    color: #B9B9BF;
+                    font-size: 10px;
 
-                @media (min-width: 576px) {
-                    font-size: 16px;
-                }
-
-
-               } 
+                    @media (min-width: 576px) {
+                        font-size: 16px;
+                    }
+                } 
             }
 
             .right {
-                // border: 1px solid blue;
-
                 display: flex;
                 align-items: flex-start;
                 justify-content: center;
