@@ -1,3 +1,9 @@
+// Struktur:
+// Fram till linje L248 = generellt
+// index.html från L249 till L1745
+// contact.html från L1747 till ...
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Inter:wght@300;400;500;700;900&display=swap');
@@ -185,6 +191,7 @@ h3 {
     }
 }
 
+// denna används i services grid
 .btn-arw-r {
     // background-color: transparent;
     // color: #191919;
@@ -1734,6 +1741,135 @@ padding: 16px;
                         }
                     }
                 }                
+            }
+        }
+    }
+}
+// NY SIDA - contact.html
+
+// connect section - under utveckling
+.connect {
+    background-color: #F0EFE9;
+    .container {
+        text-align: center;
+        padding: 20px 10px;
+
+        @media (min-width:992px) {
+            padding: 90px 0;
+
+        }
+
+        nav {
+            .breadcrumb {
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                
+                .inactive {
+                    a {
+                        font-family: 'Inter', sans-serif;
+                        font-size: 16px;
+                        font-weight: 300;
+                        text-decoration: none;
+                        color: #191919;
+                    }
+                    
+                    a:hover {
+                        text-decoration: underline;
+                        text-underline-offset: 5px;
+                    }
+                }
+
+                .active {
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: #191919;
+                }
+            }
+        }
+    }
+}
+.contact {
+    .container {
+        padding: 100px;
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            grid-area: 1fr 1fr 1fr;
+
+
+            .grid-item {
+                display: flex;
+                border: 1px solid #dad9d3;
+                padding: 60px 50px;
+
+
+                .icon {
+                    i {
+                        font-size: 20px;
+                        text-align: center;
+                        padding: 15px;
+                        color:white;
+                        background-color: #191919;
+                        border: 1px solid #191919;
+                        border-radius: 50%;
+                        margin-right: 20px;                        
+                    }
+                }
+                .text {
+                    h3 {
+
+                    }
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        color:#191919;
+                    }
+                }    
+            }
+        }
+
+        .message-us {
+            background-color: #F0EFE9;
+            margin-top:100px;
+            padding: 100px 150px;
+
+            h2 {
+                text-align: center;
+                margin: 0 200px;
+
+            }
+            form {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                
+                input {
+                    border: 10px solid white;
+                    border-radius: 25px;
+                }
+                textarea {
+                    border: 10px solid white;
+                    border-radius: 25px;
+                }
+                .submit {
+                    border: none;
+                }
+            }
+        }
+
+        .map {
+            .container-fluid {
+                .google-map {
+                    display: block;                
+                    iframe {  
+                    }
+                }
             }
         }
     }
