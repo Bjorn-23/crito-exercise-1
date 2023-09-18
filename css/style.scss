@@ -13,8 +13,14 @@ html, body {
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     font-weight: 400;
+    overflow-x: hidden;
+
 
     @media (min-width: 576px) {
+        font-size: 14px;
+    }
+
+    @media (min-width: 992px) {
         font-size: 16px;
     }
 }
@@ -66,7 +72,7 @@ h3 {
 .btn-yellow {
     background-color: #F9D783;
     border: 1px solid #F9D783;
-    border-radius: 25px;
+    border-radius: 35px;
     color: #191919;
     text-decoration: none;
     padding: 15px 25px;
@@ -91,7 +97,7 @@ h3 {
 .btn-transparent {
     background-color: transparent;
     border: 1px solid black;
-    border-radius: 25px;
+    border-radius: 35px;
     color: #191919;
     text-decoration: none;
     padding: 15px 25px;
@@ -141,7 +147,7 @@ h3 {
 .btn-black {
     background-color: #191919;
     border: 1px solid #191919;
-    border-radius: 25px;
+    border-radius: 35px;
     color: white;
     text-decoration: none;
     padding: 15px 25px;
@@ -167,26 +173,26 @@ h3 {
     background-color: transparent;
     color: #191919;
     text-decoration: none;
-    padding: 15px 25px;
+    padding: 15px 15px 15px 0;
     font-weight:600;
-    font-size: 14px;
+    font-size: 12px;
 
     @media (min-width: 992px) {
         font-size: 16px;
+        padding: 15px 25px;
+        font-size: 14px;
     }
 
     i {
         padding: 18px;
-        align-items: center;
         border: 1px solid #191919;
-        border-radius: 100%;
-        margin-left: 8px;
-        margin-right: 15px;
+        margin-right: 10px;
+        border-radius: 50%;
         font-size: 0.9em;
+
     }
     i:hover {
         background-color: #191919;
-        border: 1px solid #191919;
         color: white;
     }
 }
@@ -623,16 +629,14 @@ padding: 16px;
 
 // .company-intro - ser bra ut
 .company-intro {
-    
-    
     .container {
-        margin-top: 20px;
-        margin-bottom: 20px; 
-        display: inline-flex;
+        display: flex;
         flex-direction: column-reverse;
-        gap: 20px;
         text-align: center;
         align-content: center;
+        gap: 20px;
+        margin-top: 20px;
+        margin-bottom: 60px; 
 
         @media (min-width: 768px) {
             margin-top: 40px;
@@ -640,24 +644,22 @@ padding: 16px;
         }
     
         @media (min-width: 992px) {
+            justify-content: space-between;
+            gap: 50px;
             margin-top: 60px;
             margin-bottom: 60px;
-            display: flex;
-            justify-content: space-between;
-            align-content: flex-start;
-            gap: 50px;
- 
         }
     
         @media (min-width: 1200px) {
-            margin-top: 90px;
-            margin-bottom: 90px;
             flex-direction: row;
             text-align: left;
-            gap: 200px;
+            gap: 100px;
+            margin-top: 90px;
+            margin-bottom: 90px;
         }
 
         @media (min-width: 1400px) {
+            gap: 200px;
             margin-top: 120px;
             margin-bottom: 120px; 
         }
@@ -668,7 +670,7 @@ padding: 16px;
                
 
             img {
-                flex: 2;
+                flex: 1;
                 max-width: 100%;
             }    
             .blue-hover-wrapper {
@@ -676,11 +678,6 @@ padding: 16px;
                 top: 63%;
                 right: 30%;
                 left: -5%;
-                // max-width:80%;
-
-                @media (min-width: 1200px) {
-                    left: -10%;
-                }
 
                 .blue-hover-box {
                     background-color: #BEEBFF;
@@ -691,9 +688,9 @@ padding: 16px;
                         display: flex;
                         
                         h3 {
-                        font-size: 20px; 
-                        font-family: 'DM sans', sans-serif;
-                        font-weight: 900;
+                            font-size: 20px; 
+                            font-family: 'DM sans', sans-serif;
+                            font-weight: 900;
                         }
 
                         p {
@@ -707,76 +704,86 @@ padding: 16px;
         }    
             
         .about-company {
-            flex: 1;
             text-align: center;
-            
-            @media (min-width: 992px) {
-                text-align: left;
-                padding-left: 0px;
+            flex: 1;
+
+            @media (min-width: 768px) {
+                padding: 0 80px;
             }
+
 
             @media (min-width: 1200px) {
+                padding: 0;
                 text-align: left;
-                padding-left: 30px;
             }
-
-            .orange-txt {
-                color: #F94D1C;
-                font-size: 18px;
-
-                @media (min-width: 768px) {
-                margin-bottom: 10px;
-                }
+            
+            @media (min-width: 1400px) {
+                padding: 0 30px 0 0;
             }
 
             h2 {
-                margin-top: 10px;
-                margin-bottom: 20px;
-                
-                // @media (min-width: 992px) {
-                //     padding-right: 40px;
-                // }
+                margin: 20px 0 0 0;
 
-                @media (min-width: 1200px) {
-                    margin-top: 30px;
-                    margin-bottom: 60px;
+                @media (min-width: 992px) {
+                    margin: 30px 120px;
                 }
-                @media (max-width:1200px) {
-                    margin-top: 20px;
-                    margin-bottom: 20px;
+                
+                @media (min-width: 1200px) {
+                    margin: 40px auto;
+                }
+
+                @media (min-width: 1400px) {
+                    margin: 50px auto;
                 }
             }
 
             .lorem {
-                text-align: justify;
-                margin: 0 20px;
+                margin: 30px 20px;
 
                 @media (min-width: 992px) {
-                   text-align: left;
-                   margin: 0;
-                }                
-            }
-            // lorem botten
-            .btm-txt {
-                padding-top: 10px;
-                margin-bottom: 40px;
-
-                @media (min-width: 992px) {
-                    padding-top: 10px;
-                    margin-top: 50px;
+                    margin: 30px 150px;
                 }
-                @media (max-width:1200px) {
-                    margin-top: 20px;
+
+                @media (min-width: 1200px) {
+                    margin: 40px auto;
+                }
+            }
+
+            .btm-txt {
+                margin: 30px 20px 40px;
+
+                @media (min-width: 992px) {
+                    margin: 30px 150px;
+                }
+
+                @media (min-width: 1200px) {
+                    margin: 40px auto 90px;
+                }
+
+                @media (min-width: 1400px) {
+                    margin: 45px auto 90px;
+                }
+
+                @media (min-width: 1400px) {
+                    margin: 50px auto 90px;
                 }
             }
             
             .ci-buttons {
-                margin-top: 106px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
 
-                @media (max-width:1200px) {
-                    margin-top: 60px;
+                @media (min-width: 576px) {
+                    flex-direction: row;
+                    gap:10px;
                 }
-            }              
+
+                @media (min-width: 1200px) {
+                    justify-content: flex-start;
+                }
+            }
         }        
     }
 }
@@ -1479,6 +1486,19 @@ padding: 16px;
 // subscribe section - ser bra ut
 .subscribe{
     background-color: #F0EFE9;
+    position: relative;
+       
+    .design-lines-right {
+        display: none;
+        
+        @media (min-width: 1200px) {
+            display:inline-block;
+            position: absolute;
+            bottom: 20%;
+            right: 0;
+
+        }
+    }
 
     .container {
         padding: 40px 15px 30px 15px;
@@ -1535,7 +1555,7 @@ padding: 16px;
 
             .right {
                 display: block;
-                position: relative;
+                // position: relative;
 
                 @media (min-width: 576px) {
                     display:flex;
@@ -1563,19 +1583,6 @@ padding: 16px;
                 }
             }
         }
-    }
-    
-    .design {
-        display: none;
-        
-        @media (min-width: 1200px) {
-            display: flex;
-            position: absolute;
-            width: 40px;
-            max-width: 100%;
-            top: 50%;
-            left: 110%;
-        }    
     }
 }
 
@@ -1668,12 +1675,12 @@ padding: 16px;
             .absolute-f-t {
                 display:none;
 
-                @media (min-width: 1200px){
-                display:flex;
+                @media (min-width: 1200px) {
+                display: flex;
                 position: absolute;
                 left: 68%;
                 top: 75%;
-                z-index:1;
+                z-index: 1;
                 }
             }
         }
@@ -1826,9 +1833,6 @@ padding: 16px;
                     }
                 }
                 .text {
-                    h3 {
-
-                    }
                     a {
                         display: block;
                         text-decoration: none;
@@ -1886,8 +1890,6 @@ padding: 16px;
             .container-fluid {
                 .google-map {
                     display: block;                
-                    iframe {  
-                    }
                 }
             }
         }
