@@ -63,9 +63,12 @@ h3 {
 
 // koden nedan är delad från mig till Fredrik och Lucas i studiegrupp 4
 @media (min-width: 1660px){
-    #features-container{
+      #features-container{
         max-width:1520px;
-      }    
+      }
+      #testimonials-content{
+        max-width:1520px;
+      }   
 }
 
 
@@ -1398,12 +1401,10 @@ padding: 16px;
         }
 
         @media (min-width: 1200px) {
-            padding: 75px;
             padding-top: 90px;            
         }
 
         @media (min-width: 1400px) {
-            padding: 100px;
             padding-top: 120px;            
         }
 
@@ -1458,29 +1459,39 @@ padding: 16px;
 
             .grid-item {
                 border: 1px solid #D3D3D3;
-                padding: 10px;
                 border-radius: 10px;
+                padding:10px;
                 position: relative;
                 width:100%;
                 text-decoration: none;
 
                 @media (min-width: 992px) {
                     border: none;
+                    padding: 0;
                 }
 
                 .img-wrapper {
                     .article-img {
-                        width: 100%;                        
+                        width: 100%;
+                        height: auto;
+                        border: 1px solid transparent;
+                        border-radius: 10px;
+
+                        @media (min-width: 992px) {
+                            border: none;
+                            border-radius: 0;
+
+                        }
                     }
     
                     .date-wrapper {
                         position: absolute;
                         width:100%;
-                        top: 5%;
-                        left: 5%;
+                        top: 6%;
+                        left: 6%;
     
                         img {
-                            width: 15%;
+                            width: 14%;
                         }
                     }
                 }
@@ -1503,7 +1514,6 @@ padding: 16px;
                 }
 
                 .lorem {
-                    padding-right: 50px;
                     color: #6A6C71;
                 }
             }
@@ -1645,7 +1655,7 @@ padding: 16px;
     }
 }
 
-// footer section - ser bra ut
+// footer section - ser bra ut (samma på alla sidor)
 .footer {
     background-color: #0E1021;
     position: relative;
@@ -1860,26 +1870,61 @@ padding: 16px;
 
 // contact section - under utveckling
 .contact {
-    .container {
-        padding: 100px;
+    margin: 15px 0;
 
+    @media (min-width: 768px) {
+        margin: 30px 0;
+    }
+
+    @media (min-width: 992px) {
+        margin: 60px 0;
+    }
+
+    @media (min-width: 1200px) {
+        margin: 90px 0;
+    }
+
+    @media (min-width: 1400px) {
+        margin: 120px 0;
+    }
+
+    .container {
+   
         .grid-container {
             display: grid;
             grid-template-columns: 1fr;
             gap: 15px;
+            margin-bottom: 15px;
 
-            @media (min-width: 1200px) {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 30px;
+            @media (min-width: 768px) {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 15px;
+                margin-bottom: 30px;
             }
 
-
-            .grid-item {
+             .grid-item {
+                border: 1px solid #191919;
                 display: flex;
-                border: 1px solid #dad9d3;
-                padding: 60px 50px;
+                justify-content: left;
+                align-items: center;
+                padding: 20px 0 20px 70px;
 
+                @media (min-width: 768px) {
+                    justify-content: space-evenly;
+                    align-items: flex-start;
+                    padding: 20px;
+                }
+
+                @media (min-width: 992px) {
+                    padding: 40px;
+                }
+
+                @media (min-width: 1200px) {
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    padding: 60px;
+                    
+                }
 
                 .icon {
                     i {
@@ -1890,10 +1935,30 @@ padding: 16px;
                         background-color: #191919;
                         border: 1px solid #191919;
                         border-radius: 50%;
-                        margin-right: 20px;                        
+                        margin-right: 20px;
+                        
+                        @media (min-width: 768px) {
+                            margin-right: 10px;
+                        }
                     }
                 }
                 .text {
+                    p {
+                        margin: 0;
+
+                        @media (min-width: 768px) {
+                            font-size: 12px;
+                        }
+
+                        @media (min-width: 992px) {
+                            font-size: 14px;
+                        }
+
+                        @media (min-width: 1200px) {
+                        font-size: 18px;
+                        }
+                    }
+
                     a {
                         display: block;
                         text-decoration: none;
@@ -1905,9 +1970,23 @@ padding: 16px;
 
         .message-us {
             background-color: #F0EFE9;
-            margin-top:100px;
-            padding: 100px 150px;
+            padding: 20px 30px;
 
+            @media (min-width: 768px) {
+                margin: 40px 0;
+                padding:40px 60px;
+            }
+
+            @media (min-width: 992px) {
+                margin: 60px 0;
+                padding: 60px 80px;
+            }
+
+            
+            @media (min-width: 1200px) {
+                margin:80px 0;
+                padding: 100px 150px;
+            }
 
 
             h2 {
@@ -1916,15 +1995,15 @@ padding: 16px;
                 
                 @media (min-width:992px) {
                     margin: 0 50px;
-                    }
+                }
                 
                 @media (min-width:1200px) {
                     margin: 0 100px;
-                    }    
+                }    
 
                 @media (min-width:1400px) {
                     margin: 0 200px;
-                    }
+                }
 
             }
             form {
@@ -1949,8 +2028,11 @@ padding: 16px;
 
         .map {
             .container-fluid {
-                .google-map {
-                    display: block;                
+                margin: 15px;
+
+                
+                @media (min-width: 576px) {
+                    margin:0;
                 }
             }
         }
