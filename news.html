@@ -1,128 +1,78 @@
 <!DOCTYPE html>
-<html lang="sv-se">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <title></title>
 </head>
 <body>
     <!-- header section-->
     <header>
-        <div class="container">
-         <a href="index.html"><img src="images/header/Logotype.svg" alt="Crito Logotype"></a>
-         <button class="menu-bars">
-             <i class="fa-solid fa-bars-staggered"></i>
-         </button>
-         <div  class="menu">
-             <div class="top-menu">
-                 <div class="contact-information">
-                     <div class="content-box">
-                         <i class="fa-light fa-phone-volume" style="color: #191919;"></i>
-                         +46 (8) 121 470 50
-                     </div>
-                     <div class="content-box">
-                         <i class="fa-light fa-envelope" style="color: #191919;"></i>
-                         info@crito.com
-                     </div>
-                     <div class="content-box last">
-                         <i class="fa-light fa-location-dot" style="color: #191919;"></i>
-                         Sveavägen 31, 111 34 STOCKHOLM
-                     </div>
-                 </div>
-                 <div class="social-media">
-                     <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                     <a href="https://twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
-                     <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
-                     <a href="https://lnikedin.com"><i class="fa-brands fa-linkedin"></i></a>
-                 </div>
-             </div>
-             <div class="main-menu">
-                 <nav> 
-                     <!-- när annan sida är aktiv så ändra classen nedan på den sidan -->
-                     <a href="index.html">Home</a> 
-                     <a href="services.html">Services</a>
-                     <a href="news.html">News</a>
-                     <a class="active" href="contact.html">Contact</a>
-                 </nav>
-                 <a class="btn-yellow btn-login" href="login.html">Login<i class="fa-regular fa-arrow-up-right"></i></a>
-             </div>
-        </div>
-        </div>
-     </header>
+       <div class="container">
+        <a href="index.html"><img src="images/header/Logotype.svg" alt="Crito Logotype"></a>
+        <button class="menu-bars">
+            <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+        <div  class="menu">
+            <div class="top-menu">
+                <div class="contact-information">
+                    <div class="content-box">
+                        <i class="fa-light fa-phone-volume" style="color: #191919;"></i>
+                        +46 (8) 121 470 50
+                    </div>
+                    <div class="content-box">
+                        <i class="fa-light fa-envelope" style="color: #191919;"></i>
+                        info@crito.com
+                    </div>
+                    <div class="content-box last">
+                        <i class="fa-light fa-location-dot" style="color: #191919;"></i>
+                        Sveavägen 31, 111 34 STOCKHOLM
+                    </div>
+                </div>
+                <div class="social-media">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://lnikedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="main-menu">
+                <nav> 
+                    <!-- när annan sida är aktiv så ändra classen nedan på den sidan -->
+                    <a href="index.html">Home</a> 
+                    <a href="services.html">Services</a>
+                    <a class="active" href="news.html">News</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <a class="btn-yellow btn-login" href="login.html">Login<i class="fa-regular fa-arrow-up-right"></i></a>
+            </div>
+       </div>
+       </div>
+    </header>
 
-     <!-- connect breadcrumb section -->
-     <section class="connect">
+    <!-- news-breadcrumb section -->
+    <section class="connect">
         <div class="container">
 
             <!-- denna ska med på alla typer av sidor som inte är "home" -->
             <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item inactive"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                    <li class="breadcrumb-item active" aria-current="page">News</li>
                 </ol>
             </nav>
 
-            <h2 class="connect-title">Let's Connect</h2>
+            <h2 class="services-main-title">Services</h2>
         </div>  
 
     </section>
 
-    <!-- contact section -->
-    <section class="contact">
-        <div class="container">
-            
-            <div class="grid-container">
-                <div class="grid-item">
-                    <div class="icon"><i class="fa-sharp fa-solid fa-location-dot"></i></i></div>
-                    <div class="text">
-                        <h3>Visit us</h3>
-                        <p>Sveavägen 31</p>
-                        <p>11 34 Stockholm</p>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="icon"><i class="fa-solid fa-phone"></i></i></div>
-                    <div class="text">
-                        <h3>Visit us</h3>
-                        <p>Sveavägen 31</p>
-                        <p>111 34 Stockholm</p>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="icon"><i class="fa-light fa-envelope"></i></div>
-                    <div class="text">
-                        <h3>Email us</h3>
-                        <a href="mailto:info@crito.com">info@crito.com</a>
-                        <a href="mailto:supporto@crito.com">support@crito.com</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="message-us" id="#message-us">
-                <h2 class="message-title">Leave us a message for any information.</h2>
-                <form class="form">
-                    <input type="text" name="name" placeholder="Name*" required>
-                    <input type="email" name="email" placeholder="Email*" required>
-                    <textarea type="text" rows="5" name="message" placeholder="Your Message*" required></textarea>
-                    <input type="submit" name="submit" value="Send Message"  class="submit btn-yellow">
-                </form>
-            </div>
-        </div>    
-    </section>
 
-    <!-- map section fixa marginalen till höger! om kartan!?-->
-    <section class="map">
-        <div class="container-fluid">
-            <div class="google-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13299.173483270846!2d18.047397112850533!3d59.335248767174505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d6799554e87%3A0x6562d2c842903003!2sSveav%C3%A4gen%2031%2C%20111%2034%20Stockholm!5e0!3m2!1sen!2sse!4v1694788672912!5m2!1sen!2sse" width="100%" height="620" style="border:none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-            </div>
-
-    </section>
-    
     <!-- footer section -->
     <footer class="footer">
         <div class="footer-top relative-f-t">
@@ -199,7 +149,7 @@
 
     </footer>
 
-    
-    
-</body>
+<!-- SORT OUT ALL HREF, ALT-TEXT decrease specificity, transitions and animations on buttons -->
+
+    </body>
 </html>
