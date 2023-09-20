@@ -5,58 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script defer src="/javascript/javascript.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <title></title>
 </head>
 <body>
     <!-- header section-->
-    <header>
-       <div class="container">
-        <a href="index.html"><img src="images/header/Logotype.svg" alt="Crito Logotype"></a>
-        <button class="menu-bars">
-            <i class="fa-solid fa-bars-staggered"></i>
-        </button>
-        <div  class="menu">
-            <div class="top-menu">
-                <div class="contact-information">
-                    <div class="content-box">
-                        <i class="fa-light fa-phone-volume" style="color: #191919;"></i>
-                        +46 (8) 121 470 50
-                    </div>
-                    <div class="content-box">
-                        <i class="fa-light fa-envelope" style="color: #191919;"></i>
-                        info@crito.com
-                    </div>
-                    <div class="content-box last">
-                        <i class="fa-light fa-location-dot" style="color: #191919;"></i>
-                        Sveavägen 31, 111 34 STOCKHOLM
-                    </div>
-                </div>
-                <div class="social-media">
-                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://lnikedin.com"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="main-menu">
-                <nav> 
-                    <!-- när annan sida är aktiv så ändra classen nedan på den sidan -->
-                    <a href="index.html">Home</a> 
+    <header class="header">
+        <div class="container">
+            <a href="index.html"><img src="images/header/Logotype.svg" alt="Crito Logotype"></a>
+            
+            <div class="absolute-mb">
+                <div class="menu-bars" id="menu-Bars">
+                    <a href="index.html">Home</a>
                     <a href="services.html">Services</a>
-                    <a class="active" href="news.html">News</a>
+                    <a href="news.html" class="active">News</a>
                     <a href="contact.html">Contact</a>
-                </nav>
-                <a class="btn-yellow btn-login" href="login.html">Login<i class="fa-regular fa-arrow-up-right"></i></a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </div>
             </div>
-       </div>
+
+            <div  class="menu">
+                <div class="top-menu">
+                    <div class="contact-information">
+                        <div class="content-box">
+                            <i class="fa-light fa-phone-volume" style="color: #191919;"></i>
+                            <a href="callto:+46(8)12147050">+46 (8) 121 470 50</a>
+                        </div>
+                        <div class="content-box">
+                            <i class="fa-light fa-envelope" style="color: #191919;"></i>
+                            <a href="mailto:info@crito.com">info@crito.com</a>
+                        </div>
+                        <div class="content-box last">
+                            <i class="fa-light fa-location-dot" style="color: #191919;"></i>
+                            <a href="https://maps.app.goo.gl/JUjns7mUxx5Q5QEL8" target="_blank">Sveavägen 31 111 34 Stockholm</a>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://lnikedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="main-menu">
+                    <nav> 
+                        <!-- när annan sida är aktiv så ändra classen nedan på den sidan -->
+                        <a href="index.html">Home</a> 
+                        <a href="services.html">Services</a>
+                        <a class="active" href="news.html">News</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                    <a class="btn-yellow btn-login" href="login.html">Login<i class="fa-regular fa-arrow-up-right"></i></a>
+                </div>
+            </div>
        </div>
     </header>
 
     <!-- news-breadcrumb section -->
-    <section class="connect">
+    <section class="breadcrumbs">
         <div class="container">
 
             <!-- denna ska med på alla typer av sidor som inte är "home" -->
@@ -75,19 +85,10 @@
         <!--articles & news section  -->
         <section class="articles-news">
             <div class="container">
-                <div class="top">
-    
+                <div class="top">    
                     <div class="top-lft">
-                        <p class="orange-txt">Articles & News</p>
-                        <h2>Get All Of Our Articles & News</h2>
-                    </div>
-    
-                    <div class="top-rgt">
-                        <div class="articles-btn-container">
-                            <a class="btn-transparent-fat" href="articles.html">Browse Articles<i class="fa-regular fa-arrow-up-right"></i></a>
-                        </div>    
-                    </div>
-    
+                        <h2>Our News & Articles</h2>
+                    </div> 
                 </div>
     
                 <div class="middle grid-container">
@@ -95,7 +96,11 @@
                         <div class="img-wrapper">
                             <img  class="article-img relative" src="images/articles-news/25mar.png" alt="a woman in business suite sitting at a table in a classroom">
                             <div class="date-wrapper">
-                                <img class="absolute" src="images/articles-news/25mar.svg" alt="25th of march">
+                                <div class="yellow-square absolute">
+                                    <div class="date">25</div>
+                                    <p class="month">Mar</p>
+                                </div>
+                                <!-- <img class="absolute" src="images/articles-news/25mar.svg" alt="25th of march"> -->
                             </div>
                         </div>
                         <p class="subject">Business</p>
@@ -107,7 +112,11 @@
                         <div class="img-wrapper">
                             <img  class="article-img relative" src="images/articles-news/17mar.png" alt="a screen displaying 3 columns: examples, capabilities and limitations">
                             <div class="date-wrapper">
-                                <img class="absolute" src="images/articles-news/17mar.svg" alt="17th of march">
+                                <div class="yellow-square absolute">
+                                    <div class="date">17</div>
+                                    <p class="month">Mar</p>
+                                </div>
+                                <!-- <img class="absolute" src="images/articles-news/17mar.svg" alt="17th of march"> -->
                             </div>
                         </div>
                         <p class="subject">Business</p>
@@ -119,7 +128,11 @@
                         <div class="img-wrapper">
                             <img  class="article-img relative" src="images/articles-news/13mar.png" alt="a smartphone on top of books about css and javascript">
                             <div class="date-wrapper">
-                                <img class="absolute" src="images/articles-news/13mar.svg" alt="13th of march">
+                                <div class="yellow-square absolute">
+                                    <div class="date">13</div>
+                                    <p class="month">Mar</p>
+                                </div>
+                                <!-- <img class="absolute" src="images/articles-news/13mar.svg" alt="13th of march"> -->
                             </div>
                         </div>
                         <p class="subject">Business</p>
@@ -129,73 +142,97 @@
 
                     <a class="grid-item" href="article-news.html#25mar-digitalization">
                         <div class="img-wrapper">
-                            <img  class="article-img relative" src="images/articles-news/25mar.png" alt="a woman in business suite sitting at a table in a classroom">
+                            <img  class="article-img relative" src="images/articles-news/12mar.png" alt="people sitting in rows taking notes">
                             <div class="date-wrapper">
-                                <img class="absolute" src="images/articles-news/25mar.svg" alt="25th of march">
+                                <div class="yellow-square absolute">
+                                    <div class="date">12</div>
+                                    <p class="month">Mar</p>
+                                </div>
+                                <!-- <img class="absolute" src="images/articles-news/25mar.svg" alt="25th of march"> -->
                             </div>
                         </div>
                         <p class="subject">Business</p>
-                        <h3 class="article-title">How To Use Digitalization In The Classroom</h3>
+                        <h3 class="article-title">Why You Need To Implement The Five S's</h3>
                         <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
                     </a>
     
                     <a class="grid-item" href="article-news.html#17mar-chatgpt">
                         <div class="img-wrapper">
-                            <img  class="article-img relative" src="images/articles-news/17mar.png" alt="a screen displaying 3 columns: examples, capabilities and limitations">
+                            <img  class="article-img relative" src="images/articles-news/07mar.png" alt="an office landscape">
                             <div class="date-wrapper">
-                                <img class="absolute" src="images/articles-news/17mar.svg" alt="17th of march">
+                                <div class="yellow-square absolute">
+                                    <div class="date">07</div>
+                                    <p class="month">Mar</p>
+                                </div>
+                                <!-- <img class="absolute" src="images/articles-news/17mar.svg" alt="17th of march"> -->
                             </div>
                         </div>
                         <p class="subject">Business</p>
-                        <h3 class="article-title">How To Implement Chat GPT In Your Projects</h3>
+                        <h3 class="article-title">Get More Ivolved With Your End User</h3>
                         <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
                     </a>
     
                     <a class="grid-item" href="article-news.html#13mar-modern-css">
                         <div class="img-wrapper">
-                            <img  class="article-img relative" src="images/articles-news/13mar.png" alt="a smartphone on top of books about css and javascript">
+                            <img  class="article-img relative" src="images/articles-news/02mar.png" alt="apple dektops sitting on modern wooden desks in a design space">
                             <div class="date-wrapper">
-                                <img class="absolute" src="images/articles-news/13mar.svg" alt="13th of march">
+                                <div class="yellow-square absolute">
+                                    <div class="date">02</div>
+                                    <p class="month">Mar</p>
+                                </div>
+                                <!-- <img class="absolute" src="images/articles-news/13mar.svg" alt="13th of march"> -->
                             </div>
                         </div>
                         <p class="subject">Business</p>
-                        <h3 class="article-title">The Guide To Support Modern CSS Design</h3>
+                        <h3 class="article-title">Guiged Tour Of The Head Offices In Stockholm</h3>
                         <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
                     </a>         
 
                     <a class="grid-item" href="article-news.html#25mar-digitalization">
                         <div class="img-wrapper">
-                            <img  class="article-img relative" src="images/articles-news/25mar.png" alt="a woman in business suite sitting at a table in a classroom">
+                            <img  class="article-img relative" src="images/projects/bottom-rgt.png" alt="a screen displaying 3 columns: examples, capabilities and limitations">
                             <div class="date-wrapper">
-                                <img class="absolute" src="images/articles-news/25mar.svg" alt="25th of march">
+                                <div class="yellow-square absolute">
+                                    <div class="date">28</div>
+                                    <p class="month">Feb</p>
+                                </div>
+                                <!-- <img class="absolute" src="images/articles-news/25mar.svg" alt="25th of march"> -->
                             </div>
                         </div>
                         <p class="subject">Business</p>
-                        <h3 class="article-title">How To Use Digitalization In The Classroom</h3>
+                        <h3 class="article-title">Using Business Intelligence To Get Insights Into Our Business</h3>
                         <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
                     </a>
     
                     <a class="grid-item" href="article-news.html#17mar-chatgpt">
                         <div class="img-wrapper">
-                            <img  class="article-img relative" src="images/articles-news/17mar.png" alt="a screen displaying 3 columns: examples, capabilities and limitations">
+                            <img  class="article-img relative" src="images/projects/top-rgt.png" alt="a pair of glasses in front of apple products on a white desk">
                             <div class="date-wrapper">
-                                <img class="absolute" src="images/articles-news/17mar.svg" alt="17th of march">
+                                <div class="yellow-square absolute">
+                                    <div class="date">18</div>
+                                    <p class="month">Feb</p>
+                                </div>
+                                <!-- <img class="absolute" src="images/articles-news/17mar.svg" alt="17th of march"> -->
                             </div>
                         </div>
                         <p class="subject">Business</p>
-                        <h3 class="article-title">How To Implement Chat GPT In Your Projects</h3>
+                        <h3 class="article-title">Apple Has Released New Products. Are They Any Good?</h3>
                         <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
                     </a>
     
                     <a class="grid-item" href="article-news.html#13mar-modern-css">
                         <div class="img-wrapper">
-                            <img  class="article-img relative" src="images/articles-news/13mar.png" alt="a smartphone on top of books about css and javascript">
+                            <img  class="article-img relative" src="images/projects/bottom-lft.png" alt="a notepad with a pen and a ruler in front of a calculator on a desk">
                             <div class="date-wrapper">
-                                <img class="absolute" src="images/articles-news/13mar.svg" alt="13th of march">
+                                <div class="yellow-square absolute">
+                                    <div class="date">11</div>
+                                    <p class="month">Feb</p>
+                                </div>
+                                <!-- <img class="absolute" src="images/articles-news/13mar.svg" alt="13th of march"> -->
                             </div>
                         </div>
                         <p class="subject">Business</p>
-                        <h3 class="article-title">The Guide To Support Modern CSS Design</h3>
+                        <h3 class="article-title">How To Improve Your Team And Get Better Results</h3>
                         <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
                     </a>         
                 </div>

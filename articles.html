@@ -13,13 +13,13 @@
 <body>
     <!-- header section-->
     <header class="header">
-        <div class="container">
+       <div class="container">
             <a href="index.html"><img src="images/header/Logotype.svg" alt="Crito Logotype"></a>
-            
+
             <div class="absolute-mb">
                 <div class="menu-bars" id="menu-Bars">
                     <a href="index.html">Home</a>
-                    <a href="services.html" class="active">Services</a>
+                    <a href="services.html">Services</a>
                     <a href="news.html">News</a>
                     <a href="contact.html">Contact</a>
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -54,8 +54,8 @@
                 <div class="main-menu">
                     <nav> 
                         <!-- när annan sida är aktiv så ändra classen nedan på den sidan -->
-                        <a href="index.html">Home</a> 
-                        <a class="active" href="services.html">Services</a>
+                        <a class="active" href="index.html">Home</a> 
+                        <a href="services.html">Services</a>
                         <a href="news.html">News</a>
                         <a href="contact.html">Contact</a>
                     </nav>
@@ -65,70 +65,81 @@
        </div>
     </header>
 
-    <!-- services breadcrumb section -->
-    <section class="breadcrumbs">
-        <div class="container">
-
-            <!-- denna ska med på alla typer av sidor som inte är "home" -->
-            <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item inactive"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Services</li>
-                </ol>
-            </nav>
-
-            <h2 class="services-main-title">Services</h2>
-        </div>  
+    <section class="articles-full">
 
     </section>
 
-           <!-- our-services section-->
-        <section class="our-services services-page">
-            <div class="container">
-                
-                <div class="c-top">
-                    <div class="top-wrapper">
-                        <h2 class="services-title">We Provide The Best Service For Consulting</h2>
-                    </div>
-    
-                    <div class="spacer-rgt"></div>                    
-                </div>        
-    
-                <div class="c-middle">
-                    <div class="grid-container"> 
-                        <a class="grid-item" href="business-advice.html">
-                            <div class="box-line">_______</div>
-                            <h3>Business Advice</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
-                            <div class="btn-arw-r"><i class="fa-light fa-arrow-right"></i></div>
-                        </a>    
-                        
-                        <a class="grid-item" href="business-startup.html">
-                            <div class="box-line">_______</div>
-                            <h3>Startup Business</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
-                            <div class="btn-arw-r"><i class="fa-light fa-arrow-right"></i></div>
-                        </a>
-        
-                        <a class="grid-item" href="financial-advice.html">
-                            <div class="box-line">_______</div>
-                            <h3>Financial Advice</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
-                            <div class="btn-arw-r"><i class="fa-light fa-arrow-right"></i></div>
-                        </a>
-        
-                        <a class="grid-item" href="risk-management.html">
-                            <div class="box-line">_______</div>
-                            <h3>Risk Management</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
-                            <div class="btn-arw-r"><i class="fa-light fa-arrow-right"></i></div>
-                        </a>
-                    </div>
-                        
-                </div>    
+
+    <!--articles & news section från index -->
+    <section class="articles-news articles-page">
+        <div class="container">
+            <div class="top">
+
+                <div class="top-lft">
+                    <p class="orange-txt">Articles & News</p>
+                    <h2>Get All Of Our Articles & News</h2>
+                </div>
+
+                <div class="top-rgt">
+                    <div class="articles-btn-container">
+                        <a class="btn-transparent-fat" href="news.html">Browse Articles<i class="fa-regular fa-arrow-up-right"></i></a>
+                    </div>    
+                </div>
+
             </div>
-    
-        </section>
+
+            <div class="middle grid-container">
+                <a class="grid-item" href="news.html">
+                    <div class="img-wrapper">
+                        <img  class="article-img relative" src="images/articles-news/25mar.png" alt="a woman in business suite sitting at a table in a classroom">
+                        <div class="date-wrapper">
+                            <img class="absolute" src="images/articles-news/25mar.svg" alt="25th of march">
+                        </div>
+                    </div>
+                    <p class="subject">Business</p>
+                    <h3 class="article-title">How To Use Digitalization In The Classroom</h3>
+                    <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
+                </a>
+
+                <a class="grid-item" href="news.html">
+                    <div class="img-wrapper">
+                        <img  class="article-img relative" src="images/articles-news/17mar.png" alt="a screen displaying 3 columns: examples, capabilities and limitations">
+                        <div class="date-wrapper">
+                            <img class="absolute" src="images/articles-news/17mar.svg" alt="17th of march">
+                        </div>
+                    </div>
+                    <p class="subject">Business</p>
+                    <h3 class="article-title">How To Implement Chat GPT In Your Projects</h3>
+                    <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
+                </a>
+
+                <a class="grid-item" href="news.html">
+                    <div class="img-wrapper">
+                        <img  class="article-img relative" src="images/articles-news/13mar.png" alt="a smartphone on top of books about css and javascript">
+                        <div class="date-wrapper">
+                            <img class="absolute" src="images/articles-news/13mar.svg" alt="13th of march">
+                        </div>
+                    </div>
+                    <p class="subject">Business</p>
+                    <h3 class="article-title">The Guide To Support Modern CSS Design</h3>
+                    <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
+                </a>         
+            </div>
+
+            <div class="bottom">
+                <ol class="slide-dots">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="dot active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="dot"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2" class="dot"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3" class="dot"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4" class="dot"></li>
+                </ol>
+            </div>
+
+        </div>
+
+
+    </section>
 
     <!-- footer section -->
     <footer class="footer">

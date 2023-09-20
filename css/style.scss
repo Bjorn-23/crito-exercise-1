@@ -71,6 +71,72 @@ h3 {
       }   
 }
 
+// menu-bars for mobile
+.absolute-mb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    .menu-bars {
+        background-color: #f3f3f3;
+        overflow: hidden;
+        border: 1px solid #d3d3d3;
+        border-radius: 35px;
+        font-size: 30px;
+        color: #191919;
+        
+        
+        @media (min-width: 992px) {
+            display: none;
+        }    
+    
+        a {
+            float: left;
+            display: block;
+            text-align: center;
+            color: #191919;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        a:hover {
+            color: #d3d3d3;
+        }
+        
+        // ändrar stil på den sidan man är på
+        a.active {
+            font-weight: 600;
+        }
+    }
+    
+    @media (max-width: 991px) {
+        .menu-bars a:not(:first-child) {display: none;}
+        .menu-bars a.icon {
+            float: right;
+            display: block;
+        }
+    }    
+    
+    
+    @media (max-width: 991px) {
+        .menu-bars.responsive {position: relative;}
+        .menu-bars.responsive a.icon {
+          position: absolute;
+          right: 500px;
+          top: 500px;
+        }
+    
+        .menu-bars.responsive a {
+          float: none;
+          display: block;
+          padding: 14px 28px;
+          text-align: left;
+    
+        }
+      }
+}
 
 .btn-yellow {
     background-color: #F9D783;
@@ -254,25 +320,73 @@ h3 {
     
 }
 
-  
+// yellow date square on article picture
+.yellow-square {
+    display: inline-block;
+    background-color: #F9D783;
+    color: #191919;
+    text-decoration: none;
+    text-align: center;
+    max-width: 25%;
+    max-height: auto;
+    padding: 5px 10px;
 
+    @media (min-width: 576px) {
+        max-width: 20%;
+        max-height: auto;
+    }
     
+    @media (min-width: 992px) {
+        width: 50px;
+        height: 50px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 60px;
+        height: 60px;
+    }
+
+    .date {
+        margin: 0px;
+        font-family: 'DM sans', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+
+        @media (min-width: 992px) {
+            font-size: 16px;
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 22px;
+        }
+    }
+
+    .month {
+        margin: 0px;
+        font-size: 10px;
+
+        @media (min-width: 992px) {
+            font-size: 14px;
+        }
+    }
+}
+
 
 // Header - ser bra ut
-header {
+.header {
 background-color: #F0EFE9;
 padding: 16px;
 
-
-
-
     .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    
-    
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+
+        @media (min-width: 992px) { 
+        align-items: center;
+        gap: 30px;
+        }    
     
         .menu{
         display: none;
@@ -306,7 +420,7 @@ padding: 16px;
                         border-right: 1px solid #dad9d3;
                         font-family: 'Inter' sans-serif;
                         font-size: 15px;
-                        font-weight: 300;
+                        font-weight: 300;                
 
                         @media (min-width: 1200px){
                             justify-content: space-between;
@@ -318,6 +432,15 @@ padding: 16px;
                             margin-right: 5px;
                             font-size: 1.2em;
 
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: #191919;
+                        }
+
+                        a:hover {
+                            text-decoration: underline;
                         }
 
                         &.last {
@@ -381,16 +504,16 @@ padding: 16px;
             }
         }
     
-       .menu-bars {
-           font-size: 30px;
-           border:none;
-           background-color: transparent;
+    //    .menu-bars {
+    //        font-size: 30px;
+    //        border:none;
+    //        background-color: transparent;
     
-           @media (min-width: 992px) {
-                display: none;
-            }
+    //        @media (min-width: 992px) {
+    //             display: none;
+    //         }
     
-        }
+    //     }
     
     }
 
@@ -1642,7 +1765,8 @@ padding: 16px;
                     border: 5px solid white;
                     border-radius: 25px;
                     padding: 8px 25px;
-                    margin: 0.5em
+                    margin: 0.5em;
+                    outline: none;
                 }
 
                 .btn-yellow {
@@ -1821,18 +1945,23 @@ padding: 16px;
         }
     }
 }
-// NY SIDA - contact.html
+// SLUT PÅ INDEX
 
-// connect section - under utveckling
-.connect {
+// breadcrumbs section - under utveckling
+.breadcrumbs {
     background-color: #F0EFE9;
+    border: none;
+
+    @media (min-width: 768px) {
+        border-top: 1px solid #dad9d3;
+    }
+
     .container {
         text-align: center;
         padding: 20px 10px;
 
         @media (min-width:992px) {
             padding: 90px 0;
-
         }
 
         nav {
@@ -1868,7 +1997,7 @@ padding: 16px;
     }
 }
 
-// contact section - under utveckling
+// contact sida, contact section - under utveckling
 .contact {
     margin: 15px 0;
 
@@ -2015,10 +2144,12 @@ padding: 16px;
                 input {
                     border: 10px solid white;
                     border-radius: 25px;
+                    outline: none;
                 }
                 textarea {
                     border: 10px solid white;
                     border-radius: 25px;
+                    outline: none;
                 }
                 .submit {
                     border: none;
@@ -2033,6 +2164,48 @@ padding: 16px;
                 
                 @media (min-width: 576px) {
                     margin:0;
+                }
+            }
+        }
+    }
+}
+
+// services sida - section
+.services-page {
+    margin: 0;
+    border: none;
+
+    @media (min-width: 768px) {
+        border-top: 1px solid #dad9d3;
+    }
+
+    .container {
+        .c-middle {
+            padding-bottom: 20px;
+
+            @media (min-width: 768px) {
+                padding-bottom: 40px;
+            }
+
+            @media (min-width: 1200px) {
+                padding-bottom: 80px;
+            }
+        }   
+    
+    }
+}
+
+// articles sida - articles and news -section
+.articles-page {
+    background-color: #F0EFE9;
+
+    .container {
+        .top {
+            .top-rgt {
+                .articles-btn-container {
+                    .btn-transparent-fat {
+                        background-color: white;
+                    }
                 }
             }
         }

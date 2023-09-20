@@ -5,53 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script defer src="/javascript/javascript.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <title></title>
 </head>
 <body>
     <!-- header section-->
-    <header>
+    <header class="header">
        <div class="container">
-        <a href="index.html"><img src="images/header/Logotype.svg" alt="Crito Logotype"></a>
-        <button class="menu-bars">
-            <i class="fa-solid fa-bars-staggered"></i>
-        </button>
-        <div  class="menu">
-            <div class="top-menu">
-                <div class="contact-information">
-                    <div class="content-box">
-                        <i class="fa-light fa-phone-volume" style="color: #191919;"></i>
-                        +46 (8) 121 470 50
-                    </div>
-                    <div class="content-box">
-                        <i class="fa-light fa-envelope" style="color: #191919;"></i>
-                        info@crito.com
-                    </div>
-                    <div class="content-box last">
-                        <i class="fa-light fa-location-dot" style="color: #191919;"></i>
-                        Sveavägen 31, 111 34 STOCKHOLM
-                    </div>
-                </div>
-                <div class="social-media">
-                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://lnikedin.com"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="main-menu">
-                <nav> 
-                    <!-- när annan sida är aktiv så ändra classen nedan på den sidan -->
-                    <a class="active" href="index.html">Home</a> 
+            <a href="index.html"><img src="images/header/Logotype.svg" alt="Crito Logotype"></a>
+            
+            <div class="absolute-mb">
+                <div class="menu-bars" id="menu-Bars">
+                    <a href="index.html" class="active">Home</a>
                     <a href="services.html">Services</a>
                     <a href="news.html">News</a>
                     <a href="contact.html">Contact</a>
-                </nav>
-                <a class="btn-yellow btn-login" href="login.html">Login<i class="fa-regular fa-arrow-up-right"></i></a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </div>
             </div>
-       </div>
+
+            <div  class="menu">
+                <div class="top-menu">
+                    <div class="contact-information">
+                        <div class="content-box">
+                            <i class="fa-light fa-phone-volume" style="color: #191919;"></i>
+                            <a href="callto:+46(8)12147050">+46 (8) 121 470 50</a>
+                        </div>
+                        <div class="content-box">
+                            <i class="fa-light fa-envelope" style="color: #191919;"></i>
+                            <a href="mailto:info@crito.com">info@crito.com</a>
+                        </div>
+                        <div class="content-box last">
+                            <i class="fa-light fa-location-dot" style="color: #191919;"></i>
+                            <a href="https://maps.app.goo.gl/JUjns7mUxx5Q5QEL8" target="_blank">Sveavägen 31 111 34 Stockholm</a>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://lnikedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="main-menu">
+                    <nav> 
+                        <!-- när annan sida är aktiv så ändra classen nedan på den sidan -->
+                        <a class="active" href="index.html">Home</a> 
+                        <a href="services.html">Services</a>
+                        <a href="news.html">News</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                    <a class="btn-yellow btn-login" href="login.html">Login<i class="fa-regular fa-arrow-up-right"></i></a>
+                </div>
+            </div>
        </div>
     </header>
       
@@ -164,7 +174,7 @@
     </section>
     
        <!-- our-services section-->
-       <section class="our-services">
+    <section class="our-services">
         <div class="container">
             
             <div class="c-top">
@@ -524,14 +534,14 @@
 
                 <div class="top-rgt">
                     <div class="articles-btn-container">
-                        <a class="btn-transparent-fat" href="articles.html">Browse Articles<i class="fa-regular fa-arrow-up-right"></i></a>
+                        <a class="btn-transparent-fat" href="news.html">Browse Articles<i class="fa-regular fa-arrow-up-right"></i></a>
                     </div>    
                 </div>
 
             </div>
 
             <div class="middle grid-container">
-                <a class="grid-item" href="article-news.html#25mar-digitalization">
+                <a class="grid-item" href="news.html">
                     <div class="img-wrapper">
                         <img  class="article-img relative" src="images/articles-news/25mar.png" alt="a woman in business suite sitting at a table in a classroom">
                         <div class="date-wrapper">
@@ -543,7 +553,7 @@
                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
                 </a>
 
-                <a class="grid-item" href="article-news.html#17mar-chatgpt">
+                <a class="grid-item" href="news.html">
                     <div class="img-wrapper">
                         <img  class="article-img relative" src="images/articles-news/17mar.png" alt="a screen displaying 3 columns: examples, capabilities and limitations">
                         <div class="date-wrapper">
@@ -555,7 +565,7 @@
                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
                 </a>
 
-                <a class="grid-item" href="article-news.html#13mar-modern-css">
+                <a class="grid-item" href="news.html">
                     <div class="img-wrapper">
                         <img  class="article-img relative" src="images/articles-news/13mar.png" alt="a smartphone on top of books about css and javascript">
                         <div class="date-wrapper">
@@ -590,7 +600,7 @@
                 <div class="left">
                     <h2 class="subscribe-title">Get Updates By Signing Up</h2>
                 </div>
-                <div class="right absolute">
+                <div class="right">
                     <input type="email" class="email" placeholder="username@domain.com" required></input>
                     <div class="btn-yellow">Subscribe<i class="fa-regular fa-arrow-up-right"></i></div>
                 </div>
