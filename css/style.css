@@ -606,7 +606,7 @@ h3 {
   align-content: center;
   grid-template-columns: repeat(5, auto [row-start]);
   grid-template-rows: auto;
-  grid-template-areas: " cl1 cl1 . cl3 cl3" " cl2 cl2 . cl4 cl4" " . cl5 cl5 cl5 .";
+  grid-template-areas: " cl1 cl1 . cl3 cl3" " cl5 cl5 . cl4 cl4" " . cl2 cl2 cl2 .";
 }
 @media (min-width: 480px) {
   .clients .grid-container {
@@ -779,6 +779,18 @@ h3 {
 .company-intro .container .sam-b-wrapper img {
   flex: 1;
   max-width: 100%;
+}
+.company-intro .container .sam-b-wrapper .white-squiggles-sam-b {
+  position: absolute;
+  top: 5%;
+  left: -5%;
+  z-index: 2;
+  display: none;
+}
+@media (min-width: 576px) {
+  .company-intro .container .sam-b-wrapper .white-squiggles-sam-b {
+    display: block;
+  }
 }
 .company-intro .container .sam-b-wrapper .blue-hover-wrapper {
   position: absolute;
