@@ -17,7 +17,7 @@
             <a href="index.html"><img src="images/header/Logotype.svg" alt="Crito Logotype"></a>
             
             <div class="absolute-mb">
-                <div class="menu-bars" id="menu-Bars">
+                <button class="menu-bars" id="menu-Bars">
                     <a href="index.html" class="active">Home</a>
                     <a href="services.html">Services</a>
                     <a href="news.html">News</a>
@@ -25,7 +25,7 @@
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                         <i class="fa-solid fa-bars"></i>
                     </a>
-                </div>
+                </button>
             </div>
 
             <div  class="menu">
@@ -85,14 +85,14 @@
 
     <!-- clients section ska man lägga som länkar? -->
     <section class="clients">
-        <div id="client-container" class="container">
-            <div class="client-wrapper">
-                <img class="client-img" src="images/clients/paperz.svg" alt="paperz Logotype">
-                <img class="client-img" src="images/clients/dorfus.svg" alt="dorfus Logotype">
-                <img class="client-img" src="images/clients/martino.svg" alt="martino Logotype">
-                <img class="client-img" src="images/clients/square.svg" alt="square Logotype">
-                <img class="client-img" src="images/clients/gobona.svg" alt="gobona Logotype">
-            </div>
+        <div id="client-container" class="container grid-container">
+            <!-- <div class="client-wrapper"> -->
+                <img class="client-img cl1" src="images/clients/paperz.svg" alt="paperz Logotype">
+                <img class="client-img cl2" src="images/clients/dorfus.svg" alt="dorfus Logotype">
+                <img class="client-img cl3" src="images/clients/martino.svg" alt="martino Logotype">
+                <img class="client-img cl4" src="images/clients/square.svg" alt="square Logotype">
+                <img class="client-img cl5" src="images/clients/gobona.svg" alt="gobona Logotype">
+            <!-- </div> -->
         </div>
     </section>
 
@@ -175,6 +175,11 @@
     
        <!-- our-services section-->
     <section class="our-services">
+
+        <div class="design-lines-services">
+            <img src="images/services/white-squiggly-lines-services.svg" alt="">
+        </div>
+
         <div class="container">
             
             <div class="c-top">
@@ -602,7 +607,7 @@
                 </div>
                 <div class="right">
                     <input type="email" class="email" placeholder="username@domain.com" required></input>
-                    <div class="btn-yellow">Subscribe<i class="fa-regular fa-arrow-up-right"></i></div>
+                    <div class=" submit btn-yellow">Subscribe<i class="fa-regular fa-arrow-up-right"></i></div>
                 </div>
             </div>
         </div>
@@ -624,7 +629,7 @@
             <div class="top container">
                 <div class="grid-container">
                     <div id="logotype" class="grid-item">
-                        <img src="images/footer/Logo-cs.svg" alt="The logotype of Crito Consulting INC">
+                        <a href="index.html"><img src="images/footer/Logo-cs.svg" alt="The logotype of Crito Consulting INC"></a>
                         <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat obcaecati voluptas voluptates!
                             Voluptates laborum nam ratione minus necessitatibus, iure praesentium.</p>
                     </div>
@@ -647,7 +652,8 @@
                             <p><a href="terms-conditions.html">Terms & Conditions</a></p>
                             <p><a href="#">Privacy Policy</a></p>
                         </div>
-                                        </div>
+                    </div>
+
                     <div class="grid-item">
                         <h3 class="white-txt">Resources</h3>
                         <div class="grey-text">
@@ -656,7 +662,8 @@
                             <p><a href="how-to-blog.html">How to - Blog</a></p>
                             <p><a href="https://www.youtube.com/watch?time_continue=1&v=9i4UKnADT5E&embeds_referring_euri=https%3A%2F%2Fec.omniway.se%2F&embeds_referring_origin=https%3A%2F%2Fec.omniway.se&source_ve_path=Mjg2NjY&feature=emb_logo">Youtube Playlist</a></p>
                         </div>
-                                        </div>
+                    </div>
+
                     <div class="grid-item">
                         <h3 class="white-txt">Link</h3>
                         <div class="grey-text">
@@ -669,7 +676,8 @@
                 </div>
             </div>
 
-            <div class="design"><img class=" absolute-f-t" src="images/footer/design-squiggles.svg" alt="two  wavy lines of grey color intersecting in a pattern"></div>
+            <div class="design"><img class=" absolute-f-t" src="images/footer/design-squiggles.svg" alt="two  wavy lines of grey color intersecting in a pattern">
+            </div>
 
 
         </div>
@@ -694,7 +702,7 @@
 
     </footer>
 
-<!-- SORT OUT ALL HREF, ALT-TEXT decrease specificity, transitions and animations on buttons -->
+<!-- SORT OUT ALL HREF, ALT-TEXT decrease specificity, transitions and animations on buttons Make section margins and padding standard -->
 
     </body>
 </html>

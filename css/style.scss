@@ -25,6 +25,16 @@ html, body {
     }
 }
 
+// animations & transitions
+a {
+    transition: 0.4s;
+}
+.submit {
+    transition: 0.4s;
+}
+
+
+
 h2 {
     font-family: 'DM sans', sans-serif;
     font-weight: 700;
@@ -79,13 +89,13 @@ h3 {
     z-index: 2;
 
     .menu-bars {
+        display: block;
         background-color: #f3f3f3;
         overflow: hidden;
         border: 1px solid #d3d3d3;
-        border-radius: 35px;
+        border-radius: 25px;
         font-size: 30px;
-        color: #191919;
-        
+        color: #191919;       
         
         @media (min-width: 992px) {
             display: none;
@@ -94,7 +104,7 @@ h3 {
         a {
             float: left;
             display: block;
-            text-align: center;
+            text-align: left;
             color: #191919;
             padding: 14px 16px;
             text-decoration: none;
@@ -114,8 +124,9 @@ h3 {
     @media (max-width: 991px) {
         .menu-bars a:not(:first-child) {display: none;}
         .menu-bars a.icon {
-            float: right;
+            float: left;            
             display: block;
+            
         }
     }    
     
@@ -123,19 +134,36 @@ h3 {
     @media (max-width: 991px) {
         .menu-bars.responsive {position: relative;}
         .menu-bars.responsive a.icon {
-          position: absolute;
-          right: 500px;
-          top: 500px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            
         }
     
         .menu-bars.responsive a {
-          float: none;
-          display: block;
-          padding: 14px 28px;
-          text-align: left;
-    
+            float: none;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            text-align: left;
+
+            @media (min-width: 550px) {
+                float: left;
+                // text-align: center;
+                justify-content: space-evenly;
+
+
+            }
         }
-      }
+
+        .menu-bars.responsive :nth-child(4){
+            margin-right: px;
+
+            @media (min-width:490px) {
+                margin-right: 30px;
+            }
+        }
+    }
 }
 
 .btn-yellow {
@@ -401,12 +429,11 @@ padding: 16px;
                 justify-content: flex-end;
                 align-items: center;
                 border-bottom: 1px solid #dad9d3;
-                padding-bottom: 10px;
-               
+                padding-bottom: 10px;               
 
                 @media (min-width: 1200px){
                     justify-content: space-between;
-                }
+                }                
                 .contact-information {
                     display: none;
                     align-items: center;
@@ -426,7 +453,6 @@ padding: 16px;
                             justify-content: space-between;
                             display: flex;
                         }
-                        
 
                         i {
                             margin-right: 5px;
@@ -448,6 +474,7 @@ padding: 16px;
                         }
                     }
                 }
+
                 .social-media {
                     a {
                         color: #191919;
@@ -460,6 +487,7 @@ padding: 16px;
                     }    
                 }
             }
+
             .btn-login{
                 padding-top: 12px;
                 padding-bottom: 12px;
@@ -498,26 +526,13 @@ padding: 16px;
                         left: 50%;
                         bottom: -3px;
                         transform: translate((calc(50% - 15px)));
-
                     }
                 }
             }
         }
-    
-    //    .menu-bars {
-    //        font-size: 30px;
-    //        border:none;
-    //        background-color: transparent;
-    
-    //        @media (min-width: 992px) {
-    //             display: none;
-    //         }
-    
-    //     }
-    
     }
-
 }
+
 // Showcase - ser bra ut
 .showcase {
     background-color: #F0EFE9;
@@ -617,54 +632,72 @@ padding: 16px;
     }
 }
 
-// .clients - ser bra ut
-.clients {
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-    @media (min-width: 768px) {
-        padding-top: 40px;
-        padding-bottom: 40px;
+// clients v2 - funkar bättre - grid.
+.clients {    
+    .cl1 {
+        grid-area: cl1;
+    }
+    .cl2 {
+        grid-area: cl2;
+    }
+    .cl3 {
+        grid-area: cl3;
+    }
+    .cl4 {
+        grid-area: cl4;
+    }
+    .cl5 {
+        grid-area: cl5;
     }
 
-    @media (min-width: 992px) {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }    
+    .grid-container {
+        padding: 20px;
+        display: grid;
+        align-items: center;
+        align-content: center;
+        grid-template-columns: repeat(5, auto[row-start]);
+        grid-template-rows: auto;
+        grid-template-areas:
+        " cl1 cl1 . cl3 cl3"
+        " cl2 cl2 . cl4 cl4"
+        " . cl5 cl5 cl5 .";
 
-    .container{
-        padding: 25px 0;
- 
-        .client-wrapper {
-            display:block;            
-            
+        @media (min-width: 480px) {
+            grid-template-columns: repeat(6, auto[row-start]);
+            grid-template-rows: auto;
+            grid-template-areas:
+            " cl1 cl1  cl2 cl2 cl3 cl3"
+            " . cl4 cl4 cl5 cl5 .";
+            margin: 10px auto;
+        }
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(5, auto[row-start]);
+            grid-template-rows: auto;
+            grid-template-areas:
+            " cl1 cl2 cl3 cl4 cl5";
+            margin: 30px auto;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+            padding: 10px;
+
+            @media (min-width: 480px) {
+                padding: 15px;
+            }
+
             @media (min-width: 992px) {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                box-sizing: content-box;
-                padding: 20px;               
+                padding: 30px;
             }
 
             @media (min-width: 1200px) {
-                margin-right: -50px;
-
+                width: 100%;
+                padding: 40px;
             }
-            
-            .client-img {
-                display: block;
-                margin: 30px auto;
-
-                @media (min-width: 992px) {
-                    display: flex;
-                    width: fit-content;
-                   
-                   
-                }
-
-            }
-        }    
-    }      
+        }
+    }
 }
 
 //.features-container - ser bra ut
@@ -674,6 +707,11 @@ padding: 16px;
     .container {
         display: flex;
         flex-direction: column;
+        
+        @media (min-width: 768px) {
+            border: 1px solid #D3D3D3;
+        }    
+
 
         @media (min-width: 992px) {
             display: flex;
@@ -929,6 +967,7 @@ padding: 16px;
 
 //Our Services ser bra ut - fixa på ipad, marginalerna är fel och vänsterställda
 .our-services {
+    position: relative;
     background-color: #F0EFE9;
     padding: 60px 0 20px;
 
@@ -941,6 +980,19 @@ padding: 16px;
         margin-top: 120px;
         padding-top: 120px;
     }
+
+    .design-lines-services {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+    }
+
+
     
     .container {
         .c-top {
@@ -1018,12 +1070,12 @@ padding: 16px;
     
                     &:hover {
                         background-color: #F9D783;
-                        transition: 1s;
+                        transition: 0.5s;
                     }
                     &:hover .btn-arw-r i {
                         background-color: white;
                         color: #191919;
-                        transition: 0.7s;
+                        transition: 0.5s;
                     }
                 
                                                                         
@@ -1766,7 +1818,8 @@ padding: 16px;
                     border-radius: 25px;
                     padding: 8px 25px;
                     margin: 0.5em;
-                    outline: none;
+                    //har lämnat outline på för bätttre tillgänglighet
+                    // outline: none;
                 }
 
                 .btn-yellow {
@@ -1841,15 +1894,17 @@ padding: 16px;
 
                     @media (min-width: 992px) {
 
-                        img {
-                            padding-left: 30px;
+                        a {
+                            img {
+                                padding-left: 30px;
 
-                            @media (min-width: 992px) {
-                                padding: 0;
-                                margin-bottom: 40px;
+                                @media (min-width: 992px) {
+                                    padding: 0;
+                                    margin-bottom: 40px;
 
+                                }
                             }
-                        }
+                        }    
                     }    
 
                     .lorem {
@@ -1869,10 +1924,12 @@ padding: 16px;
                 display:none;
 
                 @media (min-width: 1200px) {
-                display: flex;
+                display: block;
                 position: absolute;
-                left: 68%;
-                top: 75%;
+                right: -5%;
+                bottom: -20%;
+                // left: 68%;
+                // top: 75%;
                 z-index: 1;
                 }
             }
@@ -1951,10 +2008,23 @@ padding: 16px;
 .breadcrumbs {
     background-color: #F0EFE9;
     border: none;
+    position: relative;
 
     @media (min-width: 768px) {
         border-top: 1px solid #dad9d3;
     }
+
+    .design-lines-breadcrumbs {
+        position: absolute;
+        left:0;
+        bottom: 0;
+        display: none;
+
+        @media (min-width: 992px) {
+            display: block;
+        }
+    }
+
 
     .container {
         text-align: center;
@@ -1993,6 +2063,12 @@ padding: 16px;
                     color: #191919;
                 }
             }
+        }
+
+        h1 {
+            font-family: 'DM sans', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
         }
     }
 }
@@ -2093,6 +2169,9 @@ padding: 16px;
                         text-decoration: none;
                         color:#191919;
                     }
+                    a:hover {
+                        text-decoration: underline;
+                    }
                 }    
             }
         }
@@ -2135,6 +2214,7 @@ padding: 16px;
                 }
 
             }
+
             form {
                 margin-top: 30px;
                 display: flex;
@@ -2144,17 +2224,21 @@ padding: 16px;
                 input {
                     border: 10px solid white;
                     border-radius: 25px;
-                    outline: none;
+                    // har lämnat outline på för bättre tillgänglighet
+                    // outline: none;
                 }
+
                 textarea {
                     border: 10px solid white;
                     border-radius: 25px;
-                    outline: none;
+                    // har lämnat outline på för bättre tillgänglighet
+                    // outline: none;
                 }
                 .submit {
                     border: none;
                 }
             }
+
         }
 
         .map {
@@ -2172,23 +2256,35 @@ padding: 16px;
 
 // services sida - section
 .services-page {
+    // background-color: #fff;
     margin: 0;
     border: none;
 
-    @media (min-width: 768px) {
-        border-top: 1px solid #dad9d3;
+    // @media (min-width: 768px) {
+    //     border-top: 1px solid #dad9d3;
+    // }
+
+    .design-lines-services {
+        display: none;
+
+        @media (min-width: 768px){
+            display: block;
+        }
     }
 
     .container {
+        // background-color: #F0EFE9;
+        // padding: 60px;
+
         .c-middle {
             padding-bottom: 20px;
 
             @media (min-width: 768px) {
-                padding-bottom: 40px;
+                padding-bottom: 100px;
             }
 
             @media (min-width: 1200px) {
-                padding-bottom: 80px;
+                padding-bottom: 200px;
             }
         }   
     
