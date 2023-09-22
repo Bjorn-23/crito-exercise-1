@@ -20,10 +20,12 @@ html, body {
 
 a {
   transition: 0.4s;
+  transition-delay: 0.15s;
 }
 
 .submit {
   transition: 0.4s;
+  transition-delay: 0.15s;
 }
 
 h2 {
@@ -275,6 +277,8 @@ h3 {
 .btn-video i:hover {
   background-color: #191919;
   color: white;
+  transition: 0.4s;
+  transition-delay: 0.15s;
 }
 
 .btn-arw-r {
@@ -1008,12 +1012,14 @@ h3 {
 }
 .our-services .container .c-middle .grid-container .grid-item:hover {
   background-color: #F9D783;
-  transition: 0.5s;
+  transition: 0.4s;
+  transition-delay: 0.2s;
 }
 .our-services .container .c-middle .grid-container .grid-item:hover .btn-arw-r i {
   background-color: white;
   color: #191919;
-  transition: 0.5s;
+  transition: 0.4s;
+  transition-delay: 0.2s;
 }
 .our-services .container .c-middle .grid-container .grid-item .box-line {
   font-weight: 700;
@@ -1875,6 +1881,12 @@ h3 {
   font-family: "DM sans", sans-serif;
   font-size: 56px;
   font-weight: 700;
+  display: none;
+}
+@media (min-width: 576px) {
+  .breadcrumbs .container h1 {
+    display: block;
+  }
 }
 
 .contact {
