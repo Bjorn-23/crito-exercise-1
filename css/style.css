@@ -18,14 +18,13 @@ html, body {
   }
 }
 
-a {
-  transition: 0.4s;
-  transition-delay: 0.15s;
-}
-
+.btn-yellow,
+.btn-transparent,
+.btn-black,
+.btn-video,
+.btn-transparent-fat,
 .submit {
   transition: 0.4s;
-  transition-delay: 0.15s;
 }
 
 h2 {
@@ -175,6 +174,11 @@ h3 {
   background-color: #191919;
   border: 1px solid #191919;
   color: white;
+  box-shadow: 0 9px #d3d3d3;
+}
+.btn-yellow:active {
+  box-shadow: 0 5px #6A6C71;
+  transform: translateY(4px);
 }
 
 .btn-transparent {
@@ -200,6 +204,11 @@ h3 {
   background-color: #191919;
   border: 1px solid #191919;
   color: white;
+  box-shadow: 0 9px #d3d3d3;
+}
+.btn-transparent:active {
+  box-shadow: 0 5px #6A6C71;
+  transform: translateY(4px);
 }
 
 .btn-transparent-fat {
@@ -223,8 +232,13 @@ h3 {
 }
 .btn-transparent-fat:hover {
   background-color: #191919;
-  border: 1px solid #F9D783;
+  border: 1px solid #191919;
   color: white;
+  box-shadow: 0 9px #d3d3d3;
+}
+.btn-transparent-fat:active {
+  box-shadow: 0 5px #6A6C71;
+  transform: translateY(4px);
 }
 
 .btn-black {
@@ -250,6 +264,11 @@ h3 {
   background-color: #F9D783;
   border: 1px solid #F9D783;
   color: black;
+  box-shadow: 0 9px #d3d3d3;
+}
+.btn-black:active {
+  box-shadow: 0 5px #6A6C71;
+  transform: translateY(4px);
 }
 
 .btn-video {
@@ -333,7 +352,7 @@ h3 {
 
 .yellow-square {
   display: inline-block;
-  background-color: #F9D783;
+  background-image: linear-gradient(to bottom right, #F9D783, #f8eed2, #F9D783);
   color: #191919;
   text-decoration: none;
   text-align: center;
@@ -351,6 +370,7 @@ h3 {
   .yellow-square {
     width: 50px;
     height: 50px;
+    padding: 5px;
   }
 }
 @media (min-width: 1200px) {
@@ -360,7 +380,6 @@ h3 {
   }
 }
 .yellow-square .date {
-  margin: 0px;
   font-family: "DM sans", sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -368,6 +387,7 @@ h3 {
 @media (min-width: 992px) {
   .yellow-square .date {
     font-size: 16px;
+    margin-top: -3px;
   }
 }
 @media (min-width: 1200px) {
@@ -580,10 +600,10 @@ h3 {
 }
 .showcase .container img {
   display: none;
-  margin-right: -50px;
 }
 @media (min-width: 1200px) {
   .showcase .container img {
+    margin-right: -50px;
     display: block;
   }
 }
@@ -659,7 +679,7 @@ h3 {
 }
 @media (min-width: 768px) {
   .features-container .container {
-    border: 1px solid #D3D3D3;
+    border: 1px solid #d3d3d3;
   }
 }
 @media (min-width: 992px) {
@@ -670,7 +690,7 @@ h3 {
     align-items: flex-start;
     box-sizing: border-box;
     gap: 10px;
-    border: 1px solid #D3D3D3;
+    border: 1px solid #d3d3d3;
     padding: 72px;
   }
 }
@@ -800,11 +820,12 @@ h3 {
   position: absolute;
   top: 63%;
   right: 30%;
-  left: -5%;
+  left: -10.5%;
 }
 .company-intro .container .sam-b-wrapper .blue-hover-wrapper .blue-hover-box {
   background-color: #BEEBFF;
-  padding: 40px 20px 40px 30px;
+  padding: 40px 25px;
+  width: 368px;
   z-index: 1;
 }
 .company-intro .container .sam-b-wrapper .blue-hover-wrapper .blue-hover-box .bh-inline-txt {
@@ -1009,17 +1030,22 @@ h3 {
   background: white;
   padding: 30px;
   text-decoration: none;
+  position: relative;
+  z-index: 2;
 }
 .our-services .container .c-middle .grid-container .grid-item:hover {
   background-color: #F9D783;
   transition: 0.4s;
-  transition-delay: 0.2s;
+  box-shadow: 3px 9px #B9B9BF;
+}
+.our-services .container .c-middle .grid-container .grid-item:active {
+  box-shadow: 1px 5px #7c7c7c;
+  transform: translateY(4px);
 }
 .our-services .container .c-middle .grid-container .grid-item:hover .btn-arw-r i {
   background-color: white;
   color: #191919;
   transition: 0.4s;
-  transition-delay: 0.2s;
 }
 .our-services .container .c-middle .grid-container .grid-item .box-line {
   font-weight: 700;
@@ -1399,7 +1425,7 @@ h3 {
 .testimonials .container .test-grid-container .grid-item {
   margin: 15px 0;
   padding: 10px;
-  border: 1px solid #D3D3D3;
+  border: 1px solid #d3d3d3;
   border-radius: 10px;
 }
 @media (min-width: 992px) {
@@ -1497,7 +1523,7 @@ h3 {
   }
 }
 .articles-news .container .grid-container .grid-item {
-  border: 1px solid #D3D3D3;
+  border: 1px solid #d3d3d3;
   border-radius: 10px;
   padding: 10px;
   position: relative;
@@ -1828,17 +1854,14 @@ h3 {
   background-color: #F0EFE9;
   border: none;
   position: relative;
-}
-@media (min-width: 768px) {
-  .breadcrumbs {
-    border-top: 1px solid #dad9d3;
-  }
+  z-index: auto;
 }
 .breadcrumbs .design-lines-breadcrumbs {
   position: absolute;
   left: 0;
   bottom: 0;
   display: none;
+  z-index: 0;
 }
 @media (min-width: 992px) {
   .breadcrumbs .design-lines-breadcrumbs {
@@ -1848,6 +1871,7 @@ h3 {
 .breadcrumbs .container {
   text-align: center;
   padding: 20px 10px;
+  position: relative;
 }
 @media (min-width: 992px) {
   .breadcrumbs .container {
@@ -1858,6 +1882,8 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 3;
 }
 .breadcrumbs .container nav .breadcrumb .inactive a {
   font-family: "Inter", sans-serif;
@@ -1874,7 +1900,6 @@ h3 {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  text-decoration: none;
   color: #191919;
 }
 .breadcrumbs .container h1 {
@@ -2025,12 +2050,12 @@ h3 {
 }
 @media (min-width: 1200px) {
   .contact .container .message-us h2 {
-    margin: 0 100px;
+    margin: 0 150px;
   }
 }
 @media (min-width: 1400px) {
   .contact .container .message-us h2 {
-    margin: 0 200px;
+    margin: 0 250px;
   }
 }
 .contact .container .message-us form {
@@ -2039,16 +2064,31 @@ h3 {
   flex-direction: column;
   gap: 30px;
 }
+.contact .container .message-us form label {
+  outline: none;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 25px;
+  background: #F9D783;
+  color: #191919;
+  width: 150px;
+}
 .contact .container .message-us form input {
   border: 10px solid white;
   border-radius: 25px;
+  padding-left: 5x;
 }
 .contact .container .message-us form textarea {
   border: 10px solid white;
   border-radius: 25px;
+  resize: none;
+  padding-left: 5px;
 }
-.contact .container .message-us form .submit {
+.contact .container .message-us form .button {
   border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
 }
 .contact .container .map .container-fluid {
   margin: 15px;

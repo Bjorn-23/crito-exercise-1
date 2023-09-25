@@ -25,16 +25,16 @@ html, body {
     }
 }
 
-// animations & transitions
-a {
-    transition: 0.4s;
-    transition-delay: 0.15s;
-
-}
+// transitions on buttons - causes jitter due to size change
+.btn-yellow,
+.btn-transparent,
+.btn-black,
+.btn-video,
+.btn-transparent-fat,
 .submit {
     transition: 0.4s;
-    transition-delay: 0.15s;
 }
+
 
 h2 {
     font-family: 'DM sans', sans-serif;
@@ -188,7 +188,15 @@ h3 {
         background-color: #191919;
         border: 1px solid #191919;
         color: white;
+        box-shadow: 0 9px#d3d3d3;
     }
+    &:active {
+        box-shadow: 0 5px #6A6C71;
+        transform: translateY(4px);
+    }
+
+    
+
 }
 
 .btn-transparent {
@@ -213,6 +221,11 @@ h3 {
         background-color: #191919;
         border: 1px solid #191919;
         color: white;
+        box-shadow: 0 9px#d3d3d3;
+    }
+    &:active {
+        box-shadow: 0 5px #6A6C71;
+        transform: translateY(4px);
     }
 }
 
@@ -236,8 +249,13 @@ h3 {
     }
     &:hover {
         background-color: #191919;
-        border: 1px solid #F9D783;
+        border: 1px solid #191919;
         color: white;
+        box-shadow: 0 9px#d3d3d3;
+    }
+    &:active {
+        box-shadow: 0 5px #6A6C71;
+        transform: translateY(4px);
     }
 }
 
@@ -263,6 +281,11 @@ h3 {
         background-color: #F9D783;
         border: 1px solid #F9D783;
         color: black;
+        box-shadow: 0 9px#d3d3d3;
+    }
+    &:active {
+        box-shadow: 0 5px #6A6C71;
+        transform: translateY(4px);
     }
 }
 
@@ -353,7 +376,7 @@ h3 {
 // yellow date square on article picture
 .yellow-square {
     display: inline-block;
-    background-color: #F9D783;
+    background-image: linear-gradient(to bottom right, #F9D783, #f8eed2, #F9D783); 
     color: #191919;
     text-decoration: none;
     text-align: center;
@@ -369,6 +392,7 @@ h3 {
     @media (min-width: 992px) {
         width: 50px;
         height: 50px;
+        padding: 5px;
     }
 
     @media (min-width: 1200px) {
@@ -377,13 +401,13 @@ h3 {
     }
 
     .date {
-        margin: 0px;
         font-family: 'DM sans', sans-serif;
         font-size: 12px;
         font-weight: 700;
 
         @media (min-width: 992px) {
             font-size: 16px;
+            margin-top: -3px;
         }
 
         @media (min-width: 1200px) {
@@ -403,7 +427,7 @@ h3 {
 
 // styling av sektioner nedanför
 
-// Header - ser bra ut
+// Header - ser bra ut - jitter i toppen
 .header {
 background-color: #F0EFE9;
 padding: 16px;
@@ -516,6 +540,7 @@ padding: 16px;
                     
                     &.active {
                         font-weight: 500;
+
                     }
 
                     &.active::after,
@@ -623,9 +648,9 @@ padding: 16px;
 
         img {
             display: none;
-            margin-right: -50px;
             
             @media (min-width: 1200px){
+                margin-right: -50px;
                 display: block;
                 }
         }
@@ -712,7 +737,7 @@ padding: 16px;
         flex-direction: column;
         
         @media (min-width: 768px) {
-            border: 1px solid #D3D3D3;
+            border: 1px solid #d3d3d3;
         }    
 
 
@@ -723,7 +748,7 @@ padding: 16px;
             align-items: flex-start;
             box-sizing: border-box;
             gap: 10px;
-            border: 1px solid #D3D3D3;
+            border: 1px solid #d3d3d3;
             padding: 72px;
         }
 
@@ -871,11 +896,12 @@ padding: 16px;
                 position: absolute;
                 top: 63%;
                 right: 30%;
-                left: -5%;
+                left: -10.5%;
 
                 .blue-hover-box {
                     background-color: #BEEBFF;
-                    padding: 40px 20px 40px 30px;
+                    padding: 40px 25px;
+                    width: 368px;
                     z-index: 1;
 
                     .bh-inline-txt {
@@ -1087,18 +1113,24 @@ padding: 16px;
                     background: white;
                     padding: 30px;
                     text-decoration: none;
+                    position: relative;
+                    z-index: 2;
     
                     &:hover {
                         background-color: #F9D783;
                         transition: 0.4s;
-                        transition-delay: 0.2s;
+                        box-shadow: 3px 9px #B9B9BF;
+                    }
+                    &:active {
+                        box-shadow: 1px 5px #7c7c7c;
+                        transform: translateY(4px);
+
                     }
                     &:hover .btn-arw-r i {
                         background-color: white;
                         color: #191919;
                         transition: 0.4s;
-                        transition-delay: 0.2s;
-                    }
+                    }                    
                 
                                                                         
                     .box-line {
@@ -1538,7 +1570,7 @@ padding: 16px;
             .grid-item {
                 margin: 15px 0;
                 padding: 10px;
-                border: 1px solid #D3D3D3;
+                border: 1px solid #d3d3d3;
                 border-radius: 10px;
 
                 @media (min-width: 992px) {
@@ -1614,7 +1646,9 @@ padding: 16px;
                 justify-content: space-between;
                 align-items: last baseline;
                 text-align: left;
+                
             }
+
 
             .top-lft{
                 p {
@@ -1655,7 +1689,7 @@ padding: 16px;
             }
 
             .grid-item {
-                border: 1px solid #D3D3D3;
+                border: 1px solid #d3d3d3;
                 border-radius: 10px;
                 padding:10px;
                 position: relative;
@@ -2031,36 +2065,37 @@ padding: 16px;
     background-color: #F0EFE9;
     border: none;
     position: relative;
-
-    @media (min-width: 768px) {
-        border-top: 1px solid #dad9d3;
-    }
+    z-index: auto;
 
     .design-lines-breadcrumbs {
         position: absolute;
         left:0;
         bottom: 0;
         display: none;
+        z-index: 0;
 
         @media (min-width: 992px) {
             display: block;
         }
     }
 
-
     .container {
         text-align: center;
         padding: 20px 10px;
+        position: relative;
+
 
         @media (min-width:992px) {
             padding: 90px 0;
         }
 
-        nav {
+        nav {            
             .breadcrumb {
                 display: flex;
                 justify-content: center;
                 align-items:center;
+                position: relative;
+                z-index: 3;
                 
                 .inactive {
                     a {
@@ -2081,7 +2116,6 @@ padding: 16px;
                     font-family: 'Inter', sans-serif;
                     font-weight: 400;
                     font-size: 16px;
-                    text-decoration: none;
                     color: #191919;
                 }
             }
@@ -2233,36 +2267,55 @@ padding: 16px;
                 }
                 
                 @media (min-width:1200px) {
-                    margin: 0 100px;
+                    margin: 0 150px;
                 }    
 
                 @media (min-width:1400px) {
-                    margin: 0 200px;
+                    margin: 0 250px;
                 }
 
             }
-
+ 
             form {
                 margin-top: 30px;
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
                 
+                label {
+                    // döljs normalt men är med i tab-index
+                    outline: none;
+                    border: 1px solid black;
+                    padding: 5px;
+                    border-radius: 25px;
+                    background: #F9D783;
+                    color: #191919;
+                    width: 150px;
+                }
+
                 input {
                     border: 10px solid white;
                     border-radius: 25px;
                     // har lämnat outline på för bättre tillgänglighet
                     // outline: none;
+                    padding-left: 5x;
                 }
 
                 textarea {
                     border: 10px solid white;
                     border-radius: 25px;
+                    resize: none;
                     // har lämnat outline på för bättre tillgänglighet
                     // outline: none;
+                    padding-left: 5px;
+
                 }
-                .submit {
+                .button {
                     border: none;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 16px;
+                    font-weight: 600;
+
                 }
             }
 
