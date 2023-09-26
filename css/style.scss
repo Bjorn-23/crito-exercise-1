@@ -284,9 +284,10 @@ h3 {
         box-shadow: 0 9px#d3d3d3;
     }
     &:active {
-        box-shadow: 0 5px #6A6C71;
         transform: translateY(4px);
+        box-shadow: 0 5px #626262;
     }
+   
 }
 
 .btn-video {
@@ -896,27 +897,47 @@ padding: 16px;
                 position: absolute;
                 top: 63%;
                 right: 30%;
-                left: -10.5%;
+                left: -5%;
+
+                @media (min-width: 768px){
+                    top: 63%;
+                    right: 30%;
+                    left: -10.5%;                    
+                }
 
                 .blue-hover-box {
                     background-color: #BEEBFF;
-                    padding: 40px 25px;
-                    width: 368px;
+                    padding: 25px;
                     z-index: 1;
+
+                    @media (min-width:768px){
+                        width: 368px;
+                        padding: 40px 25px;
+
+                    }
+
 
                     .bh-inline-txt {
                         display: flex;
                         
                         h3 {
-                            font-size: 20px; 
+                            font-size: 16px; 
                             font-family: 'DM sans', sans-serif;
                             font-weight: 900;
+
+                            @media (min-width: 768px) {
+                                font-size: 20px;
+                            }
                         }
 
                         p {
-                            font-size: 16px; 
+                            font-size: 12px; 
                             font-weight: 700;
                             margin-left: 5px;
+
+                            @media (min-width: 768px) {
+                                font-size: 16px;
+                            }
                         }
                     }
                 }
@@ -1153,6 +1174,8 @@ padding: 16px;
         }
     
         .c-btm {
+            display: flex;
+            justify-content: center;
             text-align: center;
             margin: 40px;
     
@@ -1408,6 +1431,8 @@ padding: 16px;
         }
 
         .btn-projects {
+            display: flex;
+            justify-content: center;
             text-align: center;
             margin-top: 60px;
         }
@@ -1461,6 +1486,8 @@ padding: 16px;
             }
 
             .btn-team-wrapper {
+                display: flex;
+                justify-content: center;
                 margin-bottom: 10px;
     
                 @media (min-width: 768px) {
@@ -1614,6 +1641,8 @@ padding: 16px;
         }
     
         .btn-black-div {
+            display: flex;
+            justify-content: center;
             text-align: center;
             
         }
@@ -1667,6 +1696,8 @@ padding: 16px;
                 }
 
                 .articles-btn-container {
+                    display: flex;
+                    justify-content: center;
                     .btn-transparent-fat {
                         padding: 15px 35px;
                     }                    

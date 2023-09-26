@@ -267,8 +267,8 @@ h3 {
   box-shadow: 0 9px #d3d3d3;
 }
 .btn-black:active {
-  box-shadow: 0 5px #6A6C71;
   transform: translateY(4px);
+  box-shadow: 0 5px #626262;
 }
 
 .btn-video {
@@ -820,26 +820,48 @@ h3 {
   position: absolute;
   top: 63%;
   right: 30%;
-  left: -10.5%;
+  left: -5%;
+}
+@media (min-width: 768px) {
+  .company-intro .container .sam-b-wrapper .blue-hover-wrapper {
+    top: 63%;
+    right: 30%;
+    left: -10.5%;
+  }
 }
 .company-intro .container .sam-b-wrapper .blue-hover-wrapper .blue-hover-box {
   background-color: #BEEBFF;
-  padding: 40px 25px;
-  width: 368px;
+  padding: 25px;
   z-index: 1;
+}
+@media (min-width: 768px) {
+  .company-intro .container .sam-b-wrapper .blue-hover-wrapper .blue-hover-box {
+    width: 368px;
+    padding: 40px 25px;
+  }
 }
 .company-intro .container .sam-b-wrapper .blue-hover-wrapper .blue-hover-box .bh-inline-txt {
   display: flex;
 }
 .company-intro .container .sam-b-wrapper .blue-hover-wrapper .blue-hover-box .bh-inline-txt h3 {
-  font-size: 20px;
+  font-size: 16px;
   font-family: "DM sans", sans-serif;
   font-weight: 900;
 }
+@media (min-width: 768px) {
+  .company-intro .container .sam-b-wrapper .blue-hover-wrapper .blue-hover-box .bh-inline-txt h3 {
+    font-size: 20px;
+  }
+}
 .company-intro .container .sam-b-wrapper .blue-hover-wrapper .blue-hover-box .bh-inline-txt p {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 700;
   margin-left: 5px;
+}
+@media (min-width: 768px) {
+  .company-intro .container .sam-b-wrapper .blue-hover-wrapper .blue-hover-box .bh-inline-txt p {
+    font-size: 16px;
+  }
 }
 .company-intro .container .about-company {
   text-align: center;
@@ -1061,6 +1083,8 @@ h3 {
   color: #626262;
 }
 .our-services .container .c-btm {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin: 40px;
 }
@@ -1281,6 +1305,8 @@ h3 {
   text-decoration: underline;
 }
 .projects .projects-wrapper .btn-projects {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-top: 60px;
 }
@@ -1329,6 +1355,8 @@ h3 {
   }
 }
 .team .container .top-wrapper .btn-team-wrapper {
+  display: flex;
+  justify-content: center;
   margin-bottom: 10px;
 }
 @media (min-width: 768px) {
@@ -1456,6 +1484,8 @@ h3 {
   color: #F94D1C;
 }
 .testimonials .container .btn-black-div {
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 
@@ -1502,6 +1532,10 @@ h3 {
   .articles-news .container .top .top-rgt {
     margin-top: 0;
   }
+}
+.articles-news .container .top .top-rgt .articles-btn-container {
+  display: flex;
+  justify-content: center;
 }
 .articles-news .container .top .top-rgt .articles-btn-container .btn-transparent-fat {
   padding: 15px 35px;
