@@ -16,7 +16,7 @@
        <div class="container">
             <a href="index.html"><img src="images/header/Logotype.svg" alt="Crito Logotype"></a>
 
-            <div class="absolute-mb">
+            <!-- <div class="absolute-mb">
                 <button class="menu-bars" id="menu-Bars">
                     <a href="index.html">Home</a>
                     <a href="services.html">Services</a>
@@ -26,7 +26,23 @@
                         <i class="fa-solid fa-bars"></i>
                     </a>
                 </button>
+            </div> -->
+
+            <div id="myNav" class="overlay">
+
+                <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+
+                <div class="overlay-content">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="news.html">News</a>
+                    <a href="articles.html" class="active">Articles</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
             </div>
+
+            <span onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
 
             <div  class="menu">
                 <div class="top-menu">
@@ -88,14 +104,82 @@
     </section>
 
 
-    <section class="articles-full">
+    <section class="articles">
         <div class="container grid-container">
 
-            <div class="top"></div>
+            <div class="top grid-item">
+                <div>
+                    <h2 class="articles-title">How To Use Digitalization In The Classroom</h2>
+                </div>
+                <div class="flex-txt">
+                    <p>Mar 25, 2023</p>
+                    <div class="yellow-dot"></div>
+                    <p>Business</p>
+                    <div class="yellow-dot"></div>
+                    <p>Kimberley Hansen</p>
+                </div>
+            </div>
 
-            <div class="left"></div>
+            <div class="left grid-item">
+                <img src="images/articles-news/25mar.png" alt="">
+                <p class="lorem">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed
+                    pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+                    <br><br>
+                    Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy
+                    pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. uspendisse dui purus, scelerisque at,
+                    vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.
+                    <br><br>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed
+                    pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. unc viverra imperdiet enim.
+                    Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                    egestas. Proin pharetra nonummy pede. Mauris et orci.
+                    <br><br>
+                    Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.
+                    Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis
+                    eleifend. Ut nonummy.
+                </p>
+                <blockquote class="a-quote">
+                    <p class="quote-icon"><i class="fa-sharp fa-solid fa-quote-right"></i></p>
+                    <p class="big-lorem">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed
+                        pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+                    </p>
+                </blockquote>
+                <p class="lorem">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed
+                    pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. unc viverra imperdiet enim.
+                    Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                    egestas.
+                </p>
+            </div>
 
-            <div class="right"></div>
+            <div class="right grid-item">
+                <div class="search">
+                    <input type="search" method="get" class="search-bar" placeholder="Type to search...">
+                </div>
+                
+                <div class="recent-posts">
+                    <div class="post-item"></div>
+                    <div class="post-item"></div>
+                    <div class="post-item"></div>
+                    <div class="post-item"></div>
+                </div>
+
+                <div class="categories">
+                    <ul class="cat-container">
+                        <li class="cat-item"></li>
+                        <li class="cat-item"></li>
+                        <li class="cat-item"></li>
+                        <li class="cat-item"></li>
+                        <li class="cat-item"></li>
+                        <li class="cat-item"></li>
+                    </ul>
+                </div>
+
+                
+            </div>
 
         </div>
     </section>

@@ -130,7 +130,7 @@ h3 {
 
 .btn-yellow {
   background-color: #f9d783;
-  border: 1px solid #F9D783;
+  border: 1px solid #f9d783;
   border-radius: 35px;
   color: #191919;
   text-decoration: none;
@@ -238,8 +238,8 @@ h3 {
   font-size: 0.9em;
 }
 .btn-black:hover {
-  background-color: #F9D783;
-  border: 1px solid #F9D783;
+  background-color: #f9d783;
+  border: 1px solid #f9d783;
   color: black;
   box-shadow: 0 9px #d3d3d3;
 }
@@ -329,7 +329,7 @@ h3 {
 
 .yellow-square {
   display: inline-block;
-  background-image: linear-gradient(to bottom right, #F9D783, #f8eed2, #F9D783);
+  background-image: linear-gradient(to bottom right, #f9d783, #f8eed2, #f9d783);
   color: #191919;
   text-decoration: none;
   text-align: center;
@@ -1043,7 +1043,7 @@ h3 {
   z-index: 2;
 }
 .our-services .container .c-middle .grid-container .grid-item:hover {
-  background-color: #F9D783;
+  background-color: #f9d783;
   transition: 0.4s;
   box-shadow: 3px 9px #B9B9BF;
 }
@@ -2090,7 +2090,7 @@ h3 {
   border: 1px solid black;
   padding: 5px;
   border-radius: 25px;
-  background: #F9D783;
+  background: #f9d783;
   color: #191919;
   width: 150px;
 }
@@ -2152,9 +2152,50 @@ h3 {
   }
 }
 
-.articles-page {
+.articles .top {
+  grid-area: top;
+}
+.articles .left {
+  grid-area: left;
+}
+.articles .right {
+  grid-area: right;
+}
+.articles .grid-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "top top" "left right";
+}
+.articles .grid-container .top .flex-txt {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+}
+.articles .grid-container .top .flex-txt div {
+  background-color: #f9d783;
+  height: 2px;
+  width: 2px;
+  padding: 4px;
+  border: 1px solid #f9d783;
+  border-radius: 50%;
+}
+.articles .grid-container .left .lorem {
+  color: #6A6C71;
+}
+.articles .grid-container .left .a-quote {
+  display: flex;
+  gap: 15px;
+}
+.articles .grid-container .left .a-quote .big-lorem {
+  font-family: "DM sans", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  font-style: italic;
+}
+.articles .grid-container .articles-page {
   background-color: #F0EFE9;
 }
-.articles-page .container .top .top-rgt .articles-btn-container .btn-transparent-fat {
+.articles .grid-container .articles-page .container .top .top-rgt .articles-btn-container .btn-transparent-fat {
   background-color: white;
 }

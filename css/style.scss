@@ -231,7 +231,7 @@ h3 {
 
 .btn-yellow {
     background-color: #f9d783;
-    border: 1px solid #F9D783;
+    border: 1px solid #f9d783;
     border-radius: 35px;
     color: #191919;
     text-decoration: none;
@@ -341,8 +341,8 @@ h3 {
         font-size: 0.9em;
     }
     &:hover {
-        background-color: #F9D783;
-        border: 1px solid #F9D783;
+        background-color: #f9d783;
+        border: 1px solid #f9d783;
         color: black;
         box-shadow: 0 9px#d3d3d3;
     }
@@ -440,7 +440,7 @@ h3 {
 // yellow date square on article picture
 .yellow-square {
     display: inline-block;
-    background-image: linear-gradient(to bottom right, #F9D783, #f8eed2, #F9D783); 
+    background-image: linear-gradient(to bottom right, #f9d783, #f8eed2, #f9d783); 
     color: #191919;
     text-decoration: none;
     text-align: center;
@@ -1211,7 +1211,7 @@ padding: 16px;
                     z-index: 2;
     
                     &:hover {
-                        background-color: #F9D783;
+                        background-color: #f9d783;
                         transition: 0.4s;
                         box-shadow: 3px 9px #B9B9BF;
                     }
@@ -2392,7 +2392,7 @@ padding: 16px;
                     border: 1px solid black;
                     padding: 5px;
                     border-radius: 25px;
-                    background: #F9D783;
+                    background: #f9d783;
                     color: #191919;
                     width: 150px;
                 }
@@ -2480,18 +2480,84 @@ padding: 16px;
 }
 
 // articles sida - articles and news -section
-.articles-page {
-    background-color: #F0EFE9;
+.articles {
+    .top {
+        grid-area: top;
+    }
+    .left {
+        grid-area: left;
+    }
+    .right {
+        grid-area: right;
+    }
 
-    .container {
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "top top"
+        "left right";
+        
+
         .top {
-            .top-rgt {
-                .articles-btn-container {
-                    .btn-transparent-fat {
-                        background-color: white;
+            .flex-txt {
+                display: flex;
+                justify-content: left;
+                gap: 20px;
+
+                div {
+                    background-color: #f9d783;
+                    height: 2px;
+                    width: 2px;
+                    padding: 4px;
+                    border: 1px solid #f9d783;
+                    border-radius: 50%;
+                    
+                }
+
+            }
+        }
+
+        .left {
+            .lorem {
+                color: #6A6C71;
+            }
+            .a-quote {
+                display: flex;
+                gap: 15px;
+                .big-lorem {
+                    font-family: 'DM sans', sans-serif;
+                    font-size: 22px;
+                    font-weight: 500;
+                    font-style: italic;
+                }
+            }
+
+        }
+
+        .right {
+            
+
+        }
+         
+
+        .articles-page {
+            background-color: #F0EFE9;
+        
+            .container {
+                .top {
+                    .top-rgt {
+                        .articles-btn-container {
+                            .btn-transparent-fat {
+                                background-color: white;
+                            }
+                        }
                     }
                 }
             }
         }
     }
 }
+    
+
