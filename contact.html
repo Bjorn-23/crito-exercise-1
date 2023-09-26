@@ -16,7 +16,7 @@
         <div class="container">
             <a href="index.html" tabindex="1"><img src="images/header/Logotype.svg" alt="Crito Logotype"></a>
 
-            <div class="absolute-mb">
+            <!-- <div class="absolute-mb">
                 <button class="menu-bars" id="menu-Bars">
                     <a href="index.html" class="active" tabindex="3">Home</a>
                     <a href="services.html" tabindex="4">Services</a>
@@ -26,7 +26,23 @@
                         <i class="fa-solid fa-bars" tabindex="2"></i>
                     </a>
                 </button>
+            </div> -->
+
+            <div id="myNav" class="overlay">
+
+                <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+
+                <div class="overlay-content">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="news.html">News</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </div>
+
             </div>
+
+            <span onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
+
 
             <div  class="menu">
                 <div class="top-menu">
