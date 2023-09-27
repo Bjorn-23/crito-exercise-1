@@ -70,9 +70,10 @@
                 <div class="main-menu">
                     <nav> 
                         <!-- när annan sida är aktiv så ändra classen nedan på den sidan -->
-                        <a class="active" href="index.html">Home</a> 
+                        <a href="index.html">Home</a> 
                         <a href="services.html">Services</a>
                         <a href="news.html">News</a>
+                        <a href="articles.html" class="active">Articles</a>
                         <a href="contact.html">Contact</a>
                     </nav>
                     <a class="btn-yellow btn-login" href="login.html">Login<i class="fa-regular fa-arrow-up-right"></i></a>
@@ -108,20 +109,23 @@
         <div class="container grid-container">
 
             <div class="top grid-item">
-                <div>
-                    <h2 class="articles-title">How To Use Digitalization In The Classroom</h2>
+                <div class="top-left">
+                    <div>
+                        <h2 class="articles-title">How To Use Digitalization In The Classroom</h2>
+                    </div>
+                    <div class="flex-txt">
+                        <p>Mar 25, 2023</p>
+                        <div class="yellow-dot"></div>
+                        <p>Business</p>
+                        <div class="yellow-dot"></div>
+                        <p>Kimberley Hansen</p>
+                    </div>
                 </div>
-                <div class="flex-txt">
-                    <p>Mar 25, 2023</p>
-                    <div class="yellow-dot"></div>
-                    <p>Business</p>
-                    <div class="yellow-dot"></div>
-                    <p>Kimberley Hansen</p>
-                </div>
+                <div class="top-right"></div>
             </div>
 
             <div class="left grid-item">
-                <img src="images/articles-news/25mar.png" alt="">
+                <img src="images/articles/digitalization.png" alt="">
                 <p class="lorem">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed
                     pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
@@ -153,28 +157,55 @@
                     Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
                     egestas.
                 </p>
+
+                <div class="tags">
+                    <div class="tag t1">Digitalization</div>
+                    <div class="tag t2">School</div>
+                    <div class="tag t3">IT</div>
+                    <div class="tag t4">Design</div>
+                    <div class="tag t5">Work</div>
+                    <div class="tag t6">Tech</div>
+
+                </div>
+
             </div>
 
             <div class="right grid-item">
+                <label for="a-search-bar" class="search-bar-hidden visually-hidden-focusable" tabindex="1">Press to search</label>
                 <div class="search">
-                    <input type="search" method="get" class="search-bar" placeholder="Type to search...">
+                    <input id="a-search-bar" type="search" method="get" class="search-bar" placeholder="Type to search..." tabindex="2">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
                 </div>
                 
                 <div class="recent-posts">
-                    <div class="post-item"></div>
-                    <div class="post-item"></div>
-                    <div class="post-item"></div>
-                    <div class="post-item"></div>
+                    <h3><u>Rec</u>ent Posts</h3>
+                    <div class="post-item no-border-top">
+                        <a tabindex="3" href="#">How To Blow Through Capital At An Incredible Rate</a>
+                        <p>Jan 14, 2020</p>
+                    </div>
+                    <div class="post-item">
+                        <a tabindex="4" href="#">Design Studios That Everyone Should Know About?</a>
+                        <p>Jan 14, 2020</p>
+                    </div>
+                    <div class="post-item">
+                        <a tabindex="5" href="#">How Did We Get 1M+ Visitors In 30 Days Without Anything?</a>
+                        <p>Jan 14, 2020</p>
+                    </div>
+                    <div class="post-item">
+                        <a tabindex="6" href="#">Figma On Figma: How We Built Our Website Design System</a>
+                        <p>Jan 14, 2020</p>
+                    </div>
                 </div>
 
                 <div class="categories">
+                    <h3><u>Cat</u>egories</h3>
                     <ul class="cat-container">
-                        <li class="cat-item"></li>
-                        <li class="cat-item"></li>
-                        <li class="cat-item"></li>
-                        <li class="cat-item"></li>
-                        <li class="cat-item"></li>
-                        <li class="cat-item"></li>
+                        <li class="cat-item"><a tabindex="7" href="#">Technology</a> - <span>20 posts</span>
+                        <li class="cat-item"><a tabindex="8" href="#">Freelancing</a> - <span>07 posts</span>
+                        <li class="cat-item"><a tabindex="9" href="#">Writing</a> - <span>16 posts</span>
+                        <li class="cat-item"><a tabindex="10" href="#">Marketing</a> - <span>11 posts</span>
+                        <li class="cat-item"><a tabindex="11" href="#">Business</a> - <span>35 posts</span>
+                        <li class="cat-item"><a tabindex="12" href="#">Education</a> - <span>14 posts</span>
                     </ul>
                 </div>
 
@@ -197,14 +228,14 @@
 
                 <div class="top-rgt">
                     <div class="articles-btn-container">
-                        <a class="btn-transparent-fat" href="news.html">Browse Articles<i class="fa-regular fa-arrow-up-right"></i></a>
+                        <a tabindex="13" class="btn-transparent-fat" href="news.html">Browse Articles<i class="fa-regular fa-arrow-up-right"></i></a>
                     </div>    
                 </div>
 
             </div>
 
             <div class="middle grid-container">
-                <a class="grid-item" href="news.html">
+                <a tabindex="14" class="grid-item" href="news.html">
                     <div class="img-wrapper">
                         <img  class="article-img relative" src="images/articles-news/25mar.png" alt="a woman in business suite sitting at a table in a classroom">
                         <div class="date-wrapper">
@@ -216,7 +247,7 @@
                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
                 </a>
 
-                <a class="grid-item" href="news.html">
+                <a tabindex="15" class="grid-item" href="news.html">
                     <div class="img-wrapper">
                         <img  class="article-img relative" src="images/articles-news/17mar.png" alt="a screen displaying 3 columns: examples, capabilities and limitations">
                         <div class="date-wrapper">
@@ -228,7 +259,7 @@
                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
                 </a>
 
-                <a class="grid-item" href="news.html">
+                <a  tabindex="16" class="grid-item" href="news.html">
                     <div class="img-wrapper">
                         <img  class="article-img relative" src="images/articles-news/13mar.png" alt="a smartphone on top of books about css and javascript">
                         <div class="date-wrapper">
@@ -262,7 +293,7 @@
             <div class="top container">
                 <div class="grid-container">
                     <div id="logotype" class="grid-item">
-                        <a href="index.html"><img src="images/footer/Logo-cs.svg" alt="The logotype of Crito Consulting INC"></a>
+                        <a href="index.html" tabindex="17"><img src="images/footer/Logo-cs.svg" alt="The logotype of Crito Consulting INC"></a>
                         <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat obcaecati voluptas voluptates!
                             Voluptates laborum nam ratione minus necessitatibus, iure praesentium.</p>
                     </div>
@@ -270,40 +301,40 @@
                     <div class="grid-item">
                         <h3 class="white-txt">Company</h3>
                         <div class="grey-text">
-                            <p><a href="about.html">About</a></p>
-                            <p><a href="features.html">Features</a></p>
-                            <p><a href="works.html">Works</a></p>
-                            <p><a href="career.html">Career</a></p>
+                            <p><a href="about.html" tabindex="18">About</a></p>
+                            <p><a href="features.html" tabindex="19">Features</a></p>
+                            <p><a href="works.html" tabindex="20">Works</a></p>
+                            <p><a href="career.html" tabindex="21">Career</a></p>
                         </div>
                     </div>
 
                     <div class="grid-item">
                         <h3 class="white-txt">Help</h3>
                         <div class="grey-text">
-                            <p><a href="cust-support.html">Customer Support</a></p>
-                            <p><a href="delivery.html">Delivery Details</a></p>
-                            <p><a href="terms-conditions.html">Terms & Conditions</a></p>
-                            <p><a href="#">Privacy Policy</a></p>
+                            <p><a href="cust-support.html" tabindex="22">Customer Support</a></p>
+                            <p><a href="delivery.html" tabindex="23">Delivery Details</a></p>
+                            <p><a href="terms-conditions.html" tabindex="24">Terms & Conditions</a></p>
+                            <p><a href="#" tabindex="25">Privacy Policy</a></p>
                         </div>
                     </div>
 
                     <div class="grid-item">
                         <h3 class="white-txt">Resources</h3>
                         <div class="grey-text">
-                            <p><a href="ebooks.html">Free eBooks</a></p>
-                            <p><a href="tutorial-dev.html">Development Tutorial</a></p>
-                            <p><a href="how-to-blog.html">How to - Blog</a></p>
-                            <p><a href="https://www.youtube.com/watch?time_continue=1&v=9i4UKnADT5E&embeds_referring_euri=https%3A%2F%2Fec.omniway.se%2F&embeds_referring_origin=https%3A%2F%2Fec.omniway.se&source_ve_path=Mjg2NjY&feature=emb_logo">Youtube Playlist</a></p>
+                            <p><a href="ebooks.html" tabindex="26">Free eBooks</a></p>
+                            <p><a href="tutorial-dev.html" tabindex="27">Development Tutorial</a></p>
+                            <p><a href="how-to-blog.html" tabindex="28">How to - Blog</a></p>
+                            <p><a href="https://www.youtube.com/watch?time_continue=1&v=9i4UKnADT5E&embeds_referring_euri=https%3A%2F%2Fec.omniway.se%2F&embeds_referring_origin=https%3A%2F%2Fec.omniway.se&source_ve_path=Mjg2NjY&feature=emb_logo" tabindex="29">Youtube Playlist</a></p>
                         </div>
                     </div>
 
                     <div class="grid-item">
                         <h3 class="white-txt">Link</h3>
                         <div class="grey-text">
-                            <p><a href="ebooks.html">Free eBooks</a></p>
-                            <p><a href="tutorial-dev.html">Development Tutorial</a></p>
-                            <p><a href="how-to-blog.html">How to - Blog</a></p>
-                            <p><a href="https://www.youtube.com/watch?time_continue=1&v=9i4UKnADT5E&embeds_referring_euri=https%3A%2F%2Fec.omniway.se%2F&embeds_referring_origin=https%3A%2F%2Fec.omniway.se&source_ve_path=Mjg2NjY&feature=emb_logo">Youtube Playlist</a></p>
+                            <p><a href="ebooks.html" tabindex="30">Free eBooks</a></p>
+                            <p><a href="tutorial-dev.html" tabindex="31">Development Tutorial</a></p>
+                            <p><a href="how-to-blog.html" tabindex="32">How to - Blog</a></p>
+                            <p><a href="https://www.youtube.com/watch?time_continue=1&v=9i4UKnADT5E&embeds_referring_euri=https%3A%2F%2Fec.omniway.se%2F&embeds_referring_origin=https%3A%2F%2Fec.omniway.se&source_ve_path=Mjg2NjY&feature=emb_logo" tabindex="33">Youtube Playlist</a></p>
                         </div>
                     </div>
                 </div>
@@ -320,10 +351,10 @@
             <div class="bottom container relative">
 
                 <div class="right">
-                    <p><a  class="soc-med-footer" href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></m">
-                    <p><a  class="soc-med-footer" href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></m">
-                    <p><a  class="soc-med-footer" href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></m">
-                    <p><a  class="soc-med-footer" href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></m">
+                    <p><a  class="soc-med-footer" href="https://facebook.com" tabindex="34" target="_blank"><i class="fa-brands fa-facebook"></i></a></m">
+                    <p><a  class="soc-med-footer" href="https://twitter.com" tabindex="35" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></m">
+                    <p><a  class="soc-med-footer" href="https://instagram.com"  tabindex="36" target="_blank"><i class="fa-brands fa-instagram"></i></a></m">
+                    <p><a  class="soc-med-footer" href="https://linkedin.com" tabindex="37" target="_blank"><i class="fa-brands fa-linkedin"></i></a></m">
                 </div>
                 <div class="left">
                     <p class="copyright">&copy 2023 Crito - Consulting Company INC. All Rights Reserved</p>
