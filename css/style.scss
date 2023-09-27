@@ -2689,6 +2689,26 @@ padding: 16px;
         }
     }
 }
+
+// resultatlista för form
+.results-section{
+    background-color: #f0efe9;
+
+    .container {
+        padding: 100px;
+        display: block;
+
+        .results {
+            width: 500px;
+            background-color: #f9d783;
+            border: 1px solid #f9d783;
+            border-radius: 25px;
+            padding: 50px;
+            margin-bottom: 40px;
+        }
+    }
+}
+
     
 
 // menu-bars for mobile - inte nöjd med storleken på den, kanske använd från 576-678?

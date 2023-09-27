@@ -638,8 +638,10 @@
                     <h2 class="subscribe-title">Get Updates By Signing Up</h2>
                 </div>
                 <div class="right">
-                    <input type="email" class="email" placeholder="username@domain.com" required></input>
-                    <div class=" submit btn-yellow">Subscribe<i class="fa-regular fa-arrow-up-right"></i></div>
+                    <form id="sub-form" method="get" action="form-results.html">
+                        <input type="email" class="email" name="email" id="sub-email" placeholder="username@domain.com" required></input>
+                        <button type="submit" class=" submit btn-yellow" >Subscribe<i class="fa-regular fa-arrow-up-right"></i></button>
+                    </form>
                 </div>
             </div>
         </div>

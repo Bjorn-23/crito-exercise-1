@@ -139,14 +139,17 @@
             
             <div class="message-us" id="#message-us">
                 <h2 class="message-title">Leave us a message for any information.</h2>
-                <form id="contactForm" method="post">
+                <form id="contactForm" method="get" action="form-results.html">
                     <label for="c_fullName" class="c_labels visually-hidden-focusable" tabindex="24">Your Name</label>
                     <input id="c_fullName" type="text" name="fullname" placeholder="Name...*" autocomplete="none" tabindex="25" required>
+
                     <label for="c_email" class="c_labels visually-hidden-focusable" tabindex="26">Your E-mail</label>
                     <input id="c_email" type="email" name="email" placeholder="Email...*" autocomplete="none" tabindex="27" required>
+
                     <label for="c_message" class="c_labels visually-hidden-focusable" tabindex="28">Your Message</label>
                     <textarea id="c_message" type="text" rows="5" name="message" placeholder="Your Message...*" tabindex="29" required></textarea>
-                    <button id="c_submit" type="submit" name="submit" class="submit btn-yellow" tabindex="30">Send Message<i class="fa-solid fa-arrow-up-right"></i></button>
+
+                    <button id="c_submit" type="submit" class="submit btn-yellow" tabindex="30">Send Message<i class="fa-solid fa-arrow-up-right"></i></button>
                 </form>
             </div>
         </div>    

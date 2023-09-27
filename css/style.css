@@ -2402,3 +2402,19 @@ h3 {
 .articles .grid-container .articles-page .container .top .top-rgt .articles-btn-container .btn-transparent-fat {
   background-color: white;
 }
+
+.results-section {
+  background-color: #f0efe9;
+}
+.results-section .container {
+  padding: 100px;
+  display: block;
+}
+.results-section .container .results {
+  width: 500px;
+  background-color: #f9d783;
+  border: 1px solid #f9d783;
+  border-radius: 25px;
+  padding: 50px;
+  margin-bottom: 40px;
+}
