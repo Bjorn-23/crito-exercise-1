@@ -1,9 +1,10 @@
-// Struktur:
-// Fram till linje L248 = generellt
-// index.html från L249 till L1745
-// contact.html från L1747 till ...
+// Structure:
+// L4 to L68 - general text styling, px-to-rem-converter-function .
+// L70 to 403 - Buttons & site-wide stylings + mobile menu.
+// L408 to 2080 - index.html
+// L2083 to 2716 - other pages.
 
-// scss string interpolation used to calculate rem from px.
+// scss string interpolation used to calculate rem from px on font-sizes and media-queries.
 @use "sass:math";
 
 @function rem($pixels, $context: 16) {
@@ -15,7 +16,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Inter:wght@300;400;500;700;900&display=swap');
 
-
+//text styling + box-sizing.
 html, body { 
     overflow-x: hidden;
     box-sizing: border-box;
@@ -77,7 +78,7 @@ html, body {
     left: 0; 
     top: 0;
     background-color: #f0efe9;
-    background-color: rgb(240,239,233,0.98);
+    background-color: rgb(240,239,233,0.99);
     overflow-x: hidden;
     transition: 0.5s;
 
@@ -94,14 +95,21 @@ html, body {
     a {
         padding: 16px;
         text-decoration: none;
-        font-size: 32px;
+        font-size: rem(32);
         color: #191919;
+        border-top: 1px solid rgb(185,185,191,0.75);
         display: block;
         transition: 0.4s;
 
         &:hover, &:focus {
             text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 5px;
         }
+    }
+    
+    .btm {
+        border-bottom: 1px solid rgb(185,185,192,0.75);
     }
 
     .active {
@@ -109,29 +117,36 @@ html, body {
     }
 
     .close-btn {
+        border: none;
         position: absolute;
         top: 20px;
         right: 45px;
-        font-size: 46px;
+        font-size: rem(45);
 
         &:hover, &:focus {
             text-decoration: none;
         }
     }
     
-    @media screen and (max-height: 450px) {
+    @media screen and (max-height: rem(450)){
         a {
-            font-size: 20px
+            font-size: rem(20);
         }
+
         .close-btn {
-          font-size: 40px;
+          font-size: rem(40);
           top: 15px;
           right: 35px;
         }
     }
 }
+// changed cursor
+.fa-bars:hover {
+    cursor: pointer;
+}
 
 // transitions on buttons.
+.btn-yellow,
 .btn-transparent,
 .btn-black,
 .btn-video,
@@ -149,10 +164,10 @@ html, body {
     text-decoration: none;
     padding: 15px 25px;
     font-weight:600;
-    font-size: 14px;
+    font-size: rem(14);
 
     @media (min-width: rem(992)) {
-        font-size: 16px;
+        font-size: rem(16);
     }
 
     i {
@@ -182,10 +197,10 @@ html, body {
     text-decoration: none;
     padding: 15px 25px;
     font-weight:600;
-    font-size: 14px;
+    font-size: rem(14);
 
     @media (min-width: rem(992)) {
-        font-size: 16px;
+        font-size: rem(16);
     }
 
     i {
@@ -212,10 +227,10 @@ html, body {
     text-decoration: none;
     padding: 20px 35px;
     font-weight:400;
-    font-size: 14px;
+    font-size: rem(14);
 
     @media (min-width: rem(992)) {
-        font-size: 16px;
+        font-size: rem(16);
     }
 
     i {
@@ -242,10 +257,10 @@ html, body {
     text-decoration: none;
     padding: 15px 25px;
     font-weight:600;
-    font-size: 14px;
+    font-size: rem(14);
 
     @media (min-width: rem(992)) {
-        font-size: 16px;
+        font-size: rem(16);
     }
 
     i {
@@ -271,12 +286,12 @@ html, body {
     text-decoration: none;
     padding: 15px 15px 15px 0;
     font-weight:600;
-    font-size: 12px;
+    font-size: rem(12);
 
     @media (min-width: rem(992)) {
-        font-size: 16px;
+        font-size: rem(16);
         padding: 15px 25px;
-        font-size: 14px;
+        font-size: rem(14);
     }
 
     i {
@@ -303,10 +318,10 @@ html, body {
     padding: 15px 25px;
     font-weight:600;
     text-align: right;
-    font-size: 14px;
+    font-size: rem(14);
 
     @media (min-width: rem(992)) {
-        font-size: 16px;
+        font-size: rem(16);
     }
 
     i {
@@ -379,32 +394,32 @@ html, body {
 
     .date {
         font-family: 'DM sans', sans-serif;
-        font-size: 12px;
+        font-size: rem(12);
         font-weight: 700;
 
         @media (min-width: rem(992)) {
-            font-size: 16px;
+            font-size: rem(16);
             margin-top: -3px;
         }
 
         @media (min-width: rem(1200)) {
-            font-size: 22px;
+            font-size: rem(22);
         }
     }
 
     .month {
         margin: 0px;
-        font-size: 10px;
+        font-size: rem(10);
 
         @media (min-width: rem(992)) {
-            font-size: 14px;
+            font-size: rem(14);
         }
     }
 }
 
 // styling of sections below.
 
-// Header
+// header
 .header {
 background-color: #f0efe9;
 padding: 16px;
@@ -425,7 +440,7 @@ padding: 16px;
         span {
             display: flex;
             align-items: center;
-            font-size: 32px;
+            font-size: rem(32);
     
             @media (min-width: rem(992)) {
                 display: none;
@@ -462,7 +477,7 @@ padding: 16px;
                         margin-right: 30px;
                         border-right: 1px solid #dad9d3;
                         font-family: 'Inter' sans-serif;
-                        font-size: 15px;
+                        font-size: rem(15);
                         font-weight: 300;                
 
                         @media (min-width: rem(1200)){
@@ -473,7 +488,6 @@ padding: 16px;
                         i {
                             margin-right: 5px;
                             font-size: 1.2em;
-
                         }
 
                         a {
@@ -550,7 +564,7 @@ padding: 16px;
     }
 }
 
-// Showcase - ser bra ut
+// showcase
 .showcase {
     background-color: #F0EFE9;
     position: relative;
@@ -592,7 +606,7 @@ padding: 16px;
             h1 {
                 font-family: DM sans, sans-serif; 
                 font-weight:700;
-                font-size: 40px;
+                font-size: rem(40);
                 
                 @media (min-width: rem(768)) {
                     font-size: 70px;
@@ -609,14 +623,14 @@ padding: 16px;
             }
 
             p {
-                font-size: 16px;
+                font-size: rem(16);
                 padding-top: 20px;
                 padding-left: 10px;
                 padding-right: 10px;
                 padding-bottom: 40px;
 
                 @media (min-width: rem(768)) {
-                    font-size: 20px;
+                    font-size: rem(20);
                     padding-left: 0;
                     padding-right: 0;
                 }
@@ -649,7 +663,7 @@ padding: 16px;
     }
 }
 
-// clients v2 - funkar bättre - grid.
+// clients v2 - works better - grid.
 .clients {    
     .cl1 {
         grid-area: cl1;
@@ -717,7 +731,7 @@ padding: 16px;
     }
 }
 
-//.features-container - ser bra ut
+// features-container
 .features-container {
     align-items: center;
 
@@ -805,7 +819,7 @@ padding: 16px;
 
                 .features-h3 {
                     padding-bottom: 20px;
-                    font-size: 16px;
+                    font-size: rem(16);
                 }
 
             }
@@ -821,7 +835,7 @@ padding: 16px;
 
 }
 
-// .company-intro - ser bra ut
+// company-intro
 .company-intro {
 
     .container {
@@ -909,22 +923,22 @@ padding: 16px;
                         display: flex;
                         
                         h3 {
-                            font-size: 16px; 
+                            font-size: rem(16); 
                             font-family: 'DM sans', sans-serif;
                             font-weight: 900;
 
                             @media (min-width: rem(768)) {
-                                font-size: 20px;
+                                font-size: rem(20);
                             }
                         }
 
                         p {
-                            font-size: 12px; 
+                            font-size: rem(12); 
                             font-weight: 700;
                             margin-left: 5px;
 
                             @media (min-width: rem(768)) {
-                                font-size: 16px;
+                                font-size: rem(16);
                             }
                         }
                     }
@@ -1020,7 +1034,7 @@ padding: 16px;
     }
 }
 
-//Our Services ser bra ut - fixa på ipad, marginalerna är fel och vänsterställda
+// our Services
 .our-services {
     position: relative;
     background-color: #F0EFE9;
@@ -1109,7 +1123,7 @@ padding: 16px;
                 }
 
                 @media (min-width: rem(576)) {
-                    grid-template-columns: 1fr 1fr;
+                    // grid-template-columns: 1fr 1fr;
                     margin: 0;
                 }
                 
@@ -1175,7 +1189,7 @@ padding: 16px;
     }   
 }    
 
-//.why-choose-us - ser bra ut - fixa på ipad blir konstigt run 992px - fixa blå rutans padding på mobil
+// why-choose-us
 .why-choose-us {
 
     .flex-wrapper {
@@ -1212,10 +1226,10 @@ padding: 16px;
                 }
 
                 .cu-title {
-                    font-size: 26px;
+                    font-size: rem(26);
 
                     @media (min-width: rem(992)) {    
-                        font-size: 36px;
+                        font-size: rem(36);
                     }     
                     
                 }
@@ -1272,7 +1286,7 @@ padding: 16px;
                     }
     
                     .txt-div {
-                        font-size: 12px;
+                        font-size: rem(12);
                         margin-left: 10px;                    
                         flex: 1;
                         text-align: left;
@@ -1283,7 +1297,7 @@ padding: 16px;
 
                         @media (min-width: rem(992)) {
                             margin-left: 15px;
-                            font-size: 16px;
+                            font-size: rem(16);
                             // text-align: left;    
                         }
 
@@ -1347,7 +1361,7 @@ padding: 16px;
     }   
 }
 
-//projects - ser bra ut
+// projects
 .projects {
 
     .projects-wrapper {
@@ -1428,7 +1442,7 @@ padding: 16px;
     }
 }
 
-// team - ser bra ut
+// team
 .team {
     background-color: #ECD28B;
 
@@ -1519,10 +1533,10 @@ padding: 16px;
                             .slide-bottom-text {                                
                                 p {
                                     color: #626262;
-                                    font-size: 14px;
+                                    font-size: rem(14);
                                     
                                     @media (min-width: rem(768)) {
-                                        font-size: 16px;
+                                        font-size: rem(16);
                                     }
                                 }
                             }
@@ -1534,7 +1548,7 @@ padding: 16px;
     }
 }
 
-// testimonials - ser bra ut
+// testimonials
 .testimonials {
     background-color: #ECD28B;
     padding: 15px 10px 40px 10px;
@@ -1613,7 +1627,7 @@ padding: 16px;
                         margin-left: 20px;
                                                 
                         h3 {
-                            // font-size: 22px; 
+                            // font-size: rem(22); 
                             // font-family: 'DM sans', sans-serif;
                             // font-weight: 700;
                             margin-top: 15px;                                        
@@ -1637,7 +1651,7 @@ padding: 16px;
     }
 }
 
-// articles & news - ser bra ut
+// articles & news
 .articles-news {
     .container {
         padding-bottom: 30px;
@@ -1802,7 +1816,7 @@ padding: 16px;
     }
 }
 
-// subscribe section - ser bra ut
+// subscribe section
 .subscribe{
     background-color: #F0EFE9;
     position: relative;
@@ -1844,30 +1858,30 @@ padding: 16px;
             .left {
                 h2 {
                     padding: 0 50px 15px;
-                    font-size: 24px;
+                    font-size: rem(24);
 
                     @media (min-width: rem(380)) {
                         padding: 0 60 15px;
-                        font-size: 28px;
+                        font-size: rem(28);
                     }
 
                     @media (min-width: rem(576)) {
                         padding: 0 0 15px;
-                        font-size: 28px;
+                        font-size: rem(28);
                     }
 
                     @media (min-width: rem(768)) {
                         padding: 0 0 15px;
-                        font-size: 32px;
+                        font-size: rem(32);
                     }
 
                     @media (min-width: rem(1200)) {
                         padding: 0px;
-                        font-size: 38px;
+                        font-size: rem(38);
                     }
 
                     @media (min-width: rem(1400)) {
-                        font-size: 45px;
+                        font-size: rem(45);
                     }
                 }
             }
@@ -1907,7 +1921,7 @@ padding: 16px;
     }
 }
 
-// footer section - ser bra ut (samma på alla sidor)
+// footer section
 .footer {
     background-color: #0E1021;
     position: relative;
@@ -2048,10 +2062,10 @@ padding: 16px;
             .left {
                .copyright {
                     color: #b9b9bf;
-                    font-size: 10px;
+                    font-size: rem(10);
 
                     @media (min-width: rem(576)) {
-                        font-size: 16px;
+                        font-size: rem(16);
                     }
                 } 
             }
@@ -2077,9 +2091,9 @@ padding: 16px;
         }
     }
 }
-// SLUT PÅ INDEX.HTML
+// end of index.html
 
-// breadcrumbs section - under utveckling
+// breadcrumbs section - same for all pages except change in .active depending on what page your on.
 .breadcrumbs {
     background-color: #F0EFE9;
     border: none;
@@ -2119,7 +2133,7 @@ padding: 16px;
                 .inactive {
                     a {
                         font-family: 'Inter', sans-serif;
-                        font-size: 16px;
+                        font-size: rem(16);
                         font-weight: 300;
                         text-decoration: none;
                         color: #191919;
@@ -2134,7 +2148,7 @@ padding: 16px;
                 .active {
                     font-family: 'Inter', sans-serif;
                     font-weight: 400;
-                    font-size: 16px;
+                    font-size: rem(16);
                     color: #191919;
                 }
             }
@@ -2153,7 +2167,7 @@ padding: 16px;
     }
 }
 
-// contact sida, contact section - under utveckling
+// contact.html - sections inside.
 .contact {
     margin: 15px 0;
 
@@ -2213,7 +2227,7 @@ padding: 16px;
 
                 .icon {
                     i {
-                        font-size: 20px;
+                        font-size: rem(20);
                         text-align: center;
                         padding: 15px;
                         color:white;
@@ -2232,15 +2246,15 @@ padding: 16px;
                         margin: 0;
 
                         @media (min-width: rem(768)) {
-                            font-size: 12px;
+                            font-size: rem(12);
                         }
 
                         @media (min-width: rem(992)) {
-                            font-size: 14px;
+                            font-size: rem(14);
                         }
 
                         @media (min-width: rem(1200)) {
-                        font-size: 18px;
+                        font-size: rem(18);
                         }
                     }
 
@@ -2258,7 +2272,7 @@ padding: 16px;
 
         .message-us {
             background-color: #F0EFE9;
-            padding: 20px 30px;
+            padding: 30px 15px;
 
             @media (min-width: rem(768)) {
                 margin: 40px 0;
@@ -2267,7 +2281,7 @@ padding: 16px;
 
             @media (min-width: rem(992)) {
                 margin: 60px 0;
-                padding: 60px 80px;
+                padding: 80px;
             }
 
             
@@ -2332,7 +2346,7 @@ padding: 16px;
                 .button {
                     border: none;
                     font-family: 'Inter', sans-serif;
-                    font-size: 16px;
+                    font-size: rem(16);
                     font-weight: 600;
 
                 }
@@ -2353,7 +2367,7 @@ padding: 16px;
     }
 }
 
-// services sida - section
+// services.html - sections inside. (styles for grid = Line 1096+).
 .services-page {
     // background-color: #fff;
     margin: 0;
@@ -2394,8 +2408,8 @@ padding: 16px;
     }
 }
 
-// articles sida - articles and news -section
-.articles {
+// articles.html - full page articles - fix responsiveness from 1200-1400px min-width.
+.article {
     margin: 20px 20px 60px;
 
     @media (min-width: rem(768)) {
@@ -2422,14 +2436,14 @@ padding: 16px;
                 grid-area: right;
             }
 
-        @media (min-width: rem(992)) {
+        @media (min-width: rem(1200)) {
             display: grid;
             grid-template-columns: 1.5fr 1fr;
             grid-template-rows: auto auto;
             grid-template-areas:
             "top top"
             "left right";
-            gap: 40px 140px;
+            gap: 40px 80px;
     
             .top {
                 grid-area: top;
@@ -2440,6 +2454,11 @@ padding: 16px;
             .right {
                 grid-area: right;
             }
+        }
+
+        @media (min-width: rem(1400)) {
+            gap: 40px 140px;
+
         }
         
 
@@ -2521,7 +2540,7 @@ padding: 16px;
                 }
                 .big-lorem {
                     font-family: 'DM sans', sans-serif;
-                    font-size: 22px;
+                    font-size: rem(22);
                     font-weight: 500;
                     font-style: italic;
                 }
@@ -2565,6 +2584,11 @@ padding: 16px;
                     border-radius: 25px;
                     margin: 10px;
 
+                    a {
+                        text-decoration: none;
+                        color: #191919;
+                    }
+
 
                 }
             }
@@ -2573,8 +2597,38 @@ padding: 16px;
 
         .right {
             position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 20px;
 
-            .search-bar-hidden {
+            @media (min-width: rem(992)) {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas:
+                "search-bl  search-bl"
+                "search search"
+                "recent cat";
+                
+                .search-bar-label{
+                    grid-area: search-bl;
+                }
+                .search {
+                    grid-area: search;
+                }
+                .recent-posts {
+                    grid-area: recent;
+                }
+                .categories {
+                    grid-area: cat;
+                }
+            }
+
+            @media (min-width: rem(1200)) {
+                display: block;
+            }
+
+            .search-bar-label {
                 background-color: #f3f3f3;
                 border: 1px solid #f3f3f3;
                 border-radius: 25px;
@@ -2612,8 +2666,11 @@ padding: 16px;
             .recent-posts {
                 border: 1px solid #b9b9bf;
                 padding: 50px 100px 30px 40px;
-                margin-bottom:50px;
                 
+                @media (min-width: rem(1200)) {
+                    margin-bottom:50px;
+                }
+
                 .post-item{
                     display: inline-block;
                     padding: 20px 0;
@@ -2622,7 +2679,7 @@ padding: 16px;
                     a {
                         text-decoration: none;
                         font-family: 'Dm sans', sans-serif;
-                        font-size: 16px;
+                        font-size: rem(16);
                         font-weight: 700;
                         color: #191919;
                     }
@@ -2638,7 +2695,7 @@ padding: 16px;
 
             .categories {
                 border: 1px solid #b9b9bf;
-                padding: 50px;
+                padding: 50px 0 50px 50px;
 
                 h3 {
                     margin-bottom: 25px;
@@ -2690,16 +2747,20 @@ padding: 16px;
     }
 }
 
-// resultatlista för form
+// results from subscribe form and message form.
 .results-section{
     background-color: #f0efe9;
 
     .container {
-        padding: 100px;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
 
         .results {
-            width: 500px;
+            width: auto;
+            height: auto;
             background-color: #f9d783;
             border: 1px solid #f9d783;
             border-radius: 25px;
@@ -2724,7 +2785,7 @@ padding: 16px;
 //         overflow: hidden;
 //         border: 1px solid #d3d3d3;
 //         border-radius: 25px;
-//         font-size: 30px;
+//         font-size: rem(30);
 //         color: #191919;       
         
 //         @media (min-width: rem(992)) {
@@ -2738,7 +2799,7 @@ padding: 16px;
 //             color: #191919;
 //             padding: 14px 16px;
 //             text-decoration: none;
-//             font-size: 16px;
+//             font-size: rem(16);
 //         }
         
 //         a:hover {
