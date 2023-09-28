@@ -21,6 +21,19 @@ html, body {
     overflow-x: hidden;
     box-sizing: border-box;
 
+    a {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: rem(12);
+
+        @media (min-width: rem(576)) {
+            font-size: rem(14);
+        }
+
+        @media (min-width: rem(992)) {
+            font-size: rem(16);
+        }
+    }
     p {
         color: #191919;
         font-family: 'Inter', sans-serif;
@@ -2713,30 +2726,36 @@ padding: 16px;
                 .cat-container {
                     padding: 0;
                     margin: 0;
-                    list-style-type: none;                  
 
                     .cat-item {
-                        margin:8px 0;
+                        display: flex;
+                        align-items: baseline;
+                        margin-bottom:16px;
 
                         a {
                             text-decoration: none;
-                            color: #191919;
-                            margin: 10px;
-                        }
-                        &:hover {
+                            font-family: 'DM sans', sans-serif;
                             font-weight: 700;
+                            color: #191919;
+                            margin-right: 10px;
+                            
+                        }
+                        & a:hover {
+                            text-decoration: underline;
+                            text-decoration-thickness: 1px;
+                            text-underline-offset: 5px;
                         }
 
-                        span {
-                            margin-left: 10px;
+                        p {
+                            font-family: 'DM sans', sans-serif;
+                            font-weight: 700;
+                            color: #797979;
+                            margin: 0 10px;
                         }
-                    }
-                    
+                    }                    
                 }
             }
-
-        }
-         
+        }         
 
         .articles-page {
             background-color: #F0EFE9;

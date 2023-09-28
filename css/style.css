@@ -4,6 +4,21 @@ html, body {
   overflow-x: hidden;
   box-sizing: border-box;
 }
+html a, body a {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+@media (min-width: 36rem) {
+  html a, body a {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 62rem) {
+  html a, body a {
+    font-size: 1rem;
+  }
+}
 html p, body p {
   color: #191919;
   font-family: "Inter", sans-serif;
@@ -2430,21 +2445,29 @@ html .orange-txt, body .orange-txt {
 .article .grid-container .right .categories .cat-container {
   padding: 0;
   margin: 0;
-  list-style-type: none;
 }
 .article .grid-container .right .categories .cat-container .cat-item {
-  margin: 8px 0;
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 16px;
 }
 .article .grid-container .right .categories .cat-container .cat-item a {
   text-decoration: none;
-  color: #191919;
-  margin: 10px;
-}
-.article .grid-container .right .categories .cat-container .cat-item:hover {
+  font-family: "DM sans", sans-serif;
   font-weight: 700;
+  color: #191919;
+  margin-right: 10px;
 }
-.article .grid-container .right .categories .cat-container .cat-item span {
-  margin-left: 10px;
+.article .grid-container .right .categories .cat-container .cat-item a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+.article .grid-container .right .categories .cat-container .cat-item p {
+  font-family: "DM sans", sans-serif;
+  font-weight: 700;
+  color: #797979;
+  margin: 0 10px;
 }
 .article .grid-container .articles-page {
   background-color: #F0EFE9;
