@@ -152,7 +152,7 @@ html, body {
 .btn-video,
 .btn-transparent-fat,
 .submit {
-    transition: 0.4s;
+    transition: 0.6s;
 }
 
 // button layout and functions.
@@ -291,7 +291,6 @@ html, body {
     @media (min-width: rem(992)) {
         font-size: rem(16);
         padding: 15px 25px;
-        font-size: rem(14);
     }
 
     i {
@@ -305,9 +304,14 @@ html, body {
     i:hover {
         background-color: #191919;
         color: white;
-        transition: 0.4s;
-        transition-delay: 0.15s;
+        box-shadow: 0 9px#d3d3d3;
+        transition: 0.6s;
     }
+    i:active {
+        transform: translateY(4px);
+        box-shadow: 0 5px #626262;
+    }
+
 }
 
 // used inside "our-services"-boxes.
@@ -1028,6 +1032,11 @@ padding: 16px;
 
                 @media (min-width: rem(1200)) {
                     justify-content: flex-start;
+                }
+
+                span {
+                    margin-left: -30px;
+                    font-weight: 600;
                 }
             }
         }        

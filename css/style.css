@@ -128,7 +128,7 @@ html .orange-txt, body .orange-txt {
 .btn-video,
 .btn-transparent-fat,
 .submit {
-  transition: 0.4s;
+  transition: 0.6s;
 }
 
 .btn-yellow {
@@ -263,7 +263,6 @@ html .orange-txt, body .orange-txt {
   .btn-video {
     font-size: 1rem;
     padding: 15px 25px;
-    font-size: 0.875rem;
   }
 }
 .btn-video i {
@@ -276,8 +275,12 @@ html .orange-txt, body .orange-txt {
 .btn-video i:hover {
   background-color: #191919;
   color: white;
-  transition: 0.4s;
-  transition-delay: 0.15s;
+  box-shadow: 0 9px #d3d3d3;
+  transition: 0.6s;
+}
+.btn-video i:active {
+  transform: translateY(4px);
+  box-shadow: 0 5px #626262;
 }
 
 .btn-arw-r {
@@ -943,6 +946,10 @@ html .orange-txt, body .orange-txt {
   .company-intro .container .about-company .ci-buttons {
     justify-content: flex-start;
   }
+}
+.company-intro .container .about-company .ci-buttons span {
+  margin-left: -30px;
+  font-weight: 600;
 }
 
 .our-services {
