@@ -1805,7 +1805,11 @@ padding: 16px;
                     margin-top: 30px;
                 }
                 h2 {
-                    margin-top: 20px;
+                    margin: 20px 20px 0;
+
+                    @media (min-width: rem(992)) {
+                        margin: 20px 0 0;
+                    }
                 }
             }
 

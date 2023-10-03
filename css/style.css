@@ -1712,7 +1712,12 @@ html .container, body .container {
   margin-top: 30px;
 }
 .articles-news .container .top .top-lft h2 {
-  margin-top: 20px;
+  margin: 20px 20px 0;
+}
+@media (min-width: 62rem) {
+  .articles-news .container .top .top-lft h2 {
+    margin: 20px 0 0;
+  }
 }
 .articles-news .container .top .top-rgt {
   margin-top: 40px;
