@@ -942,6 +942,7 @@ body {
             .grid-item {
                 text-align: left;
                 padding: 0;
+                position: relative;
 
                 img {
                     padding: 0 0 20px;
@@ -949,6 +950,26 @@ body {
 
                 .features-h3 {
                     padding: 0 0 20px;
+                }
+
+                .star1 {
+                    font-size: rem(8);
+                    position: absolute;
+                    top: -10px;
+                    left: 14px;
+                }
+                .star2 {
+                    font-size: rem(8);
+                    position: absolute;
+                    top: -7px;
+                    left: 36px;
+
+                }
+                .star3 {
+                    font-size: rem(8);
+                    position: absolute;
+                    top: 8px;
+                    left: 46px;
                 }
             }
         }

@@ -868,12 +868,31 @@ body .container {
 .features .container .grid-container .grid-item {
   text-align: left;
   padding: 0;
+  position: relative;
 }
 .features .container .grid-container .grid-item img {
   padding: 0 0 20px;
 }
 .features .container .grid-container .grid-item .features-h3 {
   padding: 0 0 20px;
+}
+.features .container .grid-container .grid-item .star1 {
+  font-size: 0.5rem;
+  position: absolute;
+  top: -10px;
+  left: 14px;
+}
+.features .container .grid-container .grid-item .star2 {
+  font-size: 0.5rem;
+  position: absolute;
+  top: -7px;
+  left: 36px;
+}
+.features .container .grid-container .grid-item .star3 {
+  font-size: 0.5rem;
+  position: absolute;
+  top: 8px;
+  left: 46px;
 }
 
 .company-intro {
