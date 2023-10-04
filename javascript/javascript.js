@@ -8,9 +8,9 @@ function closeNav() {
 }
 
 // for back-button on form-results to redirect to last page
-var element = document.getElementById('back-link');
+var element = document.getElementById("back-link");
 
-element.setAttribute('href', document.referrer);
+element.setAttribute("href", document.referrer)
 
 element.onclick = function() {
   history.back();
