@@ -200,10 +200,10 @@ html .container, body .container {
   background-color: #191919;
   border: 1px solid #191919;
   color: white;
-  box-shadow: 0 9px #d3d3d3;
+  box-shadow: 0 9px 5px #d3d3d3;
 }
 .btn-yellow:active {
-  box-shadow: 0 5px #6A6C71;
+  box-shadow: 0 5px 5px #6A6C71;
   transform: translateY(4px);
 }
 
@@ -230,10 +230,10 @@ html .container, body .container {
   background-color: #191919;
   border: 1px solid #191919;
   color: white;
-  box-shadow: 0 9px #d3d3d3;
+  box-shadow: 0 9px 5px #d3d3d3;
 }
 .btn-transparent:active {
-  box-shadow: 0 5px #6A6C71;
+  box-shadow: 0 5px 5px #6A6C71;
   transform: translateY(4px);
 }
 
@@ -260,10 +260,10 @@ html .container, body .container {
   background-color: #191919;
   border: 1px solid #191919;
   color: white;
-  box-shadow: 0 9px #d3d3d3;
+  box-shadow: 0 9px 5px #d3d3d3;
 }
 .btn-transparent-fat:active {
-  box-shadow: 0 5px #6A6C71;
+  box-shadow: 0 5px 5px #6A6C71;
   transform: translateY(4px);
 }
 
@@ -290,11 +290,11 @@ html .container, body .container {
   background-color: #f9d783;
   border: 1px solid #f9d783;
   color: black;
-  box-shadow: 0 9px #d3d3d3;
+  box-shadow: 0 9px 5px #d3d3d3;
 }
 .btn-black:active {
   transform: translateY(4px);
-  box-shadow: 0 5px #626262;
+  box-shadow: 0 5px 5px #626262;
 }
 
 .btn-video {
@@ -320,12 +320,12 @@ html .container, body .container {
 .btn-video i:hover {
   background-color: #191919;
   color: white;
-  box-shadow: 0 9px #d3d3d3;
-  transition: 0.6s;
+  box-shadow: 0 9px 5px #d3d3d3;
+  transition: 0.5s ease-in-out;
 }
 .btn-video i:active {
   transform: translateY(4px);
-  box-shadow: 0 5px #626262;
+  box-shadow: 0 5px 5px #626262;
 }
 
 .btn-arw-r {
@@ -1203,11 +1203,11 @@ html .container, body .container {
 .our-services .container .c-middle .grid-container .grid-item:hover {
   background-color: #f9d783;
   transition: 0.3s ease-in-out;
-  box-shadow: 5px 9px #b9b9bf;
+  box-shadow: 5px 9px 7px #b9b9bf;
   transform: scale(1.05);
 }
 .our-services .container .c-middle .grid-container .grid-item:active {
-  box-shadow: 2px 5px #7c7c7c;
+  box-shadow: 2px 5px 8px #7c7c7c;
   transform: translateY(4px);
   transform: scale(0.95);
 }
@@ -1412,6 +1412,7 @@ html .container, body .container {
   color: #191919;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  opacity: 1;
 }
 .projects .container .projects-wrapper .grid-container-p .grid-item-p img {
   margin-bottom: 40px;
@@ -1436,6 +1437,10 @@ html .container, body .container {
 }
 .projects .container .projects-wrapper .grid-container-p .grid-item-p:hover .txt-arw {
   text-decoration: underline;
+}
+.projects .container .projects-wrapper .grid-container-p .grid-item-p:hover {
+  opacity: 0.4;
+  transition: 0.3s ease-in-out;
 }
 .projects .container .projects-wrapper .btn-projects {
   text-align: center;
@@ -1806,9 +1811,14 @@ html .container, body .container {
 }
 .articles-news .container .grid-container .grid-item:hover h3 {
   text-decoration: underline;
+  transition: 0.15s ease-in-out;
 }
 .articles-news .container .grid-container .grid-item .lorem {
   color: #6A6C71;
+}
+.articles-news .container .grid-container .grid-item:hover {
+  opacity: 0.4;
+  transition: 0.15s ease-in-out;
 }
 .articles-news .container .slide-dots {
   text-align: center;

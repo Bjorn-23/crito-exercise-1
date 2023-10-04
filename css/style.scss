@@ -225,10 +225,10 @@ html, body {
         background-color: #191919;
         border: 1px solid #191919;
         color: white;
-        box-shadow: 0 9px#d3d3d3;
+        box-shadow: 0 9px 5px#d3d3d3;
     }
     &:active {
-        box-shadow: 0 5px #6A6C71;
+        box-shadow: 0 5px 5px#6A6C71;
         transform: translateY(4px);
     }
 }
@@ -256,10 +256,10 @@ html, body {
         background-color: #191919;
         border: 1px solid #191919;
         color: white;
-        box-shadow: 0 9px#d3d3d3;
+        box-shadow: 0 9px 5px#d3d3d3;
     }
     &:active {
-        box-shadow: 0 5px #6A6C71;
+        box-shadow: 0 5px 5px #6A6C71;
         transform: translateY(4px);
     }
 }
@@ -287,10 +287,10 @@ html, body {
         background-color: #191919;
         border: 1px solid #191919;
         color: white;
-        box-shadow: 0 9px#d3d3d3;
+        box-shadow: 0 9px 5px#d3d3d3;
     }
     &:active {
-        box-shadow: 0 5px #6A6C71;
+        box-shadow: 0 5px 5px #6A6C71;
         transform: translateY(4px);
     }
 }
@@ -318,11 +318,11 @@ html, body {
         background-color: #f9d783;
         border: 1px solid #f9d783;
         color: black;
-        box-shadow: 0 9px#d3d3d3;
+        box-shadow: 0 9px 5px#d3d3d3;
     }
     &:active {
         transform: translateY(4px);
-        box-shadow: 0 5px #626262;
+        box-shadow: 0 5px 5px #626262;
     }
    
 }
@@ -350,20 +350,18 @@ html, body {
     i:hover {
         background-color: #191919;
         color: white;
-        box-shadow: 0 9px#d3d3d3;
-        transition: 0.6s;
+        box-shadow: 0 9px 5px#d3d3d3;
+        transition: 0.5s ease-in-out;
     }
     i:active {
         transform: translateY(4px);
-        box-shadow: 0 5px #626262;
+        box-shadow: 0 5px 5px #626262;
     }
 }
 
 
 // used inside "our-services"-boxes.
 .btn-arw-r {
-    // background-color: transparent;
-    // color: #191919;
     text-decoration: none;
     padding: 15px 25px;
     font-weight:600;
@@ -1247,11 +1245,11 @@ padding: 16px;
                     &:hover {
                         background-color: #f9d783;
                         transition: 0.3s ease-in-out;
-                        box-shadow: 5px 9px #b9b9bf;
+                        box-shadow: 5px 9px 7px #b9b9bf;
                         transform: scale(1.05);
                     }
                     &:active {
-                        box-shadow: 2px 5px #7c7c7c;
+                        box-shadow: 2px 5px 8px #7c7c7c;
                         transform: translateY(4px);
                         transform: scale(0.95);
 
@@ -1474,9 +1472,12 @@ padding: 16px;
                     text-decoration: none;
                     color: #191919;
                     display: grid;
-                    grid-template-rows: auto 1fr auto;  
+                    grid-template-rows: auto 1fr auto;
+                    opacity: 1;
+
     
                     img {
+                        // opacity: 1;
                         margin-bottom: 40px;
                         width: 100%;
                         height: auto;                        
@@ -1503,7 +1504,11 @@ padding: 16px;
                     &:hover .txt-arw {
                         text-decoration: underline;
                     }
-                }    
+                }
+                .grid-item-p:hover {
+                    opacity: 0.4;
+                    transition: 0.3s ease-in-out;
+                }     
             }
     
             .btn-projects {
@@ -1907,12 +1912,17 @@ padding: 16px;
 
                 &:hover h3 {
                     text-decoration: underline;
+                    transition: 0.15s ease-in-out;
                 }
 
                 .lorem {
                     color: #6A6C71;
                 }
             }
+            .grid-item:hover {
+                opacity: 0.4;
+                transition: 0.15s ease-in-out;
+            }           
         }
 
         .slide-dots {
