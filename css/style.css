@@ -315,6 +315,9 @@ body .container {
   transform: translateY(4px);
   box-shadow: 0 5px 5px #626262;
 }
+.btn-black:focus {
+  outline-color: red;
+}
 
 .btn-video {
   background-color: transparent;
@@ -1552,6 +1555,9 @@ body .container {
     display: inline-block;
     margin: 0;
   }
+}
+.team .container .top-wrapper .btn-team-wrapper .btn-team:focus {
+  outline-color: #fff;
 }
 .team .container .slide-wrapper {
   padding-top: 30px;
