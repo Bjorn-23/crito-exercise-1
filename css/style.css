@@ -368,7 +368,7 @@ body .container {
   padding: 20px;
   align-items: center;
   border: 1px solid #191919;
-  border-radius: 100%;
+  border-radius: 50%;
   margin-left: 8px;
   margin-right: -15px;
   font-size: 0.9em;
@@ -446,7 +446,7 @@ body .container {
 
 .yellow-square {
   display: inline-block;
-  background-image: linear-gradient(to bottom right, #f9d783, #f8eed2, #f9d783);
+  background-image: linear-gradient(to bottom right, #f9d783, #f8eed2 50%, #f9d783 75%);
   color: #191919;
   text-decoration: none;
   text-align: center;
