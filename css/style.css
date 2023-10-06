@@ -1240,10 +1240,11 @@ body .container {
   text-decoration: none;
   position: relative;
   z-index: 2;
+  transition: background 0.3s ease-out, box-shadow 0.3s ease-out, transform 0.3s ease-out;
 }
 .our-services .container .c-middle .grid-container .grid-item:hover {
   background-color: #f9d783;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in;
   box-shadow: 5px 9px 7px #b9b9bf;
   transform: scale(1.05);
 }
@@ -1255,7 +1256,7 @@ body .container {
 .our-services .container .c-middle .grid-container .grid-item:hover .btn-arw-r i {
   background-color: white;
   color: #191919;
-  transition: 0.6s;
+  transition: 0.3s;
 }
 .our-services .container .c-middle .grid-container .grid-item .box-line {
   font-weight: 700;
